@@ -1,0 +1,29 @@
+{
+	"FileVersion": 3,
+	"Version": 4,
+	"VersionName": "1.4",
+	"FriendlyName": "MissionObjectives",
+	"Description": "Adds powerful Node Editor designer for Missions and objectives.",
+	"Category": "Other",
+	"CreatedBy": "Tefel",
+	"CreatedByURL": "youtube.com/UnrealTefel",
+	"DocsURL": "",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/8e224992c9414507b16c97f6793681c0",
+	"SupportURL": "https://twitter.com/TefelDev",
+	"EngineVersion": "4.27.0",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "MissionObjectives",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win32",
+				"Win64"
+			]
+		}
+	]
+}

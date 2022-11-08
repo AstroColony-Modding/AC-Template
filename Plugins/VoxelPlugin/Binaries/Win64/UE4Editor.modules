@@ -1,0 +1,11 @@
+{
+	"BuildId": "17155196",
+	"Modules": 
+	{
+		"Voxel": "UE4Editor-Voxel.dll",
+		"VoxelExamples": "UE4Editor-VoxelExamples.dll",
+		"VoxelGraph": "UE4Editor-VoxelGraph.dll",
+		"VoxelHelpers": "UE4Editor-VoxelHelpers.dll",
+		"VoxelNiagara": "UE4Editor-VoxelNiagara.dll"
+	}
+}

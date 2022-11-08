@@ -1,0 +1,17 @@
+{
+	"BuildId": "17155196",
+	"Modules": 
+	{
+		"AstroColony": "UE4Editor-AstroColony.dll",
+		"DataRegistry": "UE4Editor-DataRegistry.dll",
+		"GameplayAbilities": "UE4Editor-GameplayAbilities.dll",
+		"GeneratedWorldGenerators": "UE4Editor-GeneratedWorldGenerators.dll",
+		"TGCoreInput": "UE4Editor-TGCoreInput.dll",
+		"TGCoreInterfaceTypes": "UE4Editor-TGCoreInterfaceTypes.dll",
+		"TGCoreSession": "UE4Editor-TGCoreSession.dll",
+		"TGCoreTypes": "UE4Editor-TGCoreTypes.dll",
+		"TGCoreUI": "UE4Editor-TGCoreUI.dll",
+		"TGCoreUtility": "UE4Editor-TGCoreUtility.dll",
+		"TGEvent": "UE4Editor-TGEvent.dll"
+	}
+}
