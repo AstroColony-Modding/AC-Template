@@ -1,0 +1,3 @@
+[submodule "Automation-Scripts"]
+	path = Automation-Scripts
+	url = https://github.com/AstroColony-Modding/Automation-Scripts.git
