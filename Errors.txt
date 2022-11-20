@@ -96,6 +96,15 @@ Then comment out
 	UFUNCTION(BlueprintImplementableEvent)
     void OnInputControllerChanged(TEnumAsByte<ETGInputControllerType> InputControllerType); 
 
+In:
+- EHPlanetoidDestructibleItem.h
+- EHPlanetoidVisualItem.h (also remove array from SpawnDensity)
+- EHGridComponent.h, BillboardTextures
+- EHHUDGame.h, PopMenuClasses/HUDMenuClasses (also change GetPopMenuClass return type)
+- EHScenarioParams.h, TerrainTypeSpawnChances/ShapeTypeSpawnChances
+- EHDataProvider.h, every array
+replace the array decleration with TArray<> and add BlueprintReadWrite+other normal flags to the 'UPROPERTY' macro. Then update the .cpp constructor.
+
 In VoxelProceduralMeshComponent.h/.cpp, add the UPrimitiveComponent interface, i.e. like this:
 VoxelProceduralMeshComponent.h:
 #pragma once
