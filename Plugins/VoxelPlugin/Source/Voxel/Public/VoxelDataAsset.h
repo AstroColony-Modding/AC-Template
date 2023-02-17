@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelTransformableGeneratorWithBounds.h"
 #include "UObject/NoExportTypes.h"
 #include "EVoxelDataAssetImportSource.h"
 #include "VoxelDataAssetImportSettings_MagicaVox.h"
 #include "VoxelIntBox.h"
+#include "VoxelTransformableGeneratorWithBounds.h"
 #include "VoxelDataAsset.generated.h"
 
 UCLASS(Blueprintable, HideDropdown)
@@ -29,7 +29,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CompressedSizeInMB;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     EVoxelDataAssetImportSource Source;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -42,10 +42,10 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 VoxelCustomVersion;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 ValueConfigFlag;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 MaterialConfigFlag;
     
 public:

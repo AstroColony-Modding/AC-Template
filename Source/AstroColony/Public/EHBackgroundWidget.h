@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EEHBackgroundType.h"
 #include "TGUILayer.h"
+#include "EEHBackgroundType.h"
 #include "EHBackgroundWidget.generated.h"
 
 class UEHBackgroundViewModel;
-class UObject;
-class UMediaSource;
 class UMediaPlayer;
+class UMediaSource;
+class UObject;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHBackgroundWidget : public UTGUILayer {

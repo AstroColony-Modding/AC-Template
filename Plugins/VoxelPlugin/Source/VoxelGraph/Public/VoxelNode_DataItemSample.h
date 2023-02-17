@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelNodeWithContext.h"
 #include "EVoxelDataItemCombineMode.h"
+#include "VoxelNodeWithContext.h"
 #include "VoxelNode_DataItemSample.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -11,7 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Mask;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     EVoxelDataItemCombineMode CombineMode;
     
     UVoxelNode_DataItemSample();

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "TGUIPopupManager.h"
 #include "EEHUIPopupID.h"
+#include "Templates/SubclassOf.h"
 #include "EHUIPopupManager.generated.h"
 
 class UTGUIPopup;

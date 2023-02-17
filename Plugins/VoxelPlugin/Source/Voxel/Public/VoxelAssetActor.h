@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelPlaceableItemActor.h"
 #include "EVoxelAssetActorPreviewUpdateType.h"
 #include "EVoxelAssetMergeMode.h"
-#include "VoxelTransformableGeneratorPicker.h"
 #include "VoxelIntBox.h"
+#include "VoxelPlaceableItemActor.h"
+#include "VoxelTransformableGeneratorPicker.h"
 #include "VoxelAssetActor.generated.h"
 
 class USceneComponent;
@@ -43,7 +43,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PreviewLOD;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     EVoxelAssetActorPreviewUpdateType UpdateType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -52,7 +52,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bRoundAssetRotation;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 MaxPreviewChunks;
     
 private:

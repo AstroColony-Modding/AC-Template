@@ -3,8 +3,8 @@
 #include "EHScreenViewModel.h"
 #include "EHModsViewModel.generated.h"
 
-class UEHModsListViewModel;
 class UEHModsBrowsedListViewModel;
+class UEHModsListViewModel;
 class UTGViewModel;
 
 UCLASS(Blueprintable)

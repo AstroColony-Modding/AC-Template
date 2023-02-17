@@ -8,7 +8,7 @@ void UAdvancedIdentityLibrary::SetUserAccountAttribute(const FBPUserOnlineAccoun
 void UAdvancedIdentityLibrary::GetUserID(const FBPUserOnlineAccount& AccountInfo, FBPUniqueNetId& UniqueNetId) {
 }
 
-void UAdvancedIdentityLibrary::GetUserAccountRealName(const FBPUserOnlineAccount& AccountInfo, FString& UserName) {
+void UAdvancedIdentityLibrary::GetUserAccountRealName(const FBPUserOnlineAccount& AccountInfo, FString& username) {
 }
 
 void UAdvancedIdentityLibrary::GetUserAccountDisplayName(const FBPUserOnlineAccount& AccountInfo, FString& DisplayName) {

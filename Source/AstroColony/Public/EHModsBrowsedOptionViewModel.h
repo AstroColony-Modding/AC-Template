@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHViewModel.h"
 #include "CFCoreMod.h"
+#include "EHViewModel.h"
 #include "EHModsBrowsedOptionViewModel.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnInstalProgressChanged);

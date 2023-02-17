@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/StaticMeshComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "Components/StaticMeshComponent.h"
 #include "EHFlareComponent.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

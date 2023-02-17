@@ -16,10 +16,10 @@ public:
     bool StartCampaign;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool SharedTechnologyPoints;
+    bool SharedTechnologies;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool SharedTechnologies;
+    bool SharedTechnologyPoints;
     
     FEHMPScenarioParams();
 };

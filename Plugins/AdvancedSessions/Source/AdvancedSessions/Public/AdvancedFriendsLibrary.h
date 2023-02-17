@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BPFriendInfo.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "BPFriendInfo.h"
+#include "BPOnlineRecentPlayer.h"
 #include "BPUniqueNetId.h"
 #include "EBlueprintResultSwitch.h"
-#include "BPOnlineRecentPlayer.h"
 #include "AdvancedFriendsLibrary.generated.h"
 
 class APlayerController;

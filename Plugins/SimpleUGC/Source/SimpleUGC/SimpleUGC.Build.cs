@@ -10,6 +10,13 @@ public class SimpleUGC : ModuleRules {
             "Core",
             "CoreUObject",
             "Engine",
+            "InputCore",
+            "MovieScene",
+            "MovieSceneTracks",
+            "PropertyPath",
+            "Slate",
+            "SlateCore",
+            "UMG",
         });
     }
 }

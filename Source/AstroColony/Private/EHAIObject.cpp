@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 
 class AEHGrid;
-class UEHItem;
 class UEHInteractableObject;
+class UEHItem;
 
 void UEHAIObject::TransferAIToAnotherGrid(AEHGrid* AnotherGrid) {
 }
@@ -56,7 +56,6 @@ void UEHAIObject::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifet
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
     DOREPLIFETIME(UEHAIObject, AIProfession);
-    DOREPLIFETIME(UEHAIObject, CreationCellCoord);
 }
 
 UEHAIObject::UEHAIObject() {

@@ -7,7 +7,10 @@ USTRUCT(BlueprintType)
 struct CFCORE_API FCFCoreSettings {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FString defaultLanguage;
+    
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 gameId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHCustomAsset.h"
 #include "EAIProfession.h"
+#include "EHCustomAsset.h"
 #include "EHProfessionMeshAsset.generated.h"
 
 class UTexture2D;

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelPaintMaterialFiveWayBlend.h"
 #include "EVoxelPaintMaterialType.h"
-#include "VoxelPaintMaterialSingleIndex.h"
 #include "VoxelPaintMaterialColor.h"
+#include "VoxelPaintMaterialFiveWayBlend.h"
 #include "VoxelPaintMaterialMultiIndex.h"
-#include "VoxelPaintMaterialMultiIndexWetness.h"
 #include "VoxelPaintMaterialMultiIndexRaw.h"
+#include "VoxelPaintMaterialMultiIndexWetness.h"
+#include "VoxelPaintMaterialSingleIndex.h"
 #include "VoxelPaintMaterialUV.h"
 #include "VoxelPaintMaterial.generated.h"
 

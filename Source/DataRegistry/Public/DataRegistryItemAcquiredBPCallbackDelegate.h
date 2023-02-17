@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DataRegistryLookup.h"
 #include "DataRegistryId.h"
+#include "DataRegistryLookup.h"
 #include "EDataRegistryAcquireStatus.h"
 #include "DataRegistryItemAcquiredBPCallbackDelegate.generated.h"
 

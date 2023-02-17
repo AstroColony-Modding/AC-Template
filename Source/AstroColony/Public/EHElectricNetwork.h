@@ -3,8 +3,6 @@
 #include "EHNetwork.h"
 #include "EHElectricNetwork.generated.h"
 
-class AEHGrid;
-
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHElectricNetwork : public UEHNetwork {
     GENERATED_BODY()
@@ -31,7 +29,7 @@ public:
     
     UEHElectricNetwork();
     UFUNCTION(BlueprintCallable)
-    void UpdateBlackout(AEHGrid* Grid, bool HasBlackout);
+    void UpdateBlackout(bool HasBlackout);
     
 };
 

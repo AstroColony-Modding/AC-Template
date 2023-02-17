@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelGeneratorParameterTerminalType.h"
 #include "EVoxelGeneratorParameterContainerType.h"
+#include "VoxelGeneratorParameterTerminalType.h"
 #include "VoxelGeneratorParameterType.generated.h"
 
 USTRUCT(BlueprintType)

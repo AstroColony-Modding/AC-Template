@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TGUIConfig.h"
 #include "UObject/NoExportTypes.h"
-#include "ConfigurableText.h"
 #include "ConfigurableButton.h"
+#include "ConfigurableText.h"
+#include "TGUIConfig.h"
 #include "TGUIConfigMain.generated.h"
 
 UCLASS(Abstract, Blueprintable)

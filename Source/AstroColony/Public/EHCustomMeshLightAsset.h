@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
 #include "EHCustomMeshAsset.h"
+#include "Templates/SubclassOf.h"
 #include "EHCustomMeshLightAsset.generated.h"
 
 class ULightComponent;

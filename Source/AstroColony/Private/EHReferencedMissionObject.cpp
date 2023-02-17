@@ -1,9 +1,9 @@
 #include "EHReferencedMissionObject.h"
 
-class UEHMissionsComponent;
 class AEHGrid;
-class UEHInventoryComponent;
 class UEHDevicesComponent;
+class UEHInventoryComponent;
+class UEHMissionsComponent;
 
 UEHMissionsComponent* UEHReferencedMissionObject::GetMissionManagerRef() {
     return NULL;

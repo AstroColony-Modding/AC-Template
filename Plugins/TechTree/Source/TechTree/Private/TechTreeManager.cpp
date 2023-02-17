@@ -1,9 +1,9 @@
 #include "TechTreeManager.h"
 
-class UTechnologyAsset;
-class UTechTreeWidget;
 class USaveGame;
 class UTTTechNode;
+class UTechTreeWidget;
+class UTechnologyAsset;
 class UTechnologyTree;
 
 void UTechTreeManager::UnlockTechnology(UTechnologyAsset* Technology) {

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Types/SlateEnums.h"
+#include "Types/SlateEnums.h"
+#include "Types/SlateEnums.h"
 #include "Components/PanelWidget.h"
-#include "Types/SlateEnums.h"
-#include "Types/SlateEnums.h"
-#include "OnWidgetHoverEventDelegate.h"
-#include "Types/SlateEnums.h"
 #include "OnWidgetClickedEventDelegate.h"
+#include "OnWidgetFocusLostEventDelegate.h"
+#include "OnWidgetFocusReceivedEventDelegate.h"
+#include "OnWidgetHoverEventDelegate.h"
 #include "OnWidgetPressedEventDelegate.h"
 #include "OnWidgetReleasedEventDelegate.h"
-#include "OnWidgetFocusReceivedEventDelegate.h"
-#include "OnWidgetFocusLostEventDelegate.h"
 #include "TGWidget.generated.h"
 
 class USoundBase;
@@ -18,13 +18,13 @@ UCLASS(Blueprintable)
 class TGCOREUI_API UTGWidget : public UPanelWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EButtonClickMethod::Type> ClickMethod;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EButtonTouchMethod::Type> TouchMethod;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EButtonPressMethod::Type> PressMethod;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -79,7 +79,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UsePreviewValuesToShowFinalWidgetState;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 EditorPreviewStates;
     
 public:

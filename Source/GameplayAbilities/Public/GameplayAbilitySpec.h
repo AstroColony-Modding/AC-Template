@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/NetSerialization.h"
-#include "GameplayAbilityActivationInfo.h"
-#include "GameplayAbilitySpecHandle.h"
 #include "GameplayTagContainer.h"
 #include "ActiveGameplayEffectHandle.h"
+#include "GameplayAbilityActivationInfo.h"
+#include "GameplayAbilitySpecHandle.h"
 #include "GameplayAbilitySpec.generated.h"
 
-class UObject;
 class UGameplayAbility;
+class UObject;
 
 USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayAbilitySpec : public FFastArraySerializerItem {
@@ -29,7 +29,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UObject* SourceObject;
     
-    UPROPERTY(EditAnywhere, NotReplicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     uint8 ActiveCount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))

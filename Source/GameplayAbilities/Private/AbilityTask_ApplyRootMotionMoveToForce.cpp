@@ -2,8 +2,8 @@
 #include "Net/UnrealNetwork.h"
 
 class UAbilityTask_ApplyRootMotionMoveToForce;
-class UGameplayAbility;
 class UCurveVector;
+class UGameplayAbility;
 
 UAbilityTask_ApplyRootMotionMoveToForce* UAbilityTask_ApplyRootMotionMoveToForce::ApplyRootMotionMoveToForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector NewTargetLocation, float NewDuration, bool NewBSetNewMovementMode, TEnumAsByte<EMovementMode> MovementMode, bool NewBRestrictSpeedToExpected, UCurveVector* NewPathOffsetCurve, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish) {
     return NULL;

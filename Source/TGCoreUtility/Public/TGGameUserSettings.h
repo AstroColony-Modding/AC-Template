@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/GameUserSettings.h"
 #include "GameFramework/PlayerInput.h"
+#include "GameFramework/PlayerInput.h"
 #include "TGGameUserSettings.generated.h"
 
 UCLASS(Blueprintable)
@@ -41,6 +42,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 AutosaveMaxCount;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 RecoverysaveMaxCount;
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MasterVolume;

@@ -1,8 +1,8 @@
 #include "TGEventListenerComponent.h"
 #include "Templates/SubclassOf.h"
 
-class UTGEventListener;
 class AActor;
+class UTGEventListener;
 
 UTGEventListener* UTGEventListenerComponent::Register(TSubclassOf<UTGEventListener> EventListenerClass, const AActor* FilteredActor) {
     return NULL;

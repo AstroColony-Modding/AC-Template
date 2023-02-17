@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelGraphGeneratorHelper.h"
 #include "UObject/NoExportTypes.h"
+#include "VoxelGraphGeneratorHelper.h"
 #include "VoxelExample_RingWorld.generated.h"
 
 class UCurveFloat;

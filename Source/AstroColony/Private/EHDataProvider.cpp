@@ -1,5 +1,8 @@
 #include "EHDataProvider.h"
 
+class UEHAsset;
+class UEHItem;
+
 FEHTrackableInfo UEHDataProvider::GetTrackableInfo(const EEHTrackableType Type) {
     return FEHTrackableInfo{};
 }
@@ -10,6 +13,10 @@ TArray<FEHStartingStation> UEHDataProvider::GetStartingStations(const EEHStartin
 
 FDecalInfo UEHDataProvider::GetOutletInfo(const EEHDecalType Type) {
     return FDecalInfo{};
+}
+
+UEHItem* UEHDataProvider::GetBulkPreviewItem(UEHAsset* Item) {
+    return NULL;
 }
 
 UEHDataProvider::UEHDataProvider() {
@@ -28,8 +35,16 @@ UEHDataProvider::UEHDataProvider() {
     this->PlanetoidResourceItems[11] = NULL;
     this->DirtResource = NULL;
     this->QuartzResource = NULL;
+    this->HydrotonicResource = NULL;
     this->FloorRecyclable = NULL;
     this->WallRecyclable = NULL;
+    this->ColonyOrigin = NULL;
+    this->ConveyorLineItem = NULL;
+    this->AdvConveyorLineItem = NULL;
+    this->BulkHeightExtenderItem = NULL;
+    this->BulkFoundationItem = NULL;
+    this->BulkFloorItem = NULL;
+    this->BulkDecorationItem = NULL;
     this->DestructibleSpawnChances.AddDefaulted(8);
     this->VisualSpawnChances.AddDefaulted(9);
     this->DestructionGameplayEffect = NULL;

@@ -45,13 +45,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsRemotePlayerTalking(const FBPUniqueNetId& UniqueNetId);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsPlayerMuted(uint8 LocalUserNumChecking, const FBPUniqueNetId& UniqueNetId);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsLocalPlayerTalking(uint8 LocalPlayerNum);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static void IsHeadsetPresent(bool& bHasHeadset, uint8 LocalPlayerNum);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

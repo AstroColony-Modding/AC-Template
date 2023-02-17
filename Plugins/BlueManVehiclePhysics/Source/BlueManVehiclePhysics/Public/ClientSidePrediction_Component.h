@@ -5,11 +5,11 @@
 #include "HistoryBufferMinimum.h"
 #include "ClientSidePrediction_Component.generated.h"
 
-class UPrimitiveComponent;
-class UWheelManager_Component;
-class USuspensionPhysics_Component;
-class ULandVehicle_EngineComponent;
 class APawn;
+class ULandVehicle_EngineComponent;
+class UPrimitiveComponent;
+class USuspensionPhysics_Component;
+class UWheelManager_Component;
 class UWorld;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

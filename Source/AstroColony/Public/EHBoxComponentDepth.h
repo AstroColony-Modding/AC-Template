@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ShapeComponent.h"
 #include "UObject/NoExportTypes.h"
+#include "Components/ShapeComponent.h"
 #include "EHBoxComponentDepth.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

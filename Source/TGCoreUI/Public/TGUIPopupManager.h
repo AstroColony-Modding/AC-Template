@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "TGUISceneManager.h"
 #include "TGUIPopupManagerContext.h"
+#include "TGUISceneManager.h"
+#include "Templates/SubclassOf.h"
 #include "TGUIPopupManager.generated.h"
 
 class UTGUIPopup;
@@ -25,7 +25,7 @@ protected:
     UTGUIPopup* CurrentPopup;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TMap<TSubclassOf<UTGUIPopup>, UTGUIPopup*> PopupInstances;
     
 public:

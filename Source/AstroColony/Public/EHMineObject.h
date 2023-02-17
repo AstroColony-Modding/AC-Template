@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHSpecialisticProductionObject.h"
 #include "EEHMiningResourceType.h"
+#include "EHSpecialisticProductionObject.h"
 #include "EHMineObject.generated.h"
 
-class UEHInteractableObject;
 class UEHAIMinerObject;
+class UEHInteractableObject;
 class UEHWorldItem;
 
 UCLASS(Blueprintable, EditInlineNew)

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
+#include "Net/OnlineBlueprintCallProxyBase.h"
 #include "BPUniqueNetId.h"
 #include "BlueprintGetUserPrivilegeDelegateDelegate.h"
 #include "EBPUserPrivileges.h"
-#include "Net/OnlineBlueprintCallProxyBase.h"
 #include "GetUserPrivilegeCallbackProxy.generated.h"
 
 class UGetUserPrivilegeCallbackProxy;

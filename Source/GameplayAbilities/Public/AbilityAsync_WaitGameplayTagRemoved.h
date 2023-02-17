@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AbilityAsync_WaitGameplayTag.h"
-#include "AbilityAsync_WaitGameplayTag.h"
 #include "GameplayTagContainer.h"
+#include "AbilityAsync_WaitGameplayTag.h"
+#include "AbilityAsync_WaitGameplayTag.h"
 #include "AbilityAsync_WaitGameplayTagRemoved.generated.h"
 
-class UAbilityAsync_WaitGameplayTagRemoved;
 class AActor;
+class UAbilityAsync_WaitGameplayTagRemoved;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityAsync_WaitGameplayTagRemoved : public UAbilityAsync_WaitGameplayTag {

@@ -37,6 +37,7 @@ UEHItem::UEHItem() {
     this->CanUpgrade = false;
     this->CanExtract = false;
     this->CanFly = false;
+    this->CanPick = true;
     this->IgnoredWhenSaving = false;
     this->RequiresFloorForConstruction = true;
     this->IsBlockingCoord = true;

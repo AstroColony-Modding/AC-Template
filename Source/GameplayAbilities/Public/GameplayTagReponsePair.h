@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "GameplayTagContainer.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayTagReponsePair.generated.h"
 
 class UGameplayEffect;

@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
+#include "Templates/SubclassOf.h"
 #include "ActorsInSphereParams.generated.h"
 
-class UObject;
 class AActor;
+class UObject;
 
 USTRUCT(BlueprintType)
 struct FActorsInSphereParams {

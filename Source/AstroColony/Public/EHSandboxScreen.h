@@ -3,9 +3,9 @@
 #include "EHUIScreen.h"
 #include "EHSandboxScreen.generated.h"
 
+class UEHBaseButtonWidget;
 class UEHSandboxViewModel;
 class UTGEditableTextBox;
-class UEHBaseButtonWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHSandboxScreen : public UEHUIScreen {

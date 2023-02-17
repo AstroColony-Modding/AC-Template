@@ -1,13 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/Interface.h"
+#include "Templates/SubclassOf.h"
 #include "EHGameHUDInterface.generated.h"
 
-class UObject;
-class UInteractBaseWidget;
+class AEHGamePlayerController;
 class UEHInteractableObject;
+class UInteractBaseWidget;
 class UMenuWidget;
+class UObject;
 
 UINTERFACE(Blueprintable)
 class ASTROCOLONY_API UEHGameHUDInterface : public UInterface {
@@ -37,6 +38,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ToggleLog();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void ToggleHostPlayerLeft(AEHGamePlayerController* GamePlayerController);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OpenPopMenu(TSubclassOf<UInteractBaseWidget> MenuWidget, UEHInteractableObject* InteractableObject);

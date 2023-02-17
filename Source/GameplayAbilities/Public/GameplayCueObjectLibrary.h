@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "GameplayCueObjectLibrary.generated.h"
 
-class UObjectLibrary;
 class UGameplayCueSet;
+class UObjectLibrary;
 
 USTRUCT(BlueprintType)
 struct FGameplayCueObjectLibrary {

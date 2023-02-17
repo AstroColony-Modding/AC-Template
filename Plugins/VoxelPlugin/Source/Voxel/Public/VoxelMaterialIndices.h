@@ -8,5 +8,5 @@ struct FVoxelMaterialIndices {
 public:
     VOXEL_API FVoxelMaterialIndices();
 };
-
 FORCEINLINE uint32 GetTypeHash(const FVoxelMaterialIndices) { return 0; }
+

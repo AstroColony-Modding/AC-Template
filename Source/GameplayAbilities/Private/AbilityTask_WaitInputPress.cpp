@@ -1,7 +1,7 @@
 #include "AbilityTask_WaitInputPress.h"
 
-class UGameplayAbility;
 class UAbilityTask_WaitInputPress;
+class UGameplayAbility;
 
 UAbilityTask_WaitInputPress* UAbilityTask_WaitInputPress::WaitInputPress(UGameplayAbility* OwningAbility, bool bTestAlreadyPressed) {
     return NULL;

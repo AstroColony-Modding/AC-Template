@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "EHDynamicMaterialInterface.h"
 #include "EHInteractableObject.h"
-#include "UObject/NoExportTypes.h"
 #include "UEHRampDirection.h"
 #include "EHConveyorObject.generated.h"
 

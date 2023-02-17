@@ -3,8 +3,8 @@
 #include "MOTextNode.h"
 #include "MOObjectiveNode.generated.h"
 
-class UScriptedAction;
 class UObjectiveAsset;
+class UScriptedAction;
 
 UCLASS(Blueprintable)
 class MISSIONOBJECTIVES_API UMOObjectiveNode : public UMOTextNode {
@@ -29,10 +29,10 @@ public:
     TArray<UScriptedAction*> ObjectiveDone_Actions;
     
 protected:
-    UPROPERTY(EditAnywhere, SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     uint8 CurrentRepetitionsCount;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 RepetitionsCount;
     
 public:

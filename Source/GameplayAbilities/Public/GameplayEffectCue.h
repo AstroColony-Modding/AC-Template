@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayAttribute.h"
 #include "GameplayTagContainer.h"
+#include "GameplayAttribute.h"
 #include "GameplayEffectCue.generated.h"
 
 USTRUCT(BlueprintType)

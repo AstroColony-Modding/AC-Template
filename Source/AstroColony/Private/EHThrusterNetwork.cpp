@@ -1,11 +1,11 @@
 #include "EHThrusterNetwork.h"
 #include "Net/UnrealNetwork.h"
 
+class AEHGrid;
+class AEHMovableSpaceActor;
+class UEHConnectorStationObject;
 class UEHInteractableObject;
 class UEHThrusterObject;
-class UEHConnectorStationObject;
-class AEHMovableSpaceActor;
-class AEHGrid;
 
 void UEHThrusterNetwork::UpdateTotalVelocity() {
 }

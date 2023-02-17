@@ -3,8 +3,8 @@
 #include "EHScreenViewModel.h"
 #include "EHMainMenuViewModel.generated.h"
 
-class UEHMenuViewModel;
 class UEHMenuContextualPreviewViewModel;
+class UEHMenuViewModel;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHMainMenuViewModel : public UEHScreenViewModel {

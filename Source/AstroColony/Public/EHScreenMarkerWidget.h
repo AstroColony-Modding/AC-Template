@@ -3,11 +3,11 @@
 #include "Blueprint/UserWidget.h"
 #include "EHScreenMarkerWidget.generated.h"
 
+class UBorder;
 class UImage;
 class UOverlay;
-class UBorder;
-class UTextBlock;
 class USizeBox;
+class UTextBlock;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHScreenMarkerWidget : public UUserWidget {

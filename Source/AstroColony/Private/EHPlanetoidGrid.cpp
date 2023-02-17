@@ -3,6 +3,9 @@
 
 class AEHVoxelWorld;
 
+void AEHPlanetoidGrid::UpdateMPCorrectionPosition() {
+}
+
 
 void AEHPlanetoidGrid::TestingValue(const FIntVector& Coord) {
 }
@@ -18,6 +21,9 @@ void AEHPlanetoidGrid::RemoveBox(const FIntVector& Coord) {
 }
 
 void AEHPlanetoidGrid::OnRep_VoxelWorld() {
+}
+
+void AEHPlanetoidGrid::OnRep_CorrectionLocation() {
 }
 
 
@@ -82,6 +88,7 @@ void AEHPlanetoidGrid::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
     DOREPLIFETIME(AEHPlanetoidGrid, VoxelWorld);
+    DOREPLIFETIME(AEHPlanetoidGrid, CorrectionLocation);
     DOREPLIFETIME(AEHPlanetoidGrid, PlanetIndex);
 }
 
@@ -108,5 +115,6 @@ AEHPlanetoidGrid::AEHPlanetoidGrid() {
     this->PlanetoidGeneratorCompleted = false;
     this->VoxelWorld = NULL;
     this->PlanetIndex = 0;
+    this->PlanetoidTerrainID = 0;
 }
 

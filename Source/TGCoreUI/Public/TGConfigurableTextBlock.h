@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ConfigurableUIInterface.h"
 #include "Components/TextBlock.h"
+#include "ConfigurableUIInterface.h"
 #include "TGConfigurableTextBlock.generated.h"
 
 UCLASS(Blueprintable)

@@ -4,8 +4,8 @@
 #include "EHItemInstance.h"
 #include "EHAttractedAsteroidData.generated.h"
 
-class UStaticMesh;
 class UEHAsteroidsCatcher;
+class UStaticMesh;
 
 USTRUCT(BlueprintType)
 struct ASTROCOLONY_API FEHAttractedAsteroidData {
@@ -22,6 +22,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEHItemInstance> Items;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 UniverseIndex;
     
     FEHAttractedAsteroidData();
 };

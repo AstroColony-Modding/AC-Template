@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHViewModel.h"
 #include "TextBindable.h"
 #include "VisibilityBindable.h"
 #include "EButtonBarAction.h"
+#include "EHViewModel.h"
 #include "EHMenuViewModel.generated.h"
 
+class UEHBaseButtonViewModel;
 class UEHButtonBarViewModel;
 class UEHMenuViewModel;
-class UEHBaseButtonViewModel;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHMenuViewModel : public UEHViewModel {

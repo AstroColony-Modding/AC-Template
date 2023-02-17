@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHRemoteEnergyInterface.h"
-#include "EHWorldInteractiveActor.h"
-#include "EHIndicationInterface.h"
-#include "EHSaveGameInterface.h"
 #include "UObject/NoExportTypes.h"
+#include "EHIndicationInterface.h"
 #include "EHRemoteConstructionInterface.h"
+#include "EHRemoteEnergyInterface.h"
+#include "EHSaveGameInterface.h"
+#include "EHWorldInteractiveActor.h"
 #include "EHRemotlyConstructedActor.generated.h"
 
 UCLASS(Blueprintable)
@@ -29,6 +29,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsPowerActivated;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool ModifiedByPlayer;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

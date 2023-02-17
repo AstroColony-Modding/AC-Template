@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagContainer.h"
 #include "UObject/Object.h"
-#include "GameplayCueParameters.h"
+#include "GameplayTagContainer.h"
 #include "EGameplayCueEvent.h"
+#include "GameplayCueParameters.h"
 #include "GameplayCueNotify_Static.generated.h"
 
 class AActor;
@@ -34,7 +34,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent, BlueprintPure)
     bool OnActive(AActor* MyTarget, const FGameplayCueParameters& Parameters) const;
     
-    /*UFUNCTION(BlueprintImplementableEvent)
+    /*UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void K2_HandleGameplayCue(AActor* MyTarget, TEnumAsByte<EGameplayCueEvent::Type> EventType, const FGameplayCueParameters& Parameters) const;*/
     
 };

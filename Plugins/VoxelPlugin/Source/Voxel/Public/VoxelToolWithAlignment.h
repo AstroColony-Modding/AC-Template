@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelToolBase.h"
 #include "EVoxelToolAlignment.h"
+#include "VoxelToolBase.h"
 #include "VoxelToolWithAlignment.generated.h"
 
 UCLASS(Abstract, Blueprintable)

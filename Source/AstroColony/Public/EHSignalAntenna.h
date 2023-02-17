@@ -4,8 +4,8 @@
 #include "EHSignalDeviceInterface.h"
 #include "EHSignalAntenna.generated.h"
 
-class UEHSignalReceiver;
 class UEHSignalNetwork;
+class UEHSignalReceiver;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHSignalAntenna : public UEHCraftingObject, public IEHSignalDeviceInterface {

@@ -2,9 +2,9 @@
 #include "Net/UnrealNetwork.h"
 
 class UAbilityTask_MoveToLocation;
-class UGameplayAbility;
-class UCurveVector;
 class UCurveFloat;
+class UCurveVector;
+class UGameplayAbility;
 
 UAbilityTask_MoveToLocation* UAbilityTask_MoveToLocation::MoveToLocation(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector Location, float Duration, UCurveFloat* OptionalInterpolationCurve, UCurveVector* OptionalVectorInterpolationCurve) {
     return NULL;

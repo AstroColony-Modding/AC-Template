@@ -1,15 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHCraftingObject.h"
-#include "EHAcceptPushedResourceInterface.h"
-#include "EHItemInstance.h"
-#include "ELineDirection.h"
-#include "EHColliderInterface.h"
 #include "UObject/NoExportTypes.h"
 #include "EDockingState.h"
+#include "EHAcceptPushedResourceInterface.h"
+#include "EHColliderInterface.h"
+#include "EHCraftingObject.h"
+#include "EHItemInstance.h"
+#include "ELineDirection.h"
 #include "EHConnectorStationObject.generated.h"
-
-class UEHItem;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHConnectorStationObject : public UEHCraftingObject, public IEHAcceptPushedResourceInterface, public IEHColliderInterface {
@@ -21,7 +19,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEHItemInstance> AstronautOrdersCost;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 OrderedAstronautsCount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -36,9 +34,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FIntVector> LinesCoords;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UEHItem* ConveyorLineItem;
-    
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnConveyorLinesChanged OnConveyorLinesChanged;
     
@@ -49,10 +44,10 @@ public:
     EDockingState DockingState;
     
     UEHConnectorStationObject();
-    UFUNCTION(NetMulticast, Reliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_DestructConveyorLine(const uint8 LineNumber);
     
-    UFUNCTION(NetMulticast, Reliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_ConstructConveyorLine(const uint8 LineNumber, const bool ConveyorReverseDirection);
     
     UFUNCTION(BlueprintCallable)

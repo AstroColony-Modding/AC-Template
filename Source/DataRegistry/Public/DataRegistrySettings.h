@@ -4,7 +4,7 @@
 #include "Engine/EngineTypes.h"
 #include "DataRegistrySettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig, NotPlaceable, Config=Game)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig, NotPlaceable, Config=Game)
 class DATAREGISTRY_API UDataRegistrySettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:

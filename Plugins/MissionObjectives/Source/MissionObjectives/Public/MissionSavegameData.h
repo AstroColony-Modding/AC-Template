@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MissionData.h"
 #include "MOMission.h"
+#include "MissionData.h"
 #include "MissionSavegameData.generated.h"
 
 USTRUCT(BlueprintType)

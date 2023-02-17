@@ -1,7 +1,7 @@
 #include "AbilityTask_NetworkSyncPoint.h"
 
-class UGameplayAbility;
 class UAbilityTask_NetworkSyncPoint;
+class UGameplayAbility;
 
 UAbilityTask_NetworkSyncPoint* UAbilityTask_NetworkSyncPoint::WaitNetSync(UGameplayAbility* OwningAbility, EAbilityTaskNetSyncType SyncType) {
     return NULL;

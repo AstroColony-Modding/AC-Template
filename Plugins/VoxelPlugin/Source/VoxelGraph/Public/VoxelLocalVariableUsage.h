@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "VoxelLocalVariableBase.h"
 #include "VoxelPortalNodeSelector.h"
-#include "UObject/NoExportTypes.h"
 #include "VoxelLocalVariableUsage.generated.h"
 
 class UVoxelLocalVariableDeclaration;

@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/LatentActionManager.h"
-#include "VoxelMaterial.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "UObject/NoExportTypes.h"
-#include "VoxelIntBox.h"
-#include "UObject/NoExportTypes.h"
+#include "Engine/LatentActionManager.h"
 #include "EVoxelAssetMergeMode.h"
 #include "VoxelAssetItemReference.h"
 #include "VoxelDisableEditsBoxItemReference.h"
+#include "VoxelIntBox.h"
+#include "VoxelMaterial.h"
 #include "VoxelAssetTools.generated.h"
 
+class AVoxelWorld;
+class UObject;
 class UVoxelDataAsset;
 class UVoxelTransformableGeneratorInstanceWrapper;
-class UObject;
-class AVoxelWorld;
 
 UCLASS(Blueprintable)
 class VOXEL_API UVoxelAssetTools : public UBlueprintFunctionLibrary {

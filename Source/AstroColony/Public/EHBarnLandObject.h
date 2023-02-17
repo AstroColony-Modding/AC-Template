@@ -4,9 +4,9 @@
 #include "EHMetamorphosisInterface.h"
 #include "EHBarnLandObject.generated.h"
 
-class UParticleSystem;
 class UEHAIBreederObject;
 class UEHBarnLandObject;
+class UParticleSystem;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHBarnLandObject : public UEHInteractableServiceObject, public IEHMetamorphosisInterface {
@@ -26,6 +26,9 @@ public:
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UEHAIBreederObject* AssignedBreeder;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEHAIBreederObject* WorkingBreeder;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -33,10 +36,6 @@ private:
     
 public:
     UEHBarnLandObject();
-protected:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void Multi_BreederEntered(UEHAIBreederObject* NewBreeder);
-    
     
     // Fix for true pure virtual functions not being implemented
 };

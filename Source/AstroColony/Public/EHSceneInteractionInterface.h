@@ -3,8 +3,8 @@
 #include "UObject/Interface.h"
 #include "EHSceneInteractionInterface.generated.h"
 
-class USceneComponent;
 class UPrimitiveComponent;
+class USceneComponent;
 
 UINTERFACE(Blueprintable)
 class ASTROCOLONY_API UEHSceneInteractionInterface : public UInterface {

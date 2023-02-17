@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/NoExportTypes.h"
+#include "Templates/SubclassOf.h"
 #include "DecalInfo.generated.h"
 
-class UEHDecalComponent;
 class UEHCustomMeshAsset;
+class UEHDecalComponent;
 
 USTRUCT(BlueprintType)
 struct ASTROCOLONY_API FDecalInfo {
@@ -22,6 +22,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEHCustomMeshAsset* PreviewMesh;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UEHCustomMeshAsset* DecalMesh;
     
     FDecalInfo();
 };

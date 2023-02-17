@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHViewModel.h"
 #include "EEHToastNature.h"
+#include "EHViewModel.h"
 #include "EHToastContainerViewModel.generated.h"
 
+class UEHTechnologyAsset;
 class UEHToastViewModel;
 class UTexture2D;
-class UEHTechnologyAsset;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHToastContainerViewModel : public UEHViewModel {

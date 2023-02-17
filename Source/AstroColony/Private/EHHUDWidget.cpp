@@ -14,6 +14,5 @@ UEHHUDWidget::UEHHUDWidget() {
     this->InteractionCircle = NULL;
     this->HUDCounters = NULL;
     this->PlayerStats = NULL;
-    this->MissionsLog = NULL;
 }
 

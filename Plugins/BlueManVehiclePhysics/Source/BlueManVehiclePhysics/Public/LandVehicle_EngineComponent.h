@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
+#include "GearChangeCompletedDelegate.h"
 #include "GearChangeStartedDelegate.h"
 #include "Gears.h"
-#include "GearChangeCompletedDelegate.h"
 #include "LandVehicle_EngineComponent.generated.h"
 
-class USuspensionPhysics_Component;
 class UCurveFloat;
 class UPrimitiveComponent;
+class USuspensionPhysics_Component;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BLUEMANVEHICLEPHYSICS_API ULandVehicle_EngineComponent : public USceneComponent {

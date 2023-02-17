@@ -1,7 +1,7 @@
 #include "AdvancedSessionsLibrary.h"
 
-class APlayerState;
 class APlayerController;
+class APlayerState;
 class UObject;
 
 void UAdvancedSessionsLibrary::UniqueNetIdToString(const FBPUniqueNetId& UniqueNetId, FString& String) {

@@ -11,6 +11,7 @@ UTGGameUserSettings::UTGGameUserSettings() {
     this->MouseHorizontalInverted = false;
     this->AutosaveInterval = 5.00f;
     this->AutosaveMaxCount = 5;
+    this->RecoverysaveMaxCount = 5;
     this->MasterVolume = 100.00f;
     this->EffectsVolume = 100.00f;
     this->GameMusicVolume = 100.00f;

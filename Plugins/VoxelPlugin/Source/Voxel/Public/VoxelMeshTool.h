@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "VoxelMeshImporterSettingsBase.h"
-#include "VoxelToolWithAlignment.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "VoxelMeshImporterRenderTargetCache.h"
 #include "VoxelMeshImporterSettings.h"
+#include "VoxelMeshImporterSettingsBase.h"
+#include "VoxelToolWithAlignment.h"
 #include "VoxelMeshTool.generated.h"
 
 class UMaterialInterface;
@@ -81,7 +81,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bPaintIndex;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 IndexToPaint;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

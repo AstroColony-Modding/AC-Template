@@ -3,9 +3,9 @@
 #include "EHSpecialisticProductionObject.h"
 #include "EHRemoteFabricatorObject.generated.h"
 
-class UEHDeviceItem;
 class AActor;
 class UEHAIFabricatorDroneObject;
+class UEHDeviceItem;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHRemoteFabricatorObject : public UEHSpecialisticProductionObject {

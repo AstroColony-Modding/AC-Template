@@ -3,9 +3,9 @@
 #include "TGUISubsystem.h"
 #include "TGUIAudioManager.generated.h"
 
-class USoundMix;
-class USoundClass;
 class USoundBase;
+class USoundClass;
+class USoundMix;
 
 UCLASS(Blueprintable)
 class TGCOREUI_API UTGUIAudioManager : public UTGUISubsystem {

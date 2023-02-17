@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "TGUICheatComponent.h"
 #include "EHItemInstance.h"
+#include "Templates/SubclassOf.h"
 #include "EHCheatComponent.generated.h"
 
-class UUserWidget;
 class AEHHUD;
-class UEHUISystem;
-class UEHLayerManager;
 class UEHGameInstance;
+class UEHLayerManager;
+class UEHUISystem;
+class UUserWidget;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ASTROCOLONY_API UEHCheatComponent : public UTGUICheatComponent {
@@ -45,7 +45,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Exec)
     void UIShowHUD();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void UIOpenScreen(uint8 ScreenID);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Exec)
@@ -60,7 +60,7 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void UIDebugClosePopup();
     
-    UFUNCTION(Exec)
+    UFUNCTION(BlueprintCallable, Exec)
     void SetResScale(uint8 resscale);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

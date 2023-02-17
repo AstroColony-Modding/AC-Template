@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "Engine/EngineTypes.h"
 #include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
+#include "Templates/SubclassOf.h"
 #include "VoxelToolTickData.h"
 #include "VoxelTool.generated.h"
 
-class UVoxelToolSharedConfig;
 class APlayerController;
-class UVoxelTool;
 class AVoxelWorld;
+class UVoxelTool;
+class UVoxelToolSharedConfig;
 
 UCLASS(Abstract, Blueprintable)
 class VOXEL_API UVoxelTool : public UObject {
@@ -43,7 +43,7 @@ private:
     
 public:
     UVoxelTool();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FVoxelToolTickData MakeVoxelToolTickData(APlayerController* PlayerController, bool bEdit, const TMap<FName, bool>& Keys, const TMap<FName, float>& Axes, FVector2D MousePosition, FVector CameraDirection, TEnumAsByte<ECollisionChannel> CollisionChannel);
     
     UFUNCTION(BlueprintCallable)

@@ -1,6 +1,6 @@
 #include "EHChunk.h"
-#include "Net/UnrealNetwork.h"
 #include "Components/SceneComponent.h"
+#include "Net/UnrealNetwork.h"
 
 class AEHPlanetoidGrid;
 class AVoxelWorld;
@@ -27,6 +27,7 @@ void AEHChunk::OnChunkGenerated_Implementation() {
 
 void AEHChunk::HandleWorldLoaded(AVoxelWorld* VoxelWorld) {
 }
+
 
 
 TArray<FEHCelestialBodyGeneration> AEHChunk::GetCelestialGenerations(const EChunkGenerationType GenerationTyp) {

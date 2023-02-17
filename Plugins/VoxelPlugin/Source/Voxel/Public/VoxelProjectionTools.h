@@ -1,28 +1,28 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Engine/EngineTypes.h"
+#include "Kismet/KismetSystemLibrary.h"
+#include "Engine/LatentActionManager.h"
+#include "EVoxelProjectionShape.h"
 #include "VoxelLineTraceParameters.h"
 #include "VoxelProjectionHit.h"
-#include "Kismet/KismetSystemLibrary.h"
-#include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "Engine/LatentActionManager.h"
 #include "VoxelSurfaceEditsVoxels.h"
-#include "EVoxelProjectionShape.h"
 #include "VoxelProjectionTools.generated.h"
 
 class AActor;
-class UObject;
 class AVoxelWorld;
+class UObject;
 
 UCLASS(Blueprintable)
 class VOXEL_API UVoxelProjectionTools : public UBlueprintFunctionLibrary {
     GENERATED_BODY()
 public:
     UVoxelProjectionTools();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FVoxelLineTraceParameters MakeVoxelLineTraceParameters(TArray<TEnumAsByte<ECollisionChannel>> CollisionChannelsToIgnore, TArray<AActor*> ActorsToIgnore, TEnumAsByte<ECollisionChannel> CollisionChannel, TEnumAsByte<EDrawDebugTrace::Type> DrawDebugType, FLinearColor TraceColor, FLinearColor TraceHitColor, float DrawTime);
     
     UFUNCTION(BlueprintCallable)

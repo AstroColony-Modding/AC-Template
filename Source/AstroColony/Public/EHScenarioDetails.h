@@ -31,6 +31,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEHScenarioParams ScenarioParams;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 PlayersCount;
+    
     FEHScenarioDetails();
 };
 

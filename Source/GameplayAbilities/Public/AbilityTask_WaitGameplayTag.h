@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AbilityTask.h"
 #include "GameplayTagContainer.h"
+#include "AbilityTask.h"
 #include "AbilityTask_WaitGameplayTag.generated.h"
 
 class UAbilitySystemComponent;

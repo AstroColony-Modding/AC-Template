@@ -4,9 +4,9 @@
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "LogoutUserCallbackProxy.generated.h"
 
+class APlayerController;
 class ULogoutUserCallbackProxy;
 class UObject;
-class APlayerController;
 
 UCLASS(Blueprintable, MinimalAPI)
 class ULogoutUserCallbackProxy : public UOnlineBlueprintCallProxyBase {

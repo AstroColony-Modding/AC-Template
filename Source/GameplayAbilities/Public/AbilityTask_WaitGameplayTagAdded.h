@@ -5,9 +5,9 @@
 #include "WaitGameplayTagDelegateDelegate.h"
 #include "AbilityTask_WaitGameplayTagAdded.generated.h"
 
+class AActor;
 class UAbilityTask_WaitGameplayTagAdded;
 class UGameplayAbility;
-class AActor;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitGameplayTagAdded : public UAbilityTask_WaitGameplayTag {

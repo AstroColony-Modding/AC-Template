@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
+#include "Templates/SubclassOf.h"
 #include "TGEventListenerComponent.generated.h"
 
-class UTGEventListener;
 class AActor;
+class UTGEventListener;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class TGEVENT_API UTGEventListenerComponent : public UActorComponent {

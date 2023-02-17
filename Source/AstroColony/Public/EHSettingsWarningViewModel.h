@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TGViewModel.h"
-#include "VisibilityBindable.h"
 #include "TextBindable.h"
+#include "VisibilityBindable.h"
 #include "EHSettingsWarningViewModel.generated.h"
 
 UCLASS(Blueprintable)

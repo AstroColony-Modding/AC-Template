@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
 #include "GameplayAbilitySpecDef.h"
-#include "GameplayEffectModifiedAttribute.h"
 #include "GameplayEffectAttributeCaptureSpecContainer.h"
 #include "GameplayEffectContextHandle.h"
-#include "TagContainerAggregator.h"
+#include "GameplayEffectModifiedAttribute.h"
 #include "ModifierSpec.h"
-#include "GameplayTagContainer.h"
+#include "TagContainerAggregator.h"
 #include "GameplayEffectSpec.generated.h"
 
 class UGameplayEffect;

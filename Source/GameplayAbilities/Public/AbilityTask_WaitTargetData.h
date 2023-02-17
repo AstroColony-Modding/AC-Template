@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "AbilityTask.h"
-#include "WaitTargetDataDelegateDelegate.h"
-#include "GameplayAbilityTargetDataHandle.h"
-#include "EGameplayTargetingConfirmation.h"
 #include "GameplayTagContainer.h"
+#include "AbilityTask.h"
+#include "EGameplayTargetingConfirmation.h"
+#include "GameplayAbilityTargetDataHandle.h"
+#include "Templates/SubclassOf.h"
+#include "WaitTargetDataDelegateDelegate.h"
 #include "AbilityTask_WaitTargetData.generated.h"
 
 class AGameplayAbilityTargetActor;

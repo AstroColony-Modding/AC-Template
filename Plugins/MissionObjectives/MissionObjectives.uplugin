@@ -11,7 +11,7 @@
 	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/8e224992c9414507b16c97f6793681c0",
 	"SupportURL": "https://twitter.com/TefelDev",
 	"EngineVersion": "4.27.0",
-	"CanContainContent": true,
+	"CanContainContent": false,
 	"IsBetaVersion": false,
 	"IsExperimentalVersion": false,
 	"Installed": false,

@@ -1,8 +1,9 @@
 #include "EHAsteroidSpawner.h"
 #include "EHHISMComponent.h"
 
-class UEHGridComponent;
 class UEHAsteroidsCatcher;
+class UEHGridComponent;
+class UEHItem;
 class UEHResourceItem;
 
 int32 AEHAsteroidSpawner::UpdateColorFromAsteroidData(FEHAsteroidData& AsteroidData) {
@@ -58,7 +59,7 @@ void AEHAsteroidSpawner::Multi_AddAsteroid_Implementation(const FTransform& Tran
 void AEHAsteroidSpawner::HandleAssetsLoaded() {
 }
 
-FEHAsteroidData AEHAsteroidSpawner::GenerateAsteroidData() {
+FEHAsteroidData AEHAsteroidSpawner::GenerateAsteroidData(UEHItem* ResourceItem) {
     return FEHAsteroidData{};
 }
 

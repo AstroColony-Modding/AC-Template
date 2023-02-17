@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "EHCraftingObject.h"
 #include "EHItemInstance.h"
-#include "UObject/NoExportTypes.h"
 #include "EHDrillObject.generated.h"
 
 class UEHWorldResourceObject;

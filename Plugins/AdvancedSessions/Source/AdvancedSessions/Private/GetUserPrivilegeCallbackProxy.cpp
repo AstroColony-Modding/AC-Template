@@ -1,7 +1,7 @@
 #include "GetUserPrivilegeCallbackProxy.h"
 
-class UObject;
 class UGetUserPrivilegeCallbackProxy;
+class UObject;
 
 UGetUserPrivilegeCallbackProxy* UGetUserPrivilegeCallbackProxy::GetUserPrivilege(UObject* WorldContextObject, const EBPUserPrivileges& PrivilegeToCheck, const FBPUniqueNetId& PlayerUniqueNetID) {
     return NULL;

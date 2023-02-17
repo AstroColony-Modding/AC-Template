@@ -3,8 +3,8 @@
 #include "TGUIScreen.h"
 #include "EHUIScreen.generated.h"
 
-class USoundBase;
 class UEHScreenViewModel;
+class USoundBase;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHUIScreen : public UTGUIScreen {

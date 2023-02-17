@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHInt32OptionViewModel.h"
 #include "Int32Bindable.h"
+#include "EHInt32OptionViewModel.h"
 #include "EHRadioButtonsViewModel.generated.h"
 
 UCLASS(Blueprintable)

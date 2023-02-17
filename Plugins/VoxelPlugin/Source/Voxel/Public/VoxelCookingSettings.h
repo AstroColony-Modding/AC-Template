@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelGeneratorPicker.h"
 #include "EVoxelRenderType.h"
+#include "VoxelGeneratorPicker.h"
 #include "VoxelCookingSettings.generated.h"
 
 USTRUCT(BlueprintType)

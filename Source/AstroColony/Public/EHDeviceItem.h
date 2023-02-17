@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHInteractableItem.h"
-#include "StructureSize.h"
 #include "UObject/NoExportTypes.h"
-#include "EHGeneratedReactiveMesh.h"
-#include "EHOutlet.h"
 #include "ContainerPushDefinition.h"
+#include "EHGeneratedReactiveMesh.h"
+#include "EHInteractableItem.h"
+#include "EHOutlet.h"
 #include "GeneratedCustomMesh.h"
+#include "StructureSize.h"
 #include "EHDeviceItem.generated.h"
 
 class AActor;

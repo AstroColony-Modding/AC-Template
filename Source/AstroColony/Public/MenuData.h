@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataTable.h"
-#include "EMenuType.h"
-#include "EEHMenuPlatformVisibility.h"
 #include "EButtonBarAction.h"
+#include "EEHMenuPlatformVisibility.h"
+#include "EMenuType.h"
 #include "MenuData.generated.h"
 
 USTRUCT(BlueprintType)

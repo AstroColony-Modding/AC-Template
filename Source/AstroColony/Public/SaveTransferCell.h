@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "SaveGridItem.h"
 #include "UObject/NoExportTypes.h"
+#include "SaveGridItem.h"
 #include "SaveTransferCell.generated.h"
 
 USTRUCT(BlueprintType)

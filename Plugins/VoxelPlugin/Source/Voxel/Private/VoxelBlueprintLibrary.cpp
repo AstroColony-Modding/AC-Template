@@ -1,13 +1,13 @@
 #include "VoxelBlueprintLibrary.h"
 
-class AVoxelWorld;
+class AActor;
 class AVoxelSpawnerActor;
-class UVoxelHierarchicalInstancedStaticMeshComponent;
+class AVoxelWorld;
 class UMaterialInterface;
 class UObject;
 class UStaticMesh;
-class AActor;
 class UTexture2D;
+class UVoxelHierarchicalInstancedStaticMeshComponent;
 
 void UVoxelBlueprintLibrary::UpdatePosition(AVoxelWorld* World, FIntVector position) {
 }

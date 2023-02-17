@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "EEHHUDMenuType.h"
+#include "EEHPopMenuType.h"
+#include "EHGameHUDInterface.h"
 #include "EHHUD.h"
 #include "EHSaveGameInterface.h"
-#include "EHGameHUDInterface.h"
-#include "EEHPopMenuType.h"
-#include "EEHHUDMenuType.h"
+#include "Templates/SubclassOf.h"
 #include "EHHUDGame.generated.h"
 
-class UObject;
-class UInteractBaseWidget;
-class UEHInteractableObject;
-class UUserWidget;
+class UCanvasPanel;
 class UEHHUDIndicatorsWidget;
-class UMenuWidget;
+class UEHInteractableObject;
 class UEHMapWidget;
 class UEHModularVehicleWidget;
+class UInteractBaseWidget;
+class UMenuWidget;
+class UObject;
 class UTipWidget;
-class UCanvasPanel;
+class UUserWidget;
 
 UCLASS(Blueprintable, NonTransient)
 class AEHHUDGame : public AEHHUD, public IEHSaveGameInterface, public IEHGameHUDInterface {
@@ -31,6 +31,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<UClass*, EEHPopMenuType> OpenedPopupMenus;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float TechTreeScrollOffset;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnIndicatorStateChanged OnIndicatorStateChanged;
@@ -78,10 +81,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftClassPtr<UTipWidget>> TipWidgets;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<UMenuWidget> PopMenuClasses[5];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<UMenuWidget> HUDMenuClasses[10];
     
 public:

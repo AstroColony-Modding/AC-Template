@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHPipeObject.h"
 #include "EHElectricDeviceInterface.h"
+#include "EHPipeObject.h"
 #include "EHElectricCable.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

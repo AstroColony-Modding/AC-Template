@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHAsset.h"
-#include "EHItemSlotMesh.h"
-#include "EInstanceCellType.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "EHAsset.h"
 #include "EHCollectiveConstructionType.h"
 #include "EHConstructParticleType.h"
-#include "EHConstructionType.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "EPlayerActionType.h"
-#include "EHJobModeType.h"
-#include "EHItemInstance.h"
 #include "EHConstructRotationType.h"
+#include "EHConstructionType.h"
+#include "EHItemInstance.h"
+#include "EHItemSlotMesh.h"
+#include "EHJobModeType.h"
+#include "EInstanceCellType.h"
+#include "EPlayerActionType.h"
 #include "EHItem.generated.h"
 
 class UEHInstancedStaticMeshComponent;
 class UEHItem;
-class UStaticMesh;
 class UInteractBaseWidget;
+class UStaticMesh;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHItem : public UEHAsset {
@@ -119,6 +119,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool CanFly;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool CanPick;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IgnoredWhenSaving;

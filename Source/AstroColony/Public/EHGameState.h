@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EGlobalPointType.h"
 #include "TGGameState.h"
-#include "EHSaveGameInterface.h"
+#include "EGlobalPointType.h"
 #include "EHGlobalPointInstance.h"
+#include "EHSaveGameInterface.h"
 #include "EHGameState.generated.h"
 
 UCLASS(Blueprintable)
@@ -36,6 +36,9 @@ private:
     void OnRep_GlobalPoints();
     
 public:
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_SetGlobalTimeDilation(float GlobalTimeDilation);
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetPointByType(const EGlobalPointType GlobalPointType);
     

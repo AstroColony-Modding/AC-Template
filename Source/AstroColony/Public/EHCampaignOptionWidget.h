@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "TGUserWidget.h"
 #include "ESettingWidgetType.h"
+#include "Templates/SubclassOf.h"
 #include "EHCampaignOptionWidget.generated.h"
 
 class UEHCampaignOptionViewModel;
-class UTGWidget;
 class UEHOptionWidget;
 class UTGViewModel;
+class UTGWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHCampaignOptionWidget : public UTGUserWidget {

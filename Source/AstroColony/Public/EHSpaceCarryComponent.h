@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
-#include "EHSaveGameInterface.h"
 #include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "EHSaveGameInterface.h"
 #include "EHSpaceCarryComponent.generated.h"
 
+class AEHGrid;
 class AEHSpaceShuttleActor;
 class UEHAIItem;
 class UEHDockingStationObject;
-class AEHGrid;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ASTROCOLONY_API UEHSpaceCarryComponent : public UActorComponent, public IEHSaveGameInterface {

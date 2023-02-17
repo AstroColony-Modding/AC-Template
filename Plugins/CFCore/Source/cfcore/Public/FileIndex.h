@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECFCoreModLoaderType.h"
 #include "ECFCoreFileReleaseType.h"
+#include "ECFCoreModLoaderType.h"
 #include "FileIndex.generated.h"
 
 USTRUCT(BlueprintType)
@@ -11,7 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString GameVersion;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 fileId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

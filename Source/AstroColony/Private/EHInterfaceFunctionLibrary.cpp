@@ -1,7 +1,7 @@
 #include "EHInterfaceFunctionLibrary.h"
 
-class UObject;
 class UEHSignalNetwork;
+class UObject;
 
 UEHSignalNetwork* UEHInterfaceFunctionLibrary::Signal_GetNetwork(UObject* SignalDevice, bool IsIn) {
     return NULL;

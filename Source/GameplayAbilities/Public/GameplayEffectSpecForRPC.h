@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayEffectModifiedAttribute.h"
-#include "GameplayEffectContextHandle.h"
 #include "GameplayTagContainer.h"
+#include "GameplayEffectContextHandle.h"
+#include "GameplayEffectModifiedAttribute.h"
 #include "GameplayEffectSpecForRPC.generated.h"
 
 class UGameplayEffect;

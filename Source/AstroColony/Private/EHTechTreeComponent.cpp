@@ -1,14 +1,21 @@
 #include "EHTechTreeComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UEHTechnologyAsset;
 class UEHAsset;
+class UEHTechnologyAsset;
+class UTechnologyAsset;
 
 void UEHTechTreeComponent::UpdateTechPointsDocked(const bool ArePointsDocked) {
 }
 
 
-void UEHTechTreeComponent::Server_TryUnlockTechnology_Implementation() {
+void UEHTechTreeComponent::Server_UpdateTechNotificationsAllPlayers(const bool EnableTechNotificationsIn) {
+}
+
+void UEHTechTreeComponent::Server_TryUnlockTechnology() {
+}
+
+void UEHTechTreeComponent::Server_DebugUnlockTechnologyAllPlayers(UTechnologyAsset* Technology) {
 }
 
 void UEHTechTreeComponent::Server_ChangeResearchedTechnology_Implementation(UEHTechnologyAsset* TechnologyToResearch) {
@@ -55,6 +62,9 @@ bool UEHTechTreeComponent::IsAnimalUnlocked(UEHAsset* Animal) {
 
 UEHTechnologyAsset* UEHTechTreeComponent::GetTechnologyToUnlock(UEHAsset* Asset) {
     return NULL;
+}
+
+void UEHTechTreeComponent::Client_UpdateTechNotifications_Implementation(const bool EnableTechNotificationsIn) {
 }
 
 void UEHTechTreeComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

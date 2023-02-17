@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHOptionWidget.h"
 #include "Types/SlateEnums.h"
+#include "EHOptionWidget.h"
 #include "EHOptionDropdownWidget.generated.h"
 
 class UComboBoxString;
@@ -25,7 +25,7 @@ private:
     UFUNCTION(BlueprintCallable)
     void HandleSelectionOpened();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void HandleSelectionChanged(const FString& SelectedItem, TEnumAsByte<ESelectInfo::Type> SelectionType);
     
 };

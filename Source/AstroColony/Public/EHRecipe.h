@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataTable.h"
+#include "EHGlobalPointInstance.h"
 #include "EHItemInstance.h"
 #include "EHRecipeRequirements.h"
-#include "EHGlobalPointInstance.h"
 #include "EHRecipe.generated.h"
 
 class UTexture2D;

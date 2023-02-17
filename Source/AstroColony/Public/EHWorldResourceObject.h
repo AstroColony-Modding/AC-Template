@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "EHInteractableObject.h"
 #include "EHInteractionInterface.h"
 #include "EHVisitedByAIInterface.h"
-#include "UObject/NoExportTypes.h"
 #include "EHWorldResourceObject.generated.h"
 
-class UEHWorldItem;
 class UEHItem;
+class UEHWorldItem;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHWorldResourceObject : public UEHInteractableObject, public IEHInteractionInterface, public IEHVisitedByAIInterface {
@@ -15,13 +15,13 @@ class ASTROCOLONY_API UEHWorldResourceObject : public UEHInteractableObject, pub
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnResourcePicked);
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TotalNumHits;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 Quantity;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 NumOfHits;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

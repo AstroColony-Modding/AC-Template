@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHRecipe.h"
-#include "EHDeviceObject.h"
-#include "EHVisitedByAIInterface.h"
 #include "UObject/NoExportTypes.h"
-#include "EHItemInstance.h"
-#include "EHRequestedResource.h"
 #include "EEHSlotDragType.h"
+#include "EHDeviceObject.h"
+#include "EHItemInstance.h"
+#include "EHRecipe.h"
+#include "EHRequestedResource.h"
+#include "EHVisitedByAIInterface.h"
 #include "EHItemsContainer.generated.h"
 
 class UEHItem;
@@ -67,12 +67,6 @@ public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintCallable)
-    void ResetRequestedItems();
-    
-    UFUNCTION(BlueprintCallable)
-    void RemoveRequestedItem(UEHItem* Item);
-    
-    UFUNCTION(BlueprintCallable)
     void PickItem(UEHItem* Item);
     
     UFUNCTION(BlueprintCallable)
@@ -93,11 +87,11 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasItem(const FEHItemInstance& ItemInstance);
     
+    UFUNCTION(BlueprintCallable)
+    bool HasAnyValidItem();
+    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool CheckTakingItems(const TArray<FEHItemInstance>& ItemInstances);
-    
-    UFUNCTION(BlueprintCallable)
-    bool AddRequestedItem(UEHItem* Item, const uint8 MaxWorkersAssigned, const uint8 MaxResources);
     
     UFUNCTION(BlueprintCallable)
     void AddItems(const TArray<FEHItemInstance>& ItemInstences);

@@ -19,6 +19,7 @@ enum class EEHAchievement : uint8 {
     COMET,
     ELECTRICSTORM,
     FOUND_COLONY,
+    END_GAME,
     _MAX UMETA(Hidden),
 };
 

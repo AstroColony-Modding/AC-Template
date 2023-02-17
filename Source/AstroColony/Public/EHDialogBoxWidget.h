@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "TGUIPopup.h"
-#include "EEHDialogBoxButtonImage.h"
 #include "EDialogBoxElementType.h"
+#include "EEHDialogBoxButtonImage.h"
+#include "Templates/SubclassOf.h"
 #include "EHDialogBoxWidget.generated.h"
 
+class UEHCloseBox;
+class UEHDialogBoxViewModel;
+class UHorizontalBox;
 class UTGConfigurableTextBlock;
 class UTGRichTextBlock;
-class UHorizontalBox;
-class UEHCloseBox;
 class UTGUserWidget;
-class UEHDialogBoxViewModel;
 class UTexture2D;
 
 UCLASS(Blueprintable, EditInlineNew)

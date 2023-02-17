@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHDialogBoxElementViewModel.h"
 #include "VisibilityBindable.h"
 #include "EEHDialogBoxButtonImage.h"
+#include "EHDialogBoxElementViewModel.h"
 #include "EHDialogBoxButtonViewModel.generated.h"
 
-class UTexture2D;
 class UEHBaseButtonViewModel;
+class UTexture2D;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHDialogBoxButtonViewModel : public UEHDialogBoxElementViewModel {

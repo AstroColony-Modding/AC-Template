@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESettingPreviewType.h"
-#include "EHViewModel.h"
 #include "TextBindable.h"
+#include "EHViewModel.h"
+#include "ESettingPreviewType.h"
 #include "ESettingWidgetType.h"
 #include "EHSettingsOptionViewModel.generated.h"
 

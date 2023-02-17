@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AbilityTask.h"
 #include "GameplayTagContainer.h"
-#include "WaitAttributeChangeDelegateDelegate.h"
-#include "GameplayAttribute.h"
+#include "AbilityTask.h"
 #include "EWaitAttributeChangeComparison.h"
+#include "GameplayAttribute.h"
+#include "WaitAttributeChangeDelegateDelegate.h"
 #include "AbilityTask_WaitAttributeChange.generated.h"
 
-class UAbilityTask_WaitAttributeChange;
-class UAbilitySystemComponent;
-class UGameplayAbility;
 class AActor;
+class UAbilitySystemComponent;
+class UAbilityTask_WaitAttributeChange;
+class UGameplayAbility;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitAttributeChange : public UAbilityTask {

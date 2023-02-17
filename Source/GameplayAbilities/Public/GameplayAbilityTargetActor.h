@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "WorldReticleParameters.h"
 #include "GameFramework/Actor.h"
 #include "GameplayAbilityTargetingLocationInfo.h"
 #include "GameplayTargetDataFilterHandle.h"
+#include "Templates/SubclassOf.h"
+#include "WorldReticleParameters.h"
 #include "GameplayAbilityTargetActor.generated.h"
 
+class AGameplayAbilityWorldReticle;
+class APlayerController;
 class UAbilitySystemComponent;
 class UGameplayAbility;
-class APlayerController;
-class AGameplayAbilityWorldReticle;
 
 UCLASS(Abstract, Blueprintable, NotPlaceable)
 class GAMEPLAYABILITIES_API AGameplayAbilityTargetActor : public AActor {

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Engine/DataAsset.h"
 #include "GameplayCueObjectLibrary.h"
 #include "GameplayCuePendingExecute.h"
 #include "PreallocationInfo.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayCueManager.generated.h"
 
 class AGameplayCueNotify_Actor;

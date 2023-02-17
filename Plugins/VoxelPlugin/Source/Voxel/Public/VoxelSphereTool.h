@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelSphereToolBase.h"
 #include "EVoxelFalloff.h"
+#include "VoxelSphereToolBase.h"
 #include "VoxelSphereTool.generated.h"
 
 class UMaterialInterface;

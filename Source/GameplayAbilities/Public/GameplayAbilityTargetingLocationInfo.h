@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EGameplayAbilityTargetingLocationType.h"
 #include "UObject/NoExportTypes.h"
+#include "EGameplayAbilityTargetingLocationType.h"
 #include "GameplayAbilityTargetingLocationInfo.generated.h"
 
 class AActor;
-class UMeshComponent;
 class UGameplayAbility;
+class UMeshComponent;
 
 USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayAbilityTargetingLocationInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EGameplayAbilityTargetingLocationType::Type> LocationType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

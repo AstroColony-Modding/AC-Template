@@ -3,10 +3,10 @@
 #include "EHUIScreen.h"
 #include "EHCampaignScreen.generated.h"
 
-class UEHCampaignViewModel;
-class UEHCampaignListWidget;
 class UEHBaseButtonWidget;
+class UEHCampaignListWidget;
 class UEHCampaignOptionViewModel;
+class UEHCampaignViewModel;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHCampaignScreen : public UEHUIScreen {

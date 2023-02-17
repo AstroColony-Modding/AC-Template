@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHAIHumanObject.h"
 #include "EAIProfession.h"
+#include "EHAIHumanObject.h"
 #include "EHAIHumanSpecialist.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

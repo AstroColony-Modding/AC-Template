@@ -1,18 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "TGGameInstance.h"
 #include "UObject/NoExportTypes.h"
+#include "TGGameInstance.h"
+#include "EEHSoftAsyncLoadPhase.h"
+#include "EHMPScenarioParams.h"
 #include "EHScenarioParams.h"
 #include "EHServerParams.h"
-#include "EEHSoftAsyncLoadPhase.h"
+#include "Templates/SubclassOf.h"
 #include "EHGameInstance.generated.h"
 
+class AEHPlayerController;
+class UEHAchievementsManager;
+class UEHLayerManager;
 class UEHSaveGame;
 class UEHScreenManager;
-class AEHPlayerController;
-class UEHLayerManager;
-class UEHAchievementsManager;
 
 UCLASS(Blueprintable, NonTransient)
 class ASTROCOLONY_API UEHGameInstance : public UTGGameInstance {
@@ -27,7 +28,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FPrimaryAssetType> AssetTypesToLoad;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 NumberOfPlayers;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -46,6 +47,9 @@ public:
     FEHScenarioParams ScenarioParams;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FEHMPScenarioParams MPScenarioParams;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEHServerParams ServerParams;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -60,7 +64,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UEHSaveGame* CurrentSaveGame;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 PlayerNetworkID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -69,7 +73,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EEHSoftAsyncLoadPhase SoftAsyncLoadPhase;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FText SoftAsyncLoadPhaseNames[6];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -84,6 +88,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void ResetState();
+    
+    UFUNCTION(BlueprintCallable)
+    void RecoverySave();
     
     UFUNCTION(BlueprintCallable)
     void QuickSave();
@@ -115,7 +122,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FEHScenarioParams GetScenarioParams(FName Name);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     uint8 GetPlayerNetworkIndex(AEHPlayerController* PlayerController);
     
     UFUNCTION(BlueprintCallable)

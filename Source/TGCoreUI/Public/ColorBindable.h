@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Bindable.h"
 #include "UObject/NoExportTypes.h"
+#include "Bindable.h"
 #include "ColorBindable.generated.h"
 
 USTRUCT(BlueprintType)

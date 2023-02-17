@@ -24,5 +24,7 @@ enum class ECFCoreErrorCodes : uint8 {
     FailedDeletingOutputDirectory,
     FailedToMoveModDirectory,
     FailedSettingAuthToken,
+    UserNotAuthenticated,
+    FailedToCancelAction,
 };
 

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "RepeatedActionDelegateDelegate.h"
 #include "AbilityTask.h"
+#include "RepeatedActionDelegateDelegate.h"
 #include "AbilityTask_Repeat.generated.h"
 
 class UAbilityTask_Repeat;

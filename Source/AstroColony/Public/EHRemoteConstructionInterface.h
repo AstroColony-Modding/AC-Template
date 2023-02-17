@@ -4,8 +4,8 @@
 #include "EHItemInstance.h"
 #include "EHRemoteConstructionInterface.generated.h"
 
-class UTexture2D;
 class UEHRemoteFabricatorObject;
+class UTexture2D;
 
 UINTERFACE()
 class ASTROCOLONY_API UEHRemoteConstructionInterface : public UEHInteractionInterface {

@@ -2,5 +2,6 @@
 
 FEHAsteroidData::FEHAsteroidData() {
     this->Mesh = NULL;
+    this->UniverseIndex = 0;
 }
 

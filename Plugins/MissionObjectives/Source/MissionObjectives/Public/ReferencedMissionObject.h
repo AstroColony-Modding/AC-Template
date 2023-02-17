@@ -3,9 +3,9 @@
 #include "UObject/Object.h"
 #include "ReferencedMissionObject.generated.h"
 
-class UMOTextNode;
-class UMOMissionsManager;
 class APlayerController;
+class UMOMissionsManager;
+class UMOTextNode;
 class UMission;
 
 UCLASS(Blueprintable, DefaultToInstanced, EditInlineNew)

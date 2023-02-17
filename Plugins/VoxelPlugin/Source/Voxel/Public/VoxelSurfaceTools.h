@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
-#include "VoxelSurfaceEditsVoxels.h"
 #include "UObject/NoExportTypes.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
+#include "Engine/LatentActionManager.h"
+#include "EVoxelComputeDevice.h"
+#include "EVoxelFalloff.h"
+#include "EVoxelSDFMergeMode.h"
+#include "EVoxelSamplerMode.h"
 #include "VoxelFloatTexture.h"
 #include "VoxelIntBox.h"
 #include "VoxelSurfaceEditsProcessedVoxels.h"
-#include "EVoxelSamplerMode.h"
-#include "EVoxelComputeDevice.h"
-#include "Engine/LatentActionManager.h"
 #include "VoxelSurfaceEditsStack.h"
 #include "VoxelSurfaceEditsStackElement.h"
-#include "EVoxelSDFMergeMode.h"
-#include "EVoxelFalloff.h"
+#include "VoxelSurfaceEditsVoxels.h"
 #include "VoxelSurfaceTools.generated.h"
 
 class AVoxelWorld;
-class UObject;
 class UCurveFloat;
+class UObject;
 
 UCLASS(Blueprintable)
 class VOXEL_API UVoxelSurfaceTools : public UBlueprintFunctionLibrary {

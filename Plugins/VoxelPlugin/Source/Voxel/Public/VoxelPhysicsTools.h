@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/LatentActionManager.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "Engine/LatentActionManager.h"
 #include "VoxelIntBox.h"
 #include "VoxelPhysicsTools.generated.h"
 
-class UVoxelPhysicsPartSpawnerResult;
-class IVoxelPhysicsPartSpawnerResult;
-class UObject;
 class AVoxelWorld;
-class UVoxelPhysicsPartSpawner;
 class IVoxelPhysicsPartSpawner;
+class UVoxelPhysicsPartSpawner;
+class IVoxelPhysicsPartSpawnerResult;
+class UVoxelPhysicsPartSpawnerResult;
+class UObject;
 
 UCLASS(Blueprintable)
 class VOXEL_API UVoxelPhysicsTools : public UBlueprintFunctionLibrary {

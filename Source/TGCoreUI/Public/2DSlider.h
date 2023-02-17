@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/Widget.h"
-#include "Components/Widget.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "Components/Widget.h"
+#include "Components/Widget.h"
 #include "2DSliderStyle.h"
-#include "OnMouseCaptureBeginEvent2DDelegate.h"
-#include "OnMouseCaptureEndEvent2DDelegate.h"
 #include "OnControllerCaptureBeginEvent2DDelegate.h"
 #include "OnControllerCaptureEndEvent2DDelegate.h"
 #include "OnFloatValueChangedEvent2DDelegate.h"
+#include "OnMouseCaptureBeginEvent2DDelegate.h"
+#include "OnMouseCaptureEndEvent2DDelegate.h"
 #include "2DSlider.generated.h"
 
 UCLASS(Blueprintable)

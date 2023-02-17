@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "TGHUD.h"
-#include "ConfigUIInterface.h"
-#include "EEHUIScreenID.h"
-#include "EEHHUDMenuType.h"
 #include "InputCoreTypes.h"
+#include "ConfigUIInterface.h"
+#include "TGHUD.h"
+#include "EEHHUDMenuType.h"
+#include "EEHUIScreenID.h"
+#include "Templates/SubclassOf.h"
 #include "EHHUD.generated.h"
 
-class UTGUIConfigCustom;
 class UDraggableItemWidget;
-class UTGWidgetPredefinedAnimationsComponent;
-class UEHConfig;
-class UEHCheatComponent;
 class UEHBackgroundComponent;
+class UEHCheatComponent;
+class UEHConfig;
 class UEHHUDWidget;
+class UTGUIConfigCustom;
+class UTGWidgetPredefinedAnimationsComponent;
 
 UCLASS(Blueprintable, NonTransient)
 class AEHHUD : public ATGHUD, public IConfigUIInterface {
@@ -67,11 +67,19 @@ public:
     void OpenInGameScreen(const EEHUIScreenID ScreenID);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnGameStarted();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void HoldTimersCleared();
     
     UFUNCTION(BlueprintCallable)
     void HandleKeyAction(const FKey& InKey);
     
+protected:
+    UFUNCTION(BlueprintCallable)
+    void HandleGamePreStarted();
+    
+public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UEHHUDWidget* GetEHHUDWidget();
     

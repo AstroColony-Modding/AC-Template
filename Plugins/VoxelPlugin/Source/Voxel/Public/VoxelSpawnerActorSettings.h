@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "PhysicsEngine/BodyInstance.h"
+#include "Templates/SubclassOf.h"
 #include "VoxelSpawnerActorSettings.generated.h"
 
 class AVoxelSpawnerActor;

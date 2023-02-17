@@ -3,8 +3,8 @@
 #include "EHUIScreen.h"
 #include "EHMultiplayerScreen.generated.h"
 
-class UEHMultiplayerViewModel;
 class UEHBaseButtonWidget;
+class UEHMultiplayerViewModel;
 class UEHSaveLoadListWidget;
 
 UCLASS(Blueprintable, EditInlineNew)

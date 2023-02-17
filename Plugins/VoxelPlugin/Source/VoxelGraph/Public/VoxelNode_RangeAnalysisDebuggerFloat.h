@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelNodeHelper.h"
 #include "Curves/CurveFloat.h"
+#include "VoxelNodeHelper.h"
 #include "VoxelNode_RangeAnalysisDebuggerFloat.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

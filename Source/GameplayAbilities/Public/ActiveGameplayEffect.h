@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/NetSerialization.h"
-#include "PredictionKey.h"
 #include "GameplayEffectSpec.h"
+#include "PredictionKey.h"
 #include "ActiveGameplayEffect.generated.h"
 
 USTRUCT(BlueprintType)

@@ -3,9 +3,9 @@
 #include "EHInteractivePawn.h"
 #include "EHRemoteFabricatorPawn.generated.h"
 
-class UEHRemoteFabricatorObject;
-class UEHHierarchicalInstancedStaticMeshComponent;
 class AActor;
+class UEHHierarchicalInstancedStaticMeshComponent;
+class UEHRemoteFabricatorObject;
 class USceneComponent;
 
 UCLASS(Blueprintable)

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "EHItemInstance.h"
-#include "UObject/NoExportTypes.h"
 #include "EHUIFunctionLibrary.generated.h"
 
 class UWidget;

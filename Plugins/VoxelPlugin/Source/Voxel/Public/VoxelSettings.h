@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EVoxelThreadPriority.h"
 #include "Engine/DeveloperSettings.h"
+#include "EVoxelThreadPriority.h"
 #include "VoxelSettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig, config = Engine)
+UCLASS(Blueprintable, Config=Engine, DefaultConfig)
 class VOXEL_API UVoxelSettings : public UDeveloperSettings {
     GENERATED_BODY()
 public:

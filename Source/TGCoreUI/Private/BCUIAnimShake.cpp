@@ -1,7 +1,7 @@
 #include "BCUIAnimShake.h"
 
-class UTGUserWidget;
 class UBCUIAnimShake;
+class UTGUserWidget;
 
 void UBCUIAnimShake::SetConfig(const FBCShakeAnimationConfig& Config) {
 }

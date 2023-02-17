@@ -3,8 +3,8 @@
 #include "TGUserWidget.h"
 #include "EHMenuOptionWidget.generated.h"
 
-class UTGWidget;
 class UEHMenuViewModel;
+class UTGWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHMenuOptionWidget : public UTGUserWidget {

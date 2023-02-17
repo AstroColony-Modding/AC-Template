@@ -3,8 +3,8 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "UGCBlueprintLibrary.generated.h"
 
-class UUGCRegistry;
 class UObject;
+class UUGCRegistry;
 
 UCLASS(Blueprintable)
 class SIMPLEUGC_API UUGCBlueprintLibrary : public UBlueprintFunctionLibrary {

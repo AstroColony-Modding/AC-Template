@@ -3,8 +3,8 @@
 #include "VoxelGraphGeneratorHelper.h"
 #include "VoxelExample_Planet.generated.h"
 
-class UCurveLinearColor;
 class UCurveFloat;
+class UCurveLinearColor;
 
 UCLASS(Blueprintable)
 class UVoxelExample_Planet : public UVoxelGraphGeneratorHelper {

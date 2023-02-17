@@ -1,7 +1,7 @@
 #include "VoxelSphereTools.h"
 
-class UObject;
 class AVoxelWorld;
+class UObject;
 
 void UVoxelSphereTools::TrimSphereAsync(UObject* WorldContextObject, FLatentActionInfo LatentInfo, TArray<FModifiedVoxelValue>& ModifiedValues, FVoxelIntBox& EditedBounds, AVoxelWorld* VoxelWorld, const FVector& position, const FVector& Normal, float Radius, float Falloff, bool bAdditive, bool bMultiThreaded, bool bRecordModifiedValues, bool bConvertToVoxelSpace, bool bUpdateRender, bool bHideLatentWarnings) {
 }

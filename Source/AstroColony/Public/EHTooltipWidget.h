@@ -3,8 +3,8 @@
 #include "TGUILayer.h"
 #include "EHTooltipWidget.generated.h"
 
-class UTGConfigurableTextBlock;
 class UEHViewModel;
+class UTGConfigurableTextBlock;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHTooltipWidget : public UTGUILayer {

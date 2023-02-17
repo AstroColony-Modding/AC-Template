@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "TGUserWidget.h"
 #include "EHBaseButtonProperties.h"
+#include "Templates/SubclassOf.h"
 #include "EHMenuWidget.generated.h"
 
 class UEHBaseButtonWidget;
+class UEHMenuViewModel;
 class USoundBase;
 class UVerticalBox;
-class UEHMenuViewModel;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHMenuWidget : public UTGUserWidget {

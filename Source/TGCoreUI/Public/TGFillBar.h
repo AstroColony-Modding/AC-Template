@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/Widget.h"
-#include "Styling/SlateBrush.h"
 #include "UObject/NoExportTypes.h"
+#include "Styling/SlateBrush.h"
+#include "Components/Widget.h"
 #include "TGFillBar.generated.h"
 
 UCLASS(Blueprintable)

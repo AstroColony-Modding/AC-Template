@@ -24,6 +24,9 @@ public:
     FVector Color;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 UniverseIndex;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEHItemInstance> Items;
     
     FEHAsteroidData();

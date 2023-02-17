@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FindSessionsCallbackProxy.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "FindSessionsCallbackProxy.h"
-#include "SessionsSearchSetting.h"
+#include "FindSessionsCallbackProxy.h"
 #include "EBPServerPresenceSearchType.h"
+#include "SessionsSearchSetting.h"
 #include "FindSessionsCallbackProxyAdvanced.generated.h"
 
 class APlayerController;

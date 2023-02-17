@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EEHWidgetIndicatorType.h"
 #include "UObject/NoExportTypes.h"
+#include "EEHWidgetIndicatorType.h"
 #include "EHIndicationConfigData.generated.h"
 
 class UTexture2D;

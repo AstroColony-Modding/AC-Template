@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Types/SlateEnums.h"
+#include "Types/SlateEnums.h"
 #include "Layout/Margin.h"
-#include "Types/SlateEnums.h"
 #include "Components/SlateWrapperTypes.h"
-#include "Types/SlateEnums.h"
 #include "EHBaseButtonProperties.generated.h"
 
 USTRUCT(BlueprintType)
@@ -16,10 +16,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSlateChildSize Size;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EHorizontalAlignment> BaseButtonHorizontalAlignment;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EVerticalAlignment> BaseButtonVerticalAlignment;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -55,10 +55,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMargin ContentPadding;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EHorizontalAlignment> ContentHorizontalAlignment;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EVerticalAlignment> ContentVerticalAlignment;
     
     FEHBaseButtonProperties();

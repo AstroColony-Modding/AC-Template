@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "EVoxelGeneratorPickerType.h"
+#include "Templates/SubclassOf.h"
 #include "VoxelTransformableGeneratorPicker.generated.h"
 
 class UVoxelTransformableGenerator;

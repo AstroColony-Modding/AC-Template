@@ -1,9 +1,9 @@
 #include "AbilityTask_WaitOverlap.h"
 
-class UGameplayAbility;
-class UAbilityTask_WaitOverlap;
-class UPrimitiveComponent;
 class AActor;
+class UAbilityTask_WaitOverlap;
+class UGameplayAbility;
+class UPrimitiveComponent;
 
 UAbilityTask_WaitOverlap* UAbilityTask_WaitOverlap::WaitForOverlap(UGameplayAbility* OwningAbility) {
     return NULL;

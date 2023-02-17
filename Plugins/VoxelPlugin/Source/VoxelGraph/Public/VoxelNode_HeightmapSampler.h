@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelExposedNode.h"
 #include "EVoxelSamplerMode.h"
+#include "VoxelExposedNode.h"
 #include "VoxelNode_HeightmapSampler.generated.h"
 
 class UVoxelHeightmapAssetFloat;

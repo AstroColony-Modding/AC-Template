@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FBinaryDataContainer {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint8> ContainerData;
     
     ASTROCOLONY_API FBinaryDataContainer();

@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelToolsBase.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/LatentActionManager.h"
 #include "ModifiedVoxelValue.h"
 #include "VoxelIntBox.h"
-#include "UObject/NoExportTypes.h"
+#include "VoxelToolsBase.h"
 #include "VoxelLevelTools.generated.h"
 
 class AVoxelWorld;

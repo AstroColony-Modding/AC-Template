@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
+#include "Templates/SubclassOf.h"
 #include "EHThrusterNetwork.generated.h"
 
-class AEHMovableSpaceActor;
-class UEHThrusterObject;
 class AEHGrid;
-class UEHInteractableObject;
+class AEHMovableSpaceActor;
 class UEHConnectorStationObject;
+class UEHInteractableObject;
+class UEHThrusterObject;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHThrusterNetwork : public UObject {

@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "ResourceActionArray.h"
 #include "Components/ActorComponent.h"
-#include "InteractableObjectArray.h"
 #include "AIArray.h"
-#include "ResourceAction.h"
-#include "EAIProfession.h"
 #include "ContainersArray.h"
+#include "EAIProfession.h"
 #include "EHResourceVeinNetworks.h"
+#include "InteractableObjectArray.h"
+#include "ResourceAction.h"
+#include "ResourceActionArray.h"
+#include "Templates/SubclassOf.h"
 #include "EHDevicesComponent.generated.h"
 
-class UEHItemsContainer;
-class UEHProductionObject;
-class UEHInteractableObject;
-class UEHItem;
 class AEHGrid;
-class UEHWaterNetwork;
 class UEHBarrierNetwork;
 class UEHCraftingObject;
-class UEHElectricNetwork;
 class UEHDeviceObject;
+class UEHElectricNetwork;
+class UEHInteractableObject;
+class UEHItem;
+class UEHItemsContainer;
+class UEHProductionObject;
 class UEHSignalNetwork;
+class UEHWaterNetwork;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ASTROCOLONY_API UEHDevicesComponent : public UActorComponent {

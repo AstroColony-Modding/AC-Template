@@ -5,9 +5,9 @@
 #include "EHWaterDeviceInterface.h"
 #include "EHCraftingObject.generated.h"
 
-class UEHWaterNetwork;
-class UEHElectricNetwork;
 class AActor;
+class UEHElectricNetwork;
+class UEHWaterNetwork;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHCraftingObject : public UEHProductionObject, public IEHElectricDeviceInterface, public IEHWaterDeviceInterface {

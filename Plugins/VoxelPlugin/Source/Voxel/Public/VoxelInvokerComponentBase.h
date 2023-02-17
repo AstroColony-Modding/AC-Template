@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/SceneComponent.h"
 #include "VoxelInvokerSettings.h"
-#include "UObject/NoExportTypes.h"
 #include "VoxelInvokerComponentBase.generated.h"
 
 class AVoxelWorld;

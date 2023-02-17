@@ -1,7 +1,7 @@
 #include "EHToastContainerViewModel.h"
 
-class UTexture2D;
 class UEHTechnologyAsset;
+class UTexture2D;
 
 void UEHToastContainerViewModel::QueueTechnologyToast(UEHTechnologyAsset* TechnologyAsset, const float ToastDuration) {
 }

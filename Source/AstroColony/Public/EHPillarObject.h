@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHInteractableObject.h"
-#include "EHColliderInterface.h"
 #include "UObject/NoExportTypes.h"
+#include "EHColliderInterface.h"
+#include "EHInteractableObject.h"
 #include "EHPillarObject.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

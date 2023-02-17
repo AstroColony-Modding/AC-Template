@@ -1,8 +1,8 @@
 #include "LoginUserCallbackProxy.h"
 
-class UObject;
-class ULoginUserCallbackProxy;
 class APlayerController;
+class ULoginUserCallbackProxy;
+class UObject;
 
 ULoginUserCallbackProxy* ULoginUserCallbackProxy::LoginUser(UObject* WorldContextObject, APlayerController* PlayerController, const FString& UserID, const FString& UserToken) {
     return NULL;

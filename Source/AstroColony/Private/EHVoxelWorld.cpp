@@ -1,7 +1,7 @@
 #include "EHVoxelWorld.h"
+#include "Net/UnrealNetwork.h"
 
 class AEHCharacter;
-class AVoxelWorld;
 
 
 void AEHVoxelWorld::VoxelDiggingFinished(const FIntVector& Coord) {
@@ -26,9 +26,6 @@ bool AEHVoxelWorld::HasParam(const FName ParamName) {
     return false;
 }
 
-void AEHVoxelWorld::HandleVoxelWorldLoaded(AVoxelWorld* VoxelWorld) {
-}
-
 EVoxelTerrainType AEHVoxelWorld::GetVoxelTypeFromLayer(const int32 LayerIndex) {
     return EVoxelTerrainType::Mud;
 }
@@ -39,6 +36,12 @@ FIntVector AEHVoxelWorld::GetPlanetoidSize() {
 
 
 void AEHVoxelWorld::AddVoxel(const FIntVector& Coord) {
+}
+
+void AEHVoxelWorld::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    
+    DOREPLIFETIME(AEHVoxelWorld, VoxelWorldUniqueID);
 }
 
 AEHVoxelWorld::AEHVoxelWorld() {

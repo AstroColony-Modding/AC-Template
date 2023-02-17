@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/Widget.h"
 #include "UObject/NoExportTypes.h"
-#include "OnValueChangedEventDelegate.h"
-#include "OnMouseColorCaptureEndEventDelegate.h"
+#include "Components/Widget.h"
 #include "OnMouseColorCaptureBeginEventDelegate.h"
+#include "OnMouseColorCaptureEndEventDelegate.h"
+#include "OnValueChangedEventDelegate.h"
 #include "ColorWheel.generated.h"
 
 UCLASS(Blueprintable)

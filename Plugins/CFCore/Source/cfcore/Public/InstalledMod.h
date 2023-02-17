@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EInstalledModStatus.h"
 #include "CFCoreMod.h"
+#include "EInstalledModStatus.h"
 #include "File.h"
 #include "InstalledMod.generated.h"
 

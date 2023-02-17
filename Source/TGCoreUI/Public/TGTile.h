@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TGWidget.h"
-#include "Styling/SlateBrush.h"
 #include "UObject/NoExportTypes.h"
 #include "Styling/SlateTypes.h"
+#include "Styling/SlateBrush.h"
+#include "TGWidget.h"
 #include "TGTile.generated.h"
 
 UCLASS(Blueprintable)

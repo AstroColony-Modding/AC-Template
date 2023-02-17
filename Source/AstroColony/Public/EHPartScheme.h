@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EHPartScheme.generated.h"
 
-class UStaticMesh;
 class UMaterialInstance;
+class UStaticMesh;
 
 USTRUCT(BlueprintType)
 struct ASTROCOLONY_API FEHPartScheme {

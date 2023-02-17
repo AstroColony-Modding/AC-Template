@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EHDeviceItem.h"
 #include "UObject/NoExportTypes.h"
+#include "EHDeviceItem.h"
+#include "Templates/SubclassOf.h"
 #include "EHLightBlockItem.generated.h"
 
 class ULightComponent;

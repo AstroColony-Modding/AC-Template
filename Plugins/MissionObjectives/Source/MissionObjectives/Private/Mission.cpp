@@ -1,8 +1,8 @@
 #include "Mission.h"
 
-class UMOTextNode;
-class UMOObjectiveNode;
 class UMOBaseNode;
+class UMOObjectiveNode;
+class UMOTextNode;
 
 void UMission::NotifyNodeActivated(UMOTextNode* ActivatedNode) {
 }

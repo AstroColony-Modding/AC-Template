@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "EVoxelSpawnerConfigElementRandomGenerator.h"
 #include "EVoxelSpawnerType.h"
 #include "VoxelSpawnerDensity.h"
-#include "EVoxelSpawnerConfigElementRandomGenerator.h"
 #include "VoxelSpawnerOutputName.h"
 #include "VoxelSpawnerConfigSpawner.generated.h"
 
@@ -16,7 +16,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UVoxelMeshSpawner* Spawner;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     EVoxelSpawnerType SpawnerType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -28,13 +28,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVoxelSpawnerOutputName HeightGraphOutputName_HeightOnly;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 ChunkSize_EditorOnly;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 LOD;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 GenerationDistanceInVoxels_EditorOnly;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

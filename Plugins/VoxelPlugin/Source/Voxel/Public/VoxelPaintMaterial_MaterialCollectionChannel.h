@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct FVoxelPaintMaterial_MaterialCollectionChannel {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 Channel;
     
     VOXEL_API FVoxelPaintMaterial_MaterialCollectionChannel();

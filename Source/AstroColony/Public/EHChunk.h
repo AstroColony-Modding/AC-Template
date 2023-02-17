@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
 #include "EChunkGenerationType.h"
 #include "EHCelestialBodyGeneration.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "EHNebulaGeneration.h"
+#include "Templates/SubclassOf.h"
 #include "EHChunk.generated.h"
 
-class AEHVoxelWorld;
 class AEHColliderWorld;
 class AEHPlanetoidGrid;
-class USceneComponent;
+class AEHVoxelWorld;
 class AVoxelWorld;
+class USceneComponent;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API AEHChunk : public AActor {
@@ -149,6 +149,9 @@ private:
     void HandleWorldLoaded(AVoxelWorld* VoxelWorld);
     
 public:
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void HandleUniverseChanged();
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void HandleSettingsApplied();
     

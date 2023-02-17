@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHCustomAsset.h"
 #include "EGlobalPointType.h"
+#include "EHCustomAsset.h"
 #include "EHGlobalPointAsset.generated.h"
 
 UCLASS(Blueprintable)

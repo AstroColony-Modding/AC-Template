@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EAIWorkRequestState.h"
-#include "EAIWorkActionType.h"
 #include "UObject/NoExportTypes.h"
+#include "EAIWorkActionType.h"
+#include "EAIWorkRequestState.h"
 #include "AIWorkRequest.generated.h"
 
 class UEHInteractableObject;

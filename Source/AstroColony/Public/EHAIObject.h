@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHItemsContainer.h"
-#include "EHIndicationInterface.h"
+#include "UObject/NoExportTypes.h"
 #include "AIWorkRequest.h"
 #include "EAIProfession.h"
-#include "UObject/NoExportTypes.h"
+#include "EHIndicationInterface.h"
+#include "EHItemsContainer.h"
 #include "EHAIObject.generated.h"
 
-class UEHAIExternalDependenciesDataObject;
-class UEHItem;
 class AEHGrid;
+class UEHAIExternalDependenciesDataObject;
 class UEHInteractableObject;
+class UEHItem;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHAIObject : public UEHItemsContainer, public IEHIndicationInterface {
@@ -39,9 +39,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AttachedVisualItemHeight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
-    FIntVector CreationCellCoord;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsMovingOnPath;
     
@@ -66,12 +63,12 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnWorkRequestStateChanged OnWorkRequestStateChanged;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 CurrentPathIndex;
+    
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FIntVector> Path;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    int32 CurrentPathIndex;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEHAIExternalDependenciesDataObject* AIExternalDependenciesDataObject;

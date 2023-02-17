@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "GameplayAbility.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayAbility_Montage.generated.h"
 
 class UAnimMontage;

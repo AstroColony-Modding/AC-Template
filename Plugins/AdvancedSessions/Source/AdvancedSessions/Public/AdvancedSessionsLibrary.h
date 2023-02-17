@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EOnlineComparisonOpRedux.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "BPUniqueNetId.h"
-#include "SessionsSearchSetting.h"
-#include "SessionPropertyKeyPair.h"
 #include "FindSessionsCallbackProxy.h"
+#include "BPUniqueNetId.h"
 #include "EBPOnlineSessionState.h"
 #include "EBlueprintResultSwitch.h"
+#include "EOnlineComparisonOpRedux.h"
 #include "ESessionSettingSearchResult.h"
+#include "SessionPropertyKeyPair.h"
+#include "SessionsSearchSetting.h"
 #include "AdvancedSessionsLibrary.generated.h"
 
 class APlayerController;
-class UObject;
 class APlayerState;
+class UObject;
 
 UCLASS(Blueprintable)
 class UAdvancedSessionsLibrary : public UBlueprintFunctionLibrary {
@@ -38,7 +38,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FSessionPropertyKeyPair MakeLiteralSessionPropertyFloat(FName Key, float Value);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FSessionPropertyKeyPair MakeLiteralSessionPropertyByte(FName Key, uint8 Value);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHBreedAnimalTypes.h"
 #include "EHAIObject.h"
+#include "EHBreedAnimalTypes.h"
 #include "EHItemInstance.h"
 #include "EHAIBreederObject.generated.h"
 
@@ -12,7 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FEHItemInstance CarriedItem;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     uint8 CarriedWater;
     
 private:

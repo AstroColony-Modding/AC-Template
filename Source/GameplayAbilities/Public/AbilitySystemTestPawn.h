@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/DefaultPawn.h"
-#include "GameplayCueInterface.h"
 #include "AbilitySystemInterface.h"
+#include "GameplayCueInterface.h"
 #include "AbilitySystemTestPawn.generated.h"
 
 class UAbilitySystemComponent;

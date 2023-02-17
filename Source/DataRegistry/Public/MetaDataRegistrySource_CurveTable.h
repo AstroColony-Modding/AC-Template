@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "MetaDataRegistrySource.h"
 #include "DataRegistrySource_DataTableRules.h"
+#include "MetaDataRegistrySource.h"
+#include "Templates/SubclassOf.h"
 #include "MetaDataRegistrySource_CurveTable.generated.h"
 
 class UDataRegistrySource_CurveTable;

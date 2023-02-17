@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
 #include "MissionSavegameData.h"
+#include "Templates/SubclassOf.h"
 #include "MOMissionsManager.generated.h"
 
-class UMOTextNode;
 class UMOObjectiveNode;
+class UMOTextNode;
 class UMission;
 class UMissionSaveGame;
+class UObjectiveAsset;
 class UReferencedMissionObject;
 class USaveGame;
-class UObjectiveAsset;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class MISSIONOBJECTIVES_API UMOMissionsManager : public UActorComponent {
@@ -73,7 +73,7 @@ public:
     void Server_StartMission(UMission* Mission, const FName MissionID, UReferencedMissionObject* ReferencedMissionObject);
     
 private:
-    UFUNCTION(Reliable, Server)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_CompleteObjective(FName ObjectiveName, UMission* Mission, uint8 RepetitionsCount);
     
 public:
@@ -88,9 +88,6 @@ public:
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void MultiStartMission(UMission* Mission, const FName MissionID, UReferencedMissionObject* ReferencedMissionObject);
-    
-    UFUNCTION(NetMulticast, Reliable)
-    void MultiCompleteObjective(FName ObjectiveName, UMission* Mission, uint8 RepetitionsCount);
     
     UFUNCTION(BlueprintCallable)
     void LoadMissionsFromSlot(const FString& SlotName, const int32 UserIndex);
@@ -138,6 +135,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientRecovery(const FMissionSavegameData& MissionSavegameData);
+    
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void Client_CompleteObjective(FName ObjectiveName, UMission* Mission, uint8 RepetitionsCount);
     
 };
 

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EDataRegistrySubsystemGetItemResult.h"
 #include "Subsystems/EngineSubsystem.h"
-#include "DataRegistryType.h"
-#include "DataRegistryLookup.h"
+#include "Engine/DataTable.h"
 #include "DataRegistryId.h"
 #include "DataRegistryItemAcquiredBPCallbackDelegate.h"
-#include "Engine/DataTable.h"
+#include "DataRegistryLookup.h"
+#include "DataRegistryType.h"
+#include "EDataRegistrySubsystemGetItemResult.h"
 #include "DataRegistrySubsystem.generated.h"
 
 UCLASS(Blueprintable)

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelMaterial.h"
 #include "UObject/NoExportTypes.h"
+#include "VoxelMaterial.h"
 #include "VoxelValueMaterial.generated.h"
 
 USTRUCT(BlueprintType)

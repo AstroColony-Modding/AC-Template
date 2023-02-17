@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelTransformableGenerator.h"
-#include "EVoxelFunctionAxisDependencies.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
+#include "VoxelTransformableGenerator.h"
+#include "EVoxelFunctionAxisDependencies.h"
 #include "EVoxelGraphGeneratorDebugLevel.h"
 #include "VoxelGraphGenerator.generated.h"
 
-class UVoxelGraphPreviewSettings;
-class UVoxelGraphOutputsConfig;
 class UVoxelGenerator;
+class UVoxelGraphOutputsConfig;
+class UVoxelGraphPreviewSettings;
 class UVoxelNode;
 
 UCLASS(Blueprintable, HideDropdown)

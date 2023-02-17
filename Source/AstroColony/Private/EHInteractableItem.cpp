@@ -1,7 +1,7 @@
 #include "EHInteractableItem.h"
 
-class UEHInteractableObject;
 class AActor;
+class UEHInteractableObject;
 
 UEHInteractableObject* UEHInteractableItem::GetInteractableTemplate() {
     return NULL;

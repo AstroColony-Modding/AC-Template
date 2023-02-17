@@ -1,28 +1,28 @@
 #include "EHBlueprintFunctionLibrary.h"
 #include "Templates/SubclassOf.h"
 
-class UObject;
-class UWidget;
 class AActor;
-class UStaticMeshComponent;
-class APlayerController;
-class UEHItem;
-class UEHResourceItem;
-class UEHGlobalPointAsset;
 class APawn;
-class UActorComponent;
-class UEHAnimalMeshAsset;
-class UEHProfessionMeshAsset;
-class UEHPlantMeshAsset;
-class UInterface;
+class APlayerController;
 class IInterface;
-class UEHWorldItem;
-class UEHJobModeAsset;
-class UEHAsset;
-class UEHGameUserSettings;
-class UEHDataProvider;
+class UInterface;
+class UActorComponent;
 class UEHAIObject;
+class UEHAnimalMeshAsset;
+class UEHAsset;
+class UEHDataProvider;
 class UEHDevicesComponent;
+class UEHGameUserSettings;
+class UEHGlobalPointAsset;
+class UEHItem;
+class UEHJobModeAsset;
+class UEHPlantMeshAsset;
+class UEHProfessionMeshAsset;
+class UEHResourceItem;
+class UEHWorldItem;
+class UObject;
+class UStaticMeshComponent;
+class UWidget;
 
 TArray<FString> UEHBlueprintFunctionLibrary::testSplitWordsRichTextBlock(const FString& String) {
     return TArray<FString>();
@@ -75,6 +75,10 @@ bool UEHBlueprintFunctionLibrary::IsMultiplayer() {
 }
 
 bool UEHBlueprintFunctionLibrary::IsHorizontalRotation(const EEHInstanceRotation Rotation) {
+    return false;
+}
+
+bool UEHBlueprintFunctionLibrary::IsGameStarted() {
     return false;
 }
 

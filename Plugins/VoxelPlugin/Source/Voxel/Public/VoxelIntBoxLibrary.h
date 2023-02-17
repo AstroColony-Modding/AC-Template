@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "VoxelIntBox.h"
 #include "VoxelIntBoxWithValidity.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "VoxelIntBoxLibrary.generated.h"
 
 UCLASS(Blueprintable)

@@ -1,23 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ModAuthor.h"
-#include "Category.h"
-#include "ModLinks.h"
 #include "UObject/NoExportTypes.h"
+#include "Category.h"
 #include "ECFCoreModStatus.h"
-#include "ModAsset.h"
 #include "File.h"
 #include "FileIndex.h"
+#include "ModAsset.h"
+#include "ModAuthor.h"
+#include "ModLinks.h"
 #include "CFCoreMod.generated.h"
 
 USTRUCT(BlueprintType)
 struct CFCORE_API FCFCoreMod {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 ID;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 gameId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -38,7 +38,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ECFCoreModStatus status;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 downloadCount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -62,7 +62,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FModAsset> screenshots;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 mainFileId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -86,7 +86,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool isAvailable;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 thumbsUpCount;
     
     FCFCoreMod();

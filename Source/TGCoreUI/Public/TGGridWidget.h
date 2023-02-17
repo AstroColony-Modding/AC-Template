@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "TGUserWidget.h"
 #include "Types/SlateEnums.h"
 #include "Types/SlateEnums.h"
 #include "Layout/Margin.h"
-#include "TGGridWidgetScroll.h"
 #include "TGGridWidgetFocus.h"
+#include "TGGridWidgetScroll.h"
+#include "TGUserWidget.h"
+#include "Templates/SubclassOf.h"
 #include "TGGridWidget.generated.h"
 
 class UScrollBox;
-class UTGUniformGridPanel;
 class USizeBox;
 class UTGGridSlotWidget;
 class UTGInvisibleSlotWidget;
+class UTGUniformGridPanel;
 
 UCLASS(Blueprintable, EditInlineNew)
 class TGCOREUI_API UTGGridWidget : public UTGUserWidget {
@@ -37,10 +37,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UScrollBox* ScrollBox;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EHorizontalAlignment> SlotHorizontalAlignment;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EVerticalAlignment> SlotVerticalAlignment;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

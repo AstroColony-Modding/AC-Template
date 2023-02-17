@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayAbilityTargetActor.h"
 #include "Engine/CollisionProfile.h"
+#include "GameplayAbilityTargetActor.h"
 #include "GameplayAbilityTargetActor_Trace.generated.h"
 
 UCLASS(Abstract, Blueprintable, Config=Game)

@@ -1,17 +1,13 @@
 #include "EHAsteroidsCatcher.h"
 
+class UEHResourceItem;
+
 bool UEHAsteroidsCatcher::RemoveProcessedAsteroid() {
     return false;
 }
 
 bool UEHAsteroidsCatcher::RemoveAttractedAsteroid() {
     return false;
-}
-
-void UEHAsteroidsCatcher::NotifyAsteroidCatched() {
-}
-
-void UEHAsteroidsCatcher::NotifyAsteroidAttraceted(const FEHAsteroidData& AsteroidData, const FTransform& Transform) {
 }
 
 bool UEHAsteroidsCatcher::IsProcessingAsteroid() {
@@ -22,7 +18,8 @@ bool UEHAsteroidsCatcher::IsAttractingAsteroid() {
     return false;
 }
 
-void UEHAsteroidsCatcher::HandleGameStarted() {
+bool UEHAsteroidsCatcher::ChangeCatchedResource(UEHResourceItem* Resource) {
+    return false;
 }
 
 UEHAsteroidsCatcher::UEHAsteroidsCatcher() {
@@ -30,6 +27,7 @@ UEHAsteroidsCatcher::UEHAsteroidsCatcher() {
     this->LaserBeamParticle = NULL;
     this->ProcessingParticle = NULL;
     this->AsteroidScale = 0.50f;
+    this->CatchResourceType = NULL;
     this->AsteroidProcessingTime = 5.00f;
 }
 

@@ -4,8 +4,8 @@
 #include "EHItemInstance.h"
 #include "EHVehicleTypeData.generated.h"
 
-class UTexture2D;
 class APawn;
+class UTexture2D;
 
 USTRUCT(BlueprintType)
 struct ASTROCOLONY_API FEHVehicleTypeData {

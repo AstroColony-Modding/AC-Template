@@ -11,5 +11,6 @@ AEHRemotlyConstructedActor::AEHRemotlyConstructedActor() {
     this->AccumulatedEnergy = 0.00f;
     this->IsConstructionDone = false;
     this->IsPowerActivated = false;
+    this->ModifiedByPlayer = false;
 }
 

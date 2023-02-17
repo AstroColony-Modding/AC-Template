@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelNode.h"
 #include "VoxelGraphMacroPin.h"
+#include "VoxelNode.h"
 #include "VoxelGraphMacroInputOutputNode.generated.h"
 
 class UVoxelGraphMacro;

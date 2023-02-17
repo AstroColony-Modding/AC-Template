@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHCelestialGenerationObject.h"
 #include "EBlackHoleType.h"
+#include "EHCelestialGenerationObject.h"
 #include "EHBlackHoleGenerationObject.generated.h"
 
 UCLASS(Blueprintable)

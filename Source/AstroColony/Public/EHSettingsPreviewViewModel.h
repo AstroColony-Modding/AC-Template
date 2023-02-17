@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TGViewModel.h"
-#include "VisibilityBindable.h"
-#include "Texture2DBindable.h"
-#include "TextBindable.h"
 #include "Int32Bindable.h"
+#include "TGViewModel.h"
+#include "TextBindable.h"
+#include "Texture2DBindable.h"
+#include "VisibilityBindable.h"
 #include "EHSettingsPreviewViewModel.generated.h"
 
-class UEHSettingsGamepadPreviewViewModel;
 class UEHOptionViewModel;
 class UEHSettingsGamepadPreviewFrontViewModel;
+class UEHSettingsGamepadPreviewViewModel;
 class UEHSettingsOptionViewModel;
 
 UCLASS(Blueprintable)

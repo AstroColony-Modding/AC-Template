@@ -1,11 +1,11 @@
 #include "VoxelGeneratorTools.h"
 #include "Templates/SubclassOf.h"
 
-class UVoxelTransformableGenerator;
-class UVoxelGeneratorInstanceWrapper;
 class UObject;
-class UVoxelTransformableGeneratorInstanceWrapper;
 class UVoxelGenerator;
+class UVoxelGeneratorInstanceWrapper;
+class UVoxelTransformableGenerator;
+class UVoxelTransformableGeneratorInstanceWrapper;
 
 bool UVoxelGeneratorTools::SetTransformableGeneratorParameter(const FVoxelTransformableGeneratorPicker& Picker, FName UniqueName, int32 Value) {
     return false;

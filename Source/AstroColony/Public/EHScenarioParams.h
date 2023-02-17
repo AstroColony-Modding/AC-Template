@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHItemInstance.h"
 #include "EHGlobalPointInstance.h"
+#include "EHItemInstance.h"
 #include "EHScenarioParams.generated.h"
 
 class UEHTechnologyAsset;
@@ -40,10 +40,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ChunkElementsCount;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     float TerrainTypeSpawnChances[6];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     float ShapeTypeSpawnChances[10];
     
     FEHScenarioParams();

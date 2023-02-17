@@ -3,8 +3,8 @@
 #include "UObject/Object.h"
 #include "EHSSEInitializer.generated.h"
 
-class UEHInteractableObject;
 class AEHGrid;
+class UEHInteractableObject;
 
 UCLASS(Blueprintable, DefaultToInstanced, EditInlineNew)
 class ASTROCOLONY_API UEHSSEInitializer : public UObject {

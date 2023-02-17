@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "GameplayTagContainer.h"
-#include "GameplayEffectExecutionScopedModifierInfo.h"
 #include "ConditionalGameplayEffect.h"
+#include "GameplayEffectExecutionScopedModifierInfo.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayEffectExecutionDefinition.generated.h"
 
-class UGameplayEffectExecutionCalculation;
 class UGameplayEffect;
+class UGameplayEffectExecutionCalculation;
 
 USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayEffectExecutionDefinition {

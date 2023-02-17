@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "InputCoreTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "MeshPivotInfo.h"
 #include "Engine/EngineTypes.h"
+#include "InputCoreTypes.h"
+#include "MeshPivotInfo.h"
 #include "UtilityBlueprintFunctionLibrary.generated.h"
 
-class UDataTable;
 class AActor;
-class UObject;
-class ULevel;
-class UWorld;
 class AEHGrid;
+class UDataTable;
+class ULevel;
+class UObject;
+class UWorld;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UUtilityBlueprintFunctionLibrary : public UBlueprintFunctionLibrary {
@@ -76,6 +76,9 @@ public:
     static AEHGrid* FindGrid(const UObject* WorldContextObject, const FName GridUniqueID);
     
     UFUNCTION(BlueprintCallable)
+    static void CopyToClipboard(const FString& StringToCopy);
+    
+    UFUNCTION(BlueprintCallable)
     static void CopyPropertiesFromOneObjectToAnother(UObject* SourceObject, UObject* TargetObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
@@ -84,7 +87,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static float CalculateProgress(UObject* WorldContextObject, float PreviouslyCompletedProgress, float RemainingTime);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool BitmaskTestBit(int32 BitMask, uint8 Bit);
     
     UFUNCTION(BlueprintCallable)

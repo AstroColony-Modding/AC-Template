@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "VoxelMeshImporterRenderTargetCache.generated.h"
 
-class UTextureRenderTarget2D;
 class UMaterialInterface;
+class UTextureRenderTarget2D;
 
 USTRUCT(BlueprintType)
 struct VOXEL_API FVoxelMeshImporterRenderTargetCache {

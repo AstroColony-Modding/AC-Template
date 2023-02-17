@@ -3,8 +3,8 @@
 #include "GameplayTask.h"
 #include "AbilityTask.generated.h"
 
-class UGameplayAbility;
 class UAbilitySystemComponent;
+class UGameplayAbility;
 
 UCLASS(Abstract, Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask : public UGameplayTask {

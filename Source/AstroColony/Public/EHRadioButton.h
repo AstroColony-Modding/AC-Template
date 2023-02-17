@@ -34,7 +34,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetButtonName();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     uint8 GetButtonID();
     
 };

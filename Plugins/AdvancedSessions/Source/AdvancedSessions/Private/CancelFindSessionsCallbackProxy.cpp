@@ -1,8 +1,8 @@
 #include "CancelFindSessionsCallbackProxy.h"
 
+class APlayerController;
 class UCancelFindSessionsCallbackProxy;
 class UObject;
-class APlayerController;
 
 UCancelFindSessionsCallbackProxy* UCancelFindSessionsCallbackProxy::CancelFindSessions(UObject* WorldContextObject, APlayerController* PlayerController) {
     return NULL;

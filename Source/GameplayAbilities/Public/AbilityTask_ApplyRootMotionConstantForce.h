@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/RootMotionSource.h"
 #include "AbilityTask_ApplyRootMotion_Base.h"
 #include "ApplyRootMotionConstantForceDelegateDelegate.h"
-#include "GameFramework/RootMotionSource.h"
 #include "AbilityTask_ApplyRootMotionConstantForce.generated.h"
 
-class UCurveFloat;
 class UAbilityTask_ApplyRootMotionConstantForce;
+class UCurveFloat;
 class UGameplayAbility;
 
 UCLASS(Blueprintable)

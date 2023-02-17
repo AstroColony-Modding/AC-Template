@@ -7,7 +7,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHArithmeticCombinatorObject : public UEHSignalObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 MathOperationIndex;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

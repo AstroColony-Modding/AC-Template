@@ -13,7 +13,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SlotIndex;
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UTGGridWidget> GridReference;
     
 public:

@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EVoxelRenderType.h"
 #include "EVoxelMaterialConfig.h"
+#include "EVoxelRenderType.h"
 #include "VoxelGeneratorInit.generated.h"
 
-class UVoxelMaterialCollectionBase;
 class AVoxelWorld;
+class UVoxelMaterialCollectionBase;
 
 USTRUCT(BlueprintType)
 struct VOXEL_API FVoxelGeneratorInit {
@@ -26,7 +26,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UVoxelMaterialCollectionBase* MaterialCollection;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AVoxelWorld> World;
     
     FVoxelGeneratorInit();

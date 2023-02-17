@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Materials/MaterialExpression.h"
 #include "UObject/NoExportTypes.h"
+#include "Materials/MaterialExpression.h"
 #include "MaterialExpressionUnpack.generated.h"
 
 UCLASS(Blueprintable, CollapseCategories)

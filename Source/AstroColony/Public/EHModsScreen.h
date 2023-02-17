@@ -3,10 +3,10 @@
 #include "EHUIScreen.h"
 #include "EHModsScreen.generated.h"
 
-class UEHModsViewModel;
-class UEHModsListWidget;
 class UEHBaseButtonWidget;
 class UEHModsBrowsedWidget;
+class UEHModsListWidget;
+class UEHModsViewModel;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHModsScreen : public UEHUIScreen {
@@ -28,11 +28,17 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEHBaseButtonWidget* RemoveModButton;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UEHBaseButtonWidget* OpenModButton;
+    
 public:
     UEHModsScreen();
 private:
     UFUNCTION(BlueprintCallable)
     void HandleRemoveModClicked(UEHBaseButtonWidget* ButtonWidget);
+    
+    UFUNCTION(BlueprintCallable)
+    void HandleOpenModClicked(UEHBaseButtonWidget* ButtonWidget);
     
     UFUNCTION(BlueprintCallable)
     void HandleInstallModButtonClicked(UEHBaseButtonWidget* ButtonWidget);

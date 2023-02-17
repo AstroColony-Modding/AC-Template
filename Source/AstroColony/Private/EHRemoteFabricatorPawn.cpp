@@ -1,6 +1,6 @@
 #include "EHRemoteFabricatorPawn.h"
-#include "EHHierarchicalInstancedStaticMeshComponent.h"
 #include "Components/SceneComponent.h"
+#include "EHHierarchicalInstancedStaticMeshComponent.h"
 
 AEHRemoteFabricatorPawn::AEHRemoteFabricatorPawn() {
     this->HISMExpeditionDrones = CreateDefaultSubobject<UEHHierarchicalInstancedStaticMeshComponent>(TEXT("HISMExpeditionDrones"));

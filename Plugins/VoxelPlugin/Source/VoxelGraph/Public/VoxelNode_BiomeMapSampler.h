@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelExposedNode.h"
 #include "BiomeMapElement.h"
+#include "VoxelExposedNode.h"
 #include "VoxelNode_BiomeMapSampler.generated.h"
 
 class UTexture2D;

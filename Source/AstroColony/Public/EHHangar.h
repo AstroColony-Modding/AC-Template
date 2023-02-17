@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHCraftingObject.h"
 #include "UObject/NoExportTypes.h"
+#include "EHCraftingObject.h"
 #include "EHHangar.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

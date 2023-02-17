@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
-#include "BPUniqueNetId.h"
 #include "FindSessionsCallbackProxy.h"
+#include "BPUniqueNetId.h"
 #include "EBPLoginStatus.h"
 #include "AdvancedFriendsInterface.generated.h"
 

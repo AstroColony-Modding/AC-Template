@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
+#include "GameplayTagContainer.h"
 #include "AbilityTask.h"
-#include "WaitAbilityActivateDelegateDelegate.h"
-#include "GameplayTagContainer.h"
 #include "GameplayTagRequirements.h"
-#include "GameplayTagContainer.h"
+#include "WaitAbilityActivateDelegateDelegate.h"
 #include "AbilityTask_WaitAbilityActivate.generated.h"
 
-class UGameplayAbility;
 class UAbilityTask_WaitAbilityActivate;
+class UGameplayAbility;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitAbilityActivate : public UAbilityTask {

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Engine/NetSerialization.h"
 #include "GameplayTagContainer.h"
-#include "PredictionKey.h"
 #include "GameplayCueParameters.h"
+#include "PredictionKey.h"
 #include "ActiveGameplayCue.generated.h"
 
 USTRUCT(BlueprintType)

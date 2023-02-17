@@ -4,8 +4,8 @@
 #include "WaitConfirmCancelDelegateDelegate.h"
 #include "AbilityTask_WaitConfirmCancel.generated.h"
 
-class UGameplayAbility;
 class UAbilityTask_WaitConfirmCancel;
+class UGameplayAbility;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitConfirmCancel : public UAbilityTask {

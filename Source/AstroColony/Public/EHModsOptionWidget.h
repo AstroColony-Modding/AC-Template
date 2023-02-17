@@ -1,23 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "TGUserWidget.h"
-#include "ESettingWidgetType.h"
 #include "EHModsOptionWidget.generated.h"
 
-class UTGWidget;
-class UEHOptionWidget;
 class UEHModsOptionViewModel;
 class UTGViewModel;
+class UTGWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHModsOptionWidget : public UTGUserWidget {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<ESettingWidgetType, TSubclassOf<UEHOptionWidget>> SettingsWidgetMap;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTGWidget* InteractiveArea;
     

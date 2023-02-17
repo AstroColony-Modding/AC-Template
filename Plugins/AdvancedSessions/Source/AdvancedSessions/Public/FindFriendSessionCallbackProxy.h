@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BlueprintFindFriendSessionDelegateDelegate.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "BPUniqueNetId.h"
+#include "BlueprintFindFriendSessionDelegateDelegate.h"
 #include "FindFriendSessionCallbackProxy.generated.h"
 
+class APlayerController;
 class UFindFriendSessionCallbackProxy;
 class UObject;
-class APlayerController;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UFindFriendSessionCallbackProxy : public UOnlineBlueprintCallProxyBase {

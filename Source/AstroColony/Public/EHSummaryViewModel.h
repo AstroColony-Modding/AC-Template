@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHSaveLoadListViewModel.h"
 #include "EHScreenViewModel.h"
+#include "EHSaveLoadListViewModel.h"
 #include "EHSummaryViewModel.generated.h"
 
 UCLASS(Blueprintable)

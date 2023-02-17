@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "GameplayTagContainer.h"
-#include "GameplayCueParameters.h"
 #include "EGameplayCueEvent.h"
+#include "GameplayCueParameters.h"
 #include "GameplayCueNotify_Actor.generated.h"
 
 UCLASS(Blueprintable)
@@ -65,7 +65,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     bool OnActive(AActor* MyTarget, const FGameplayCueParameters& Parameters);
     
-    /*UFUNCTION(BlueprintImplementableEvent)
+    /*UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void K2_HandleGameplayCue(AActor* MyTarget, TEnumAsByte<EGameplayCueEvent::Type> EventType, const FGameplayCueParameters& Parameters);*/
     
     UFUNCTION(BlueprintCallable)

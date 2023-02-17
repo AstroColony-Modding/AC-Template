@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ActiveGameplayEffectHandle.h"
 #include "AbilityAsync.h"
-#include "GameplayTagRequirements.h"
+#include "ActiveGameplayEffectHandle.h"
 #include "GameplayEffectSpecHandle.h"
+#include "GameplayTagRequirements.h"
 #include "GameplayTargetDataFilterHandle.h"
 #include "AbilityAsync_WaitGameplayEffectApplied.generated.h"
 

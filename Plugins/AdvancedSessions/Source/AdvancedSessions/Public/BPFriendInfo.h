@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EBPOnlinePresenceState.h"
 #include "BPFriendPresenceInfo.h"
 #include "BPUniqueNetId.h"
+#include "EBPOnlinePresenceState.h"
 #include "BPFriendInfo.generated.h"
 
 USTRUCT(BlueprintType)

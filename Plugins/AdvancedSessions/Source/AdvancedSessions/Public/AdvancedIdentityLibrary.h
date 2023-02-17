@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
+#include "BPUniqueNetId.h"
+#include "BPUserOnlineAccount.h"
 #include "EBPLoginStatus.h"
 #include "EBlueprintResultSwitch.h"
-#include "BPUserOnlineAccount.h"
-#include "BPUniqueNetId.h"
 #include "AdvancedIdentityLibrary.generated.h"
 
 class APlayerController;
@@ -21,7 +21,7 @@ public:
     static void GetUserID(const FBPUserOnlineAccount& AccountInfo, FBPUniqueNetId& UniqueNetId);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
-    static void GetUserAccountRealName(const FBPUserOnlineAccount& AccountInfo, FString& UserName);
+    static void GetUserAccountRealName(const FBPUserOnlineAccount& AccountInfo, FString& username);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetUserAccountDisplayName(const FBPUserOnlineAccount& AccountInfo, FString& DisplayName);

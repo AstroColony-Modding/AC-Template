@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "TGUserWidget.h"
 #include "Layout/Margin.h"
+#include "TGUserWidget.h"
+#include "Templates/SubclassOf.h"
 #include "EHTabContainerWidget.generated.h"
 
-class UHorizontalBox;
-class UUserWidget;
 class UEHTabCategoryViewModel;
+class UHorizontalBox;
 class USoundBase;
 class UTGConfigurableTextBlock;
 class UTGInputActionWidget;
+class UUserWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHTabContainerWidget : public UTGUserWidget {

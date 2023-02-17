@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "WorldReticleParameters.h"
-#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
+#include "WorldReticleParameters.h"
 #include "GameplayAbilityWorldReticle.generated.h"
 
 class APlayerController;

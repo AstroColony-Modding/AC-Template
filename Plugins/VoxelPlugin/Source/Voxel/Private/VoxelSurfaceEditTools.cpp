@@ -1,7 +1,7 @@
 #include "VoxelSurfaceEditTools.h"
 
-class UObject;
 class AVoxelWorld;
+class UObject;
 
 void UVoxelSurfaceEditTools::PropagateVoxelMaterialsAsync(UObject* WorldContextObject, FLatentActionInfo LatentInfo, TArray<FModifiedVoxelMaterial>& ModifiedMaterials, FVoxelIntBox& EditedBounds, AVoxelWorld* VoxelWorld, const FVoxelSurfaceEditsProcessedVoxels& ProcessedVoxels, bool bMultiThreaded, bool bRecordModifiedMaterials, bool bUpdateRender, bool bHideLatentWarnings) {
 }

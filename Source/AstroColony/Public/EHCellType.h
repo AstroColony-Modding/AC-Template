@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EEHInstanceRotation.h"
 #include "UObject/NoExportTypes.h"
+#include "EEHInstanceRotation.h"
 #include "EHCellType.generated.h"
 
-class UEHItem;
 class UEHInteractableObject;
+class UEHItem;
 
 USTRUCT(BlueprintType)
 struct ASTROCOLONY_API FEHCellType {
@@ -27,10 +27,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector InstanceLocation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 CellState;
     
     FEHCellType();
 };
-
 FORCEINLINE uint32 GetTypeHash(const FEHCellType) { return 0; }
+

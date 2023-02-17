@@ -1,7 +1,7 @@
 #include "AbilityTask_WaitConfirm.h"
 
-class UGameplayAbility;
 class UAbilityTask_WaitConfirm;
+class UGameplayAbility;
 
 UAbilityTask_WaitConfirm* UAbilityTask_WaitConfirm::WaitConfirm(UGameplayAbility* OwningAbility) {
     return NULL;

@@ -20,7 +20,7 @@ float UEHGameUserSettings::GetBenchmarkCPU() {
 }
 
 UEHGameUserSettings::UEHGameUserSettings() {
-    this->CinematicAlreadyWatched = false;
+    this->CinematicAlreadyWatched = true;
     this->RestoreOpenWindowState = true;
 }
 

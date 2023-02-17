@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TGUISubsystem.h"
 #include "TGILoadingScreen.h"
+#include "TGUISubsystem.h"
 #include "TGUILoadingScreenManager.generated.h"
 
 UCLASS(Blueprintable)

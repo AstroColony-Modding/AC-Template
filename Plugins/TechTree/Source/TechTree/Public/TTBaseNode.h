@@ -22,7 +22,7 @@ public:
     TArray<UTTBaseNode*> ChildNodes;
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 UniqueID;
     
 public:

@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "AbilityTask.h"
+#include "Templates/SubclassOf.h"
 #include "VisualizeTargetingDelegateDelegate.h"
 #include "AbilityTask_VisualizeTargeting.generated.h"
 
+class AGameplayAbilityTargetActor;
 class UAbilityTask_VisualizeTargeting;
 class UGameplayAbility;
-class AGameplayAbilityTargetActor;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_VisualizeTargeting : public UAbilityTask {

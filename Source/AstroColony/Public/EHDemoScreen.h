@@ -3,8 +3,8 @@
 #include "EHUIScreen.h"
 #include "EHDemoScreen.generated.h"
 
-class UEHDemoViewModel;
 class UEHBaseButtonWidget;
+class UEHDemoViewModel;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHDemoScreen : public UEHUIScreen {

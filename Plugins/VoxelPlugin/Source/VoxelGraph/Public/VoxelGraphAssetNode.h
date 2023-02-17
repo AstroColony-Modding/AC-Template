@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelNodeWithContext.h"
 #include "VoxelGeneratorPicker.h"
+#include "VoxelNodeWithContext.h"
 #include "VoxelGraphAssetNode.generated.h"
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)

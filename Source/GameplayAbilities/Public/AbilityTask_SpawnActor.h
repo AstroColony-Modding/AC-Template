@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "AbilityTask.h"
-#include "SpawnActorDelegateDelegate.h"
 #include "GameplayAbilityTargetDataHandle.h"
+#include "SpawnActorDelegateDelegate.h"
+#include "Templates/SubclassOf.h"
 #include "AbilityTask_SpawnActor.generated.h"
 
+class AActor;
 class UAbilityTask_SpawnActor;
 class UGameplayAbility;
-class AActor;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_SpawnActor : public UAbilityTask {

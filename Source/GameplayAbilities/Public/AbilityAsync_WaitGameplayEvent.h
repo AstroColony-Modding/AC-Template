@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
 #include "AbilityAsync.h"
 #include "GameplayEventData.h"
-#include "GameplayTagContainer.h"
 #include "AbilityAsync_WaitGameplayEvent.generated.h"
 
 class AActor;

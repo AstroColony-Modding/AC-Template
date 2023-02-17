@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHLayerOverride.h"
 #include "UObject/NoExportTypes.h"
+#include "EHLayerOverride.h"
 #include "VoxelTerrainDigData.generated.h"
 
+class UEHItem;
 class UMaterialInterface;
 class UVoxelInstancedMaterialCollection;
-class UEHItem;
 
 USTRUCT(BlueprintType)
 struct FVoxelTerrainDigData {

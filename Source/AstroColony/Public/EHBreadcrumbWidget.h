@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "TGUserWidget.h"
 #include "Layout/Margin.h"
+#include "TGUserWidget.h"
+#include "Templates/SubclassOf.h"
 #include "EHBreadcrumbWidget.generated.h"
 
-class UTexture2D;
-class UHorizontalBox;
 class UEHBreadcrumbViewModel;
+class UHorizontalBox;
+class UTexture2D;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHBreadcrumbWidget : public UTGUserWidget {

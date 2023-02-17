@@ -1,9 +1,9 @@
 #include "AbilityTask_ApplyRootMotionConstantForce.h"
 #include "Net/UnrealNetwork.h"
 
-class UGameplayAbility;
-class UCurveFloat;
 class UAbilityTask_ApplyRootMotionConstantForce;
+class UCurveFloat;
+class UGameplayAbility;
 
 UAbilityTask_ApplyRootMotionConstantForce* UAbilityTask_ApplyRootMotionConstantForce::ApplyRootMotionConstantForce(UGameplayAbility* OwningAbility, FName TaskInstanceName, FVector NewWorldDirection, float NewStrength, float NewDuration, bool NewBIsAdditive, UCurveFloat* NewStrengthOverTime, ERootMotionFinishVelocityMode VelocityOnFinishMode, FVector SetVelocityOnFinish, float ClampVelocityOnFinish, bool NewBEnableGravity) {
     return NULL;

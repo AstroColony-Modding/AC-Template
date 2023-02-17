@@ -15,7 +15,6 @@ void UEHConnectorStationObject::ConstructConveyorLine(const uint8 LineNumber, co
 UEHConnectorStationObject::UEHConnectorStationObject() {
     this->OrderedAstronautsCount = 0;
     this->DesiredDockTime = 0.00f;
-    this->ConveyorLineItem = NULL;
     this->DockingState = EDockingState::Undocked;
 }
 

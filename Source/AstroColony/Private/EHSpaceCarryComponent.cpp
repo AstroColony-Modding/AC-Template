@@ -1,7 +1,7 @@
 #include "EHSpaceCarryComponent.h"
 
-class AEHSpaceShuttleActor;
 class AEHGrid;
+class AEHSpaceShuttleActor;
 class UEHDockingStationObject;
 
 void UEHSpaceCarryComponent::HandleGameStarted() {

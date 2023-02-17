@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelNode_GeneratorSamplerBase.h"
 #include "VoxelGeneratorPicker.h"
+#include "VoxelNode_GeneratorSamplerBase.h"
 #include "VoxelNode_SingleGeneratorSamplerBase.generated.h"
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)

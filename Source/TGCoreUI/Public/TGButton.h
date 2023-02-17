@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TGTile.h"
-#include "Styling/SlateColor.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Layout/Margin.h"
+#include "Styling/SlateColor.h"
 #include "Fonts/SlateFontInfo.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "TGTile.h"
 #include "TGButton.generated.h"
 
 UCLASS(Blueprintable)

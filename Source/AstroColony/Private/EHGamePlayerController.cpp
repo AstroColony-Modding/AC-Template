@@ -1,10 +1,9 @@
 #include "EHGamePlayerController.h"
 #include "Net/UnrealNetwork.h"
 
-class UEHBarrierNetwork;
 class AEHCharacter;
 class APawn;
-class AEHGrid;
+class UEHBarrierNetwork;
 
 
 void AEHGamePlayerController::ToggleControlMode(const bool ControlModeEnabled) {
@@ -12,6 +11,10 @@ void AEHGamePlayerController::ToggleControlMode(const bool ControlModeEnabled) {
 
 void AEHGamePlayerController::ToggleCharacterRefillingOxygen_Implementation(const bool IsBarrierRefillingOxygen, UEHBarrierNetwork* BarrierNetwork) {
 }
+
+void AEHGamePlayerController::ShowUniverseActors(const uint8 ActorsUniverseIndex) {
+}
+
 
 
 
@@ -38,16 +41,16 @@ bool AEHGamePlayerController::IsCharacterPossesed() {
     return false;
 }
 
-
-
-void AEHGamePlayerController::HandlePlayerEnteredGrid(AEHGrid* Grid) {
+void AEHGamePlayerController::HideUniverseActors(const uint8 ActorsUniverseIndex) {
 }
 
 
-void AEHGamePlayerController::GoToPreviousUniverse() {
+
+
+void AEHGamePlayerController::GoToPreviousUniverse(const bool UpdateActorsVisibility) {
 }
 
-void AEHGamePlayerController::GoToNextUniverse() {
+void AEHGamePlayerController::GoToNextUniverse(const bool UpdateActorsVisibility) {
 }
 
 FName AEHGamePlayerController::GetUniverseSignature() {
@@ -56,6 +59,9 @@ FName AEHGamePlayerController::GetUniverseSignature() {
 
 AEHCharacter* AEHGamePlayerController::GetEHCharacter() {
     return NULL;
+}
+
+void AEHGamePlayerController::DebugShowActors(bool On, const uint8 Index) {
 }
 
 void AEHGamePlayerController::Client_NotifyPossessImpossible_Implementation() {
@@ -83,7 +89,6 @@ AEHGamePlayerController::AEHGamePlayerController() {
     this->LosingHealth = true;
     this->ShouldUpdateWorldOrigin = true;
     this->EnableDebugMode = true;
-    this->HasPlayerVisitedPlanet = false;
     this->DebugMode = EEHDebugMode::None;
     this->IsDebugTravelUniverse = false;
     this->ScenarioManager = NULL;

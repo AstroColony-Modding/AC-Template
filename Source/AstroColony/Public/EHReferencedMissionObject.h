@@ -3,12 +3,12 @@
 #include "ReferencedMissionObject.h"
 #include "EHReferencedMissionObject.generated.h"
 
-class UEHMissionsComponent;
-class UEHDevicesComponent;
-class UEHGridComponent;
 class AEHGamePlayerController;
 class AEHGrid;
+class UEHDevicesComponent;
+class UEHGridComponent;
 class UEHInventoryComponent;
+class UEHMissionsComponent;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHReferencedMissionObject : public UReferencedMissionObject {

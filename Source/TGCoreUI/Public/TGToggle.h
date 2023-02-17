@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TGWidget.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Styling/SlateTypes.h"
-#include "Styling/SlateColor.h"
-#include "Styling/SlateBrush.h"
 #include "Layout/Margin.h"
+#include "Styling/SlateBrush.h"
+#include "Styling/SlateColor.h"
 #include "Fonts/SlateFontInfo.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "OnToggleStateChangedDelegate.h"
+#include "TGWidget.h"
 #include "TGToggle.generated.h"
 
 UCLASS(Blueprintable)
 class TGCOREUI_API UTGToggle : public UTGWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ESlateCheckBoxType::Type> CheckBoxType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

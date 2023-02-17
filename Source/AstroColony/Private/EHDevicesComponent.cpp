@@ -1,9 +1,9 @@
 #include "EHDevicesComponent.h"
 #include "Templates/SubclassOf.h"
 
+class UEHInteractableObject;
 class UEHItem;
 class UEHItemsContainer;
-class UEHInteractableObject;
 
 void UEHDevicesComponent::MarkWaterNetworkStateDirty() {
 }

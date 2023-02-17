@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "GameplayAbilityTargetDataHandle.h"
+#include "Engine/EngineTypes.h"
+#include "GameFramework/RootMotionSource.h"
 #include "AbilityTask_ApplyRootMotion_Base.h"
 #include "ApplyRootMotionMoveToActorForceDelegateDelegate.h"
 #include "ERootMotionMoveToActorTargetOffsetType.h"
-#include "Engine/EngineTypes.h"
-#include "GameFramework/RootMotionSource.h"
+#include "GameplayAbilityTargetDataHandle.h"
 #include "AbilityTask_ApplyRootMotionMoveToActorForce.generated.h"
 
-class UCurveVector;
 class AActor;
-class UCurveFloat;
 class UAbilityTask_ApplyRootMotionMoveToActorForce;
+class UCurveFloat;
+class UCurveVector;
 class UGameplayAbility;
 
 UCLASS(Blueprintable)
@@ -47,7 +47,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool bSetNewMovementMode;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EMovementMode> NewMovementMode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))

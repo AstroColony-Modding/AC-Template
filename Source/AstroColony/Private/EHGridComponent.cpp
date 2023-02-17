@@ -1,15 +1,15 @@
 #include "EHGridComponent.h"
 
-class UEHItem;
-class UEHThrusterNetwork;
 class AEHGrid;
-class UEHInteractableObject;
 class UEHAsteroidsCatcher;
+class UEHConnectorStationObject;
 class UEHDeviceObject;
 class UEHDockingStationObject;
+class UEHInteractableObject;
+class UEHItem;
 class UEHOxygenGenerator;
 class UEHSignalObject;
-class UEHConnectorStationObject;
+class UEHThrusterNetwork;
 
 void UEHGridComponent::UpgradeCellObject() {
 }
@@ -39,6 +39,9 @@ void UEHGridComponent::Server_TraceCatchAsteroid_Implementation(UEHAsteroidsCatc
 }
 
 void UEHGridComponent::Server_StopDocking_Implementation(AEHGrid* GridReference) {
+}
+
+void UEHGridComponent::Server_StartSimulation_Implementation() {
 }
 
 void UEHGridComponent::Server_SetDesiredMovement_Implementation(UEHThrusterNetwork* ThrusterNetwork, const FVector& DesiredMovement) {
@@ -87,6 +90,9 @@ void UEHGridComponent::Server_DockStation_Implementation(AEHGrid* GridReference,
 }
 
 void UEHGridComponent::Server_DestructConveyorLine_Implementation(UEHConnectorStationObject* ConnectorObject, const uint8 LineNumber) {
+}
+
+void UEHGridComponent::Server_CreateStationOrigin_Implementation(const FString& StationName, const FVector& Location) {
 }
 
 void UEHGridComponent::Server_ConstructItems_Implementation(AEHGrid* GridReference, UEHItem* Item, const TArray<FIntVector>& ConstructCoords, EEHInstanceRotation Rotation) {
@@ -139,6 +145,7 @@ void UEHGridComponent::PerformCancelAction() {
 
 void UEHGridComponent::OpenCellObject() {
 }
+
 
 
 
@@ -269,6 +276,12 @@ void UEHGridComponent::FinishInteractionCellObject() {
 void UEHGridComponent::DebugRemoveAllChunks() {
 }
 
+void UEHGridComponent::ClientCheckSimulationReady() {
+}
+
+void UEHGridComponent::Client_StartSimulation_Implementation() {
+}
+
 void UEHGridComponent::Client_Start_Implementation() {
 }
 
@@ -352,7 +365,6 @@ UEHGridComponent::UEHGridComponent() {
     this->DefaultBlockingHitOffset = 3.00f;
     this->AddingRemovingOffset = 6.00f;
     this->DestructibleHitOffset = -4.00f;
-    this->CurrentLookAtItem = NULL;
     this->FloorThickness = 2.00f;
     this->WallThickness = 10.00f;
     this->RenderRange = 2;
@@ -386,6 +398,7 @@ UEHGridComponent::UEHGridComponent() {
     this->CameraLineTraceLength = 12000.00f;
     this->UnderLineTraceLength = -5000.00f;
     this->IsPlayerReady = false;
+    this->ClientSimulationSyncTime = 6.00f;
     this->HighlightPreviewMaterial = NULL;
     this->ValidConstructPreviewMaterial = NULL;
     this->InvalidConstructPreviewMaterial = NULL;

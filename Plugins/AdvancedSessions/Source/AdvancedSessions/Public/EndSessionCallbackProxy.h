@@ -4,9 +4,9 @@
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "EndSessionCallbackProxy.generated.h"
 
+class APlayerController;
 class UEndSessionCallbackProxy;
 class UObject;
-class APlayerController;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UEndSessionCallbackProxy : public UOnlineBlueprintCallProxyBase {

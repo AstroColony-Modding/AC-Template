@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ActiveGameplayEffect.h"
 #include "Engine/NetSerialization.h"
+#include "ActiveGameplayEffect.h"
 #include "ActiveGameplayEffectsContainer.generated.h"
 
 class UGameplayEffect;

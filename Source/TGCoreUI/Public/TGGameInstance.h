@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TGIGameInstanceUI.h"
 #include "AdvancedFriendsGameInstance.h"
 #include "GCInterface.h"
+#include "TGIGameInstanceUI.h"
 #include "TGGameInstance.generated.h"
 
-class UUGCRegistry;
 class UObject;
+class UUGCRegistry;
 
 UCLASS(Blueprintable, NonTransient)
 class TGCOREUI_API UTGGameInstance : public UAdvancedFriendsGameInstance, public ITGIGameInstanceUI, public IGCInterface {

@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "GameAssets.h"
-#include "ECFCoreStatus.h"
 #include "ECFCoreApiStatus.h"
+#include "ECFCoreStatus.h"
+#include "GameAssets.h"
 #include "Game.generated.h"
 
 USTRUCT(BlueprintType)
 struct CFCORE_API FGame {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 ID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

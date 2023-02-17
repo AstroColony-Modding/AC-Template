@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "GameplayTagContainer.h"
+#include "GameplayTagContainer.h"
 #include "AbilityTask.h"
-#include "GameplayTagContainer.h"
 #include "WaitAbilityCommitDelegateDelegate.h"
-#include "GameplayTagContainer.h"
 #include "AbilityTask_WaitAbilityCommit.generated.h"
 
 class UAbilityTask_WaitAbilityCommit;

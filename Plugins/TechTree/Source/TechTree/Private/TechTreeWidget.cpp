@@ -1,8 +1,8 @@
 #include "TechTreeWidget.h"
 
+class UTechNodeArrowWidget;
 class UTechNodeWidget;
 class UTechnologyAsset;
-class UTechNodeArrowWidget;
 
 TArray<UTechNodeWidget*> UTechTreeWidget::GetTechNodeWidgets() {
     return TArray<UTechNodeWidget*>();

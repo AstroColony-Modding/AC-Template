@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESettingsThumbstickActions.h"
 #include "ESettingsControllerActions.h"
+#include "ESettingsThumbstickActions.h"
 #include "EHThumbstickPreviewKeyLayout.generated.h"
 
 USTRUCT(BlueprintType)

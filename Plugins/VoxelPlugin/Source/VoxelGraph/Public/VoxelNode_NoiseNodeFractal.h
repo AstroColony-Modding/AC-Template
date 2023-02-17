@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelNode_NoiseNode.h"
 #include "EVoxelNoiseFractalType.h"
+#include "VoxelNode_NoiseNode.h"
 #include "VoxelNode_NoiseNodeFractal.generated.h"
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
@@ -20,7 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EVoxelNoiseFractalType FractalType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FString, uint8> LODToOctavesMap;
     
     UVoxelNode_NoiseNodeFractal();

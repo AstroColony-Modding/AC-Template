@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHCelestialBodyActor.h"
 #include "UObject/NoExportTypes.h"
+#include "EHCelestialBodyActor.h"
 #include "EHCometStrike.generated.h"
 
 class AActor;

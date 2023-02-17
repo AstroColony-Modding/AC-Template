@@ -1,6 +1,6 @@
 #include "EHHUD.h"
-#include "EHBackgroundComponent.h"
 #include "TGWidgetPredefinedAnimationsComponent.h"
+#include "EHBackgroundComponent.h"
 
 class UEHHUDWidget;
 
@@ -15,7 +15,11 @@ void AEHHUD::OpenInGameScreen(const EEHUIScreenID ScreenID) {
 }
 
 
+
 void AEHHUD::HandleKeyAction(const FKey& InKey) {
+}
+
+void AEHHUD::HandleGamePreStarted() {
 }
 
 UEHHUDWidget* AEHHUD::GetEHHUDWidget() {

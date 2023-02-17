@@ -1,9 +1,9 @@
 #include "AbilityTask_SpawnActor.h"
 #include "Templates/SubclassOf.h"
 
-class UGameplayAbility;
 class AActor;
 class UAbilityTask_SpawnActor;
+class UGameplayAbility;
 
 UAbilityTask_SpawnActor* UAbilityTask_SpawnActor::SpawnActor(UGameplayAbility* OwningAbility, FGameplayAbilityTargetDataHandle TargetData, TSubclassOf<AActor> Class) {
     return NULL;

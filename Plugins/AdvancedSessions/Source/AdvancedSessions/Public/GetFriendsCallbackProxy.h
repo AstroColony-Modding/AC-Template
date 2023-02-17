@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BlueprintGetFriendsListDelegateDelegate.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
+#include "BlueprintGetFriendsListDelegateDelegate.h"
 #include "GetFriendsCallbackProxy.generated.h"
 
+class APlayerController;
 class UGetFriendsCallbackProxy;
 class UObject;
-class APlayerController;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UGetFriendsCallbackProxy : public UOnlineBlueprintCallProxyBase {

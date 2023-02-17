@@ -3,9 +3,9 @@
 #include "EHUIScreen.h"
 #include "EHSettingsScreen.generated.h"
 
+class UEHSettingsCategoryWidget;
 class UEHSettingsViewModel;
 class UEHTabContainerWidget;
-class UEHSettingsCategoryWidget;
 class UTGViewModel;
 
 UCLASS(Blueprintable, EditInlineNew)

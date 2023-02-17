@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
-#include "BlueprintSendFriendInviteDelegateDelegate.h"
 #include "BPUniqueNetId.h"
+#include "BlueprintSendFriendInviteDelegateDelegate.h"
 #include "SendFriendInviteCallbackProxy.generated.h"
 
-class USendFriendInviteCallbackProxy;
-class UObject;
 class APlayerController;
+class UObject;
+class USendFriendInviteCallbackProxy;
 
 UCLASS(Blueprintable, MinimalAPI)
 class USendFriendInviteCallbackProxy : public UOnlineBlueprintCallProxyBase {

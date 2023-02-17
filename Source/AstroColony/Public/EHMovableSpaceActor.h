@@ -1,21 +1,25 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
+#include "GameFramework/Actor.h"
 #include "EHMovableSpaceActor.generated.h"
 
-class UStaticMeshComponent;
 class UEHPrimitiveComponent;
+class UStaticMeshComponent;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API AEHMovableSpaceActor : public AActor {
     GENERATED_BODY()
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnMovingToDestinationChanged, const bool, IsMovingToDestination);
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnMovingChanged, const bool, IsMoving);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMovableSpaceActorLocationChanged);
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector SpaceVelocity;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOnMovingChanged OnMovingChanged;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMovingToDestinationChanged OnMovingToDestinationChanged;

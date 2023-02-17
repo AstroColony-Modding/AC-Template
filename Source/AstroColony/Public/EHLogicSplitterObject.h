@@ -7,7 +7,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHLogicSplitterObject : public UEHLogicObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 DirectionIndex;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

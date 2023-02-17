@@ -3,12 +3,6 @@
 
 class UEHItem;
 
-void UEHItemsContainer::ResetRequestedItems() {
-}
-
-void UEHItemsContainer::RemoveRequestedItem(UEHItem* Item) {
-}
-
 void UEHItemsContainer::PickItem(UEHItem* Item) {
 }
 
@@ -32,11 +26,11 @@ bool UEHItemsContainer::HasItem(const FEHItemInstance& ItemInstance) {
     return false;
 }
 
-bool UEHItemsContainer::CheckTakingItems(const TArray<FEHItemInstance>& ItemInstances) {
+bool UEHItemsContainer::HasAnyValidItem() {
     return false;
 }
 
-bool UEHItemsContainer::AddRequestedItem(UEHItem* Item, const uint8 MaxWorkersAssigned, const uint8 MaxResources) {
+bool UEHItemsContainer::CheckTakingItems(const TArray<FEHItemInstance>& ItemInstances) {
     return false;
 }
 

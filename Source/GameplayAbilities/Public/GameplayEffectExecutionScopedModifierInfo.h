@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayEffectAttributeCaptureDefinition.h"
-#include "GameplayTagRequirements.h"
 #include "GameplayTagContainer.h"
 #include "EGameplayEffectScopedModifierAggregatorType.h"
 #include "EGameplayModOp.h"
+#include "GameplayEffectAttributeCaptureDefinition.h"
 #include "GameplayEffectModifierMagnitude.h"
 #include "GameplayModEvaluationChannelSettings.h"
+#include "GameplayTagRequirements.h"
 #include "GameplayEffectExecutionScopedModifierInfo.generated.h"
 
 USTRUCT(BlueprintType)
@@ -22,7 +22,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameplayEffectScopedModifierAggregatorType AggregatorType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EGameplayModOp::Type> ModifierOp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

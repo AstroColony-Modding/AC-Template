@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayAttribute.h"
 #include "EGameplayModOp.h"
-#include "ScalableFloat.h"
+#include "GameplayAttribute.h"
 #include "GameplayEffectModifierMagnitude.h"
 #include "GameplayModEvaluationChannelSettings.h"
 #include "GameplayTagRequirements.h"
+#include "ScalableFloat.h"
 #include "GameplayModifierInfo.generated.h"
 
 USTRUCT(BlueprintType)
@@ -15,7 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAttribute Attribute;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EGameplayModOp::Type> ModifierOp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

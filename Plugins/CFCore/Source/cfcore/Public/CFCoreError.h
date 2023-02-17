@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECFCoreErrorCodes.h"
 #include "CFCoreApiResponseError.h"
+#include "ECFCoreErrorCodes.h"
 #include "CFCoreError.generated.h"
 
 USTRUCT(BlueprintType)

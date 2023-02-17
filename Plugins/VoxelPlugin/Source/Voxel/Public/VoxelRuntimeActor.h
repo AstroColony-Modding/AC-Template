@@ -1,33 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "GameFramework/Actor.h"
-#include "VoxelGeneratorPicker.h"
-#include "VoxelLODMaterials.h"
-#include "VoxelIntBox.h"
-#include "EVoxelMaterialConfig.h"
-#include "VoxelLODMaterialCollections.h"
-#include "EVoxelNormalConfig.h"
-#include "EVoxelUVConfig.h"
-#include "EVoxelRGBHardness.h"
-#include "VoxelMeshConfig.h"
 #include "PhysicsEngine/BodyInstance.h"
-#include "EVoxelRenderType.h"
-#include "BodySetupEnums.h"
-#include "EVoxelTaskType.h"
 #include "Components/PrimitiveComponent.h"
+#include "BodySetupEnums.h"
+#include "EVoxelMaterialConfig.h"
+#include "EVoxelNormalConfig.h"
+#include "EVoxelRGBHardness.h"
+#include "EVoxelRenderType.h"
+#include "EVoxelTaskType.h"
+#include "EVoxelUVConfig.h"
+#include "Templates/SubclassOf.h"
+#include "VoxelGeneratorPicker.h"
+#include "VoxelIntBox.h"
+#include "VoxelLODMaterialCollections.h"
+#include "VoxelLODMaterials.h"
+#include "VoxelMeshConfig.h"
 #include "VoxelRuntimeActor.generated.h"
 
-class UVoxelRendererSubsystemProxy;
-class UVoxelPlaceableItemManager;
 class UMaterialInterface;
-class UVoxelMaterialCollectionBase;
-class UVoxelProceduralMeshComponent;
-class UVoxelSpawnerConfig;
 class UPhysicalMaterial;
-class UVoxelMultiplayerInterface;
-class UVoxelLODSubsystemProxy;
 class UTexture;
+class UVoxelLODSubsystemProxy;
+class UVoxelMaterialCollectionBase;
+class UVoxelMultiplayerInterface;
+class UVoxelPlaceableItemManager;
+class UVoxelProceduralMeshComponent;
+class UVoxelRendererSubsystemProxy;
+class UVoxelSpawnerConfig;
 
 UCLASS(Blueprintable)
 class VOXEL_API AVoxelRuntimeActor : public AActor {
@@ -69,7 +69,7 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 RenderOctreeDepth;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 WorldSizeInVoxel;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -132,10 +132,10 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bOneMaterialPerCubeSide;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint8> HolesMaterials;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<uint8, FVoxelMeshConfig> MaterialsMeshConfigs;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -234,7 +234,7 @@ public:
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SpawnersCollisionDistanceInVoxel;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, EditAnywhere, meta=(AllowPrivateAccess=true))
     int64 MaxNumberOfFoliageInstances;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -243,10 +243,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBodyInstance CollisionPresets;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ECollisionTraceFlag> CollisionTraceFlag;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ECanBeCharacterBase> CanCharacterStepUpOn;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -318,7 +318,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UVoxelLODSubsystemProxy> LODSubsystem;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<UTexture>> DebugTextures;
     
     AVoxelRuntimeActor();

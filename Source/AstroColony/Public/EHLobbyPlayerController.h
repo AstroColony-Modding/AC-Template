@@ -15,7 +15,7 @@ public:
     void LobbyLoadSavegame();
     
 private:
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_SendPackage(const TArray<uint8>& PackageData);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)

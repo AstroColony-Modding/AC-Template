@@ -1,19 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "TGUILayerManager.h"
-#include "EEHUIUnderlayID.h"
-#include "EEHUIOverlayID.h"
-#include "EToastImageType.h"
 #include "EEHToastNature.h"
+#include "EEHUIOverlayID.h"
+#include "EEHUIUnderlayID.h"
+#include "EToastImageType.h"
 #include "EHLayerManager.generated.h"
 
 class UDataTable;
-class UTGUILayer;
-class UTexture2D;
-class USoundBase;
-class UEHToastContainerViewModel;
-class UTGViewModel;
+class UEHModsListViewModel;
 class UEHTechnologyAsset;
+class UEHToastContainerViewModel;
+class USoundBase;
+class UTGUILayer;
+class UTGViewModel;
+class UTexture2D;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHLayerManager : public UTGUILayerManager {
@@ -44,7 +45,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EToastImageType, UTexture2D*> ToastImageReferences;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<USoundBase> ToastSounds[3];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -52,6 +53,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     UEHToastContainerViewModel* ToastContainerViewModel;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UEHModsListViewModel* ModsListViewModel;
     
 public:
     UEHLayerManager();
@@ -74,13 +78,22 @@ public:
     UTGUILayer* OpenOverlay(const EEHUIOverlayID OverlayID, UTGViewModel* ViewModel);
     
     UFUNCTION(BlueprintCallable)
+    void OpenModsHUBWidget(const FString& ModToNavigate);
+    
+    UFUNCTION(BlueprintCallable)
     void OpenAllAvailableLayers();
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    bool IsOverlayOpen(const EEHUIOverlayID OverlayID);
     
     UFUNCTION(BlueprintCallable)
     void CloseUnderlay(const EEHUIUnderlayID UnderlayID, bool bRelease);
     
     UFUNCTION(BlueprintCallable)
     void CloseOverlay(const EEHUIOverlayID OverlayID, bool bRelease);
+    
+    UFUNCTION(BlueprintCallable)
+    void CloseModsHUBWidget();
     
 };
 

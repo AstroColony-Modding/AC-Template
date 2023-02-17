@@ -1,8 +1,8 @@
 #include "VoxelProjectionTools.h"
 
 class AActor;
-class UObject;
 class AVoxelWorld;
+class UObject;
 
 FVoxelLineTraceParameters UVoxelProjectionTools::MakeVoxelLineTraceParameters(TArray<TEnumAsByte<ECollisionChannel>> CollisionChannelsToIgnore, TArray<AActor*> ActorsToIgnore, TEnumAsByte<ECollisionChannel> CollisionChannel, TEnumAsByte<EDrawDebugTrace::Type> DrawDebugType, FLinearColor TraceColor, FLinearColor TraceHitColor, float DrawTime) {
     return FVoxelLineTraceParameters{};

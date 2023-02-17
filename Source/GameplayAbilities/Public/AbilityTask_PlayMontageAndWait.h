@@ -5,8 +5,8 @@
 #include "AbilityTask_PlayMontageAndWait.generated.h"
 
 class UAbilityTask_PlayMontageAndWait;
-class UGameplayAbility;
 class UAnimMontage;
+class UGameplayAbility;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_PlayMontageAndWait : public UAbilityTask {

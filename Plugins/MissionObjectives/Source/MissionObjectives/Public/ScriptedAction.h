@@ -13,7 +13,7 @@ class MISSIONOBJECTIVES_API UScriptedAction : public UObject {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<APlayerController> PlayerControllerRef;
     
 public:

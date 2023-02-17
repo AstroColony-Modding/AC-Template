@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VisibilityBindable.h"
+#include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "GameFramework/PlayerInput.h"
-#include "TextBindable.h"
-#include "Vector2DBindable.h"
-#include "StringBindable.h"
-#include "Texture2DBindable.h"
-#include "Int32Bindable.h"
 #include "InputCoreTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "FloatBindable.h"
 #include "BoolBindable.h"
 #include "ColorBindable.h"
+#include "FloatBindable.h"
+#include "Int32Bindable.h"
+#include "StringBindable.h"
+#include "TextBindable.h"
+#include "Texture2DBindable.h"
+#include "Vector2DBindable.h"
+#include "VisibilityBindable.h"
 #include "TGUIFunctionLibrary.generated.h"
 
-class UTextBlock;
-class UWidget;
-class UWidgetSwitcher;
+class UComboBoxString;
+class UEditableText;
 class UImage;
 class UObject;
+class USlider;
 class UTGEditableTextBox;
 class UTGRichTextBlock;
-class UEditableText;
-class UComboBoxString;
 class UTGToggle;
-class USlider;
+class UTextBlock;
 class UUserWidget;
+class UWidget;
+class UWidgetSwitcher;
 
 UCLASS(Blueprintable)
 class UTGUIFunctionLibrary : public UBlueprintFunctionLibrary {
@@ -89,6 +89,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     static void Bool_BindIsEnabled(UPARAM(Ref) FBoolBindable& BoolBindable, UWidget* Widget);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool ActionHasKey(const FName ActionName, const FKey& Key);
     
 };
 

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHAIObject.h"
 #include "EEHBillboardType.h"
-#include "EHHumanNeed.h"
+#include "EHAIObject.h"
 #include "EHHeadMeshes.h"
+#include "EHHumanNeed.h"
 #include "EHHumanNeedID.h"
 #include "EHAIHumanObject.generated.h"
 
-class UEHItem;
 class UDataTable;
+class UEHItem;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHAIHumanObject : public UEHAIObject {

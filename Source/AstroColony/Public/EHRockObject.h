@@ -1,19 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "EHInteractableObject.h"
 #include "EHInteractionInterface.h"
-#include "UObject/NoExportTypes.h"
 #include "EHItemInstance.h"
+#include "EHVisitedByAIInterface.h"
 #include "EHRockObject.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)
-class ASTROCOLONY_API UEHRockObject : public UEHInteractableObject, public IEHInteractionInterface {
+class ASTROCOLONY_API UEHRockObject : public UEHInteractableObject, public IEHInteractionInterface, public IEHVisitedByAIInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TotalNumHits;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 NumOfHits;
     
     UEHRockObject();

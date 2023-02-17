@@ -4,9 +4,9 @@
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "CancelFindSessionsCallbackProxy.generated.h"
 
-class UObject;
-class UCancelFindSessionsCallbackProxy;
 class APlayerController;
+class UCancelFindSessionsCallbackProxy;
+class UObject;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UCancelFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase {

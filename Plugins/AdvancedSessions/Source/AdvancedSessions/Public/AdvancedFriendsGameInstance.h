@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/GameInstance.h"
-#include "BPUniqueNetId.h"
 #include "FindSessionsCallbackProxy.h"
+#include "BPUniqueNetId.h"
 #include "EBPLoginStatus.h"
 #include "AdvancedFriendsGameInstance.generated.h"
 

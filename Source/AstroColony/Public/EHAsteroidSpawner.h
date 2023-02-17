@@ -1,21 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHAsteroidExtraction.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Engine/NetSerialization.h"
-#include "EHWorldInteractiveActor.h"
-#include "EHSaveGameInterface.h"
-#include "EHAsteroidData.h"
-#include "UObject/NoExportTypes.h"
 #include "EEHMiningResourceType.h"
+#include "EHAsteroidData.h"
+#include "EHAsteroidExtraction.h"
 #include "EHAttractedAsteroidData.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "EHSaveGameInterface.h"
+#include "EHWorldInteractiveActor.h"
 #include "EHAsteroidSpawner.generated.h"
 
-class UEHHISMComponent;
+class UEHAsteroidsCatcher;
 class UEHDataProvider;
 class UEHGridComponent;
-class UEHAsteroidsCatcher;
+class UEHHISMComponent;
+class UEHItem;
 class UEHResourceItem;
 
 UCLASS(Blueprintable)
@@ -180,7 +181,7 @@ private:
     
 public:
     UFUNCTION(BlueprintCallable)
-    FEHAsteroidData GenerateAsteroidData();
+    FEHAsteroidData GenerateAsteroidData(UEHItem* ResourceItem);
     
     UFUNCTION(BlueprintCallable)
     UEHResourceItem* ExtractResource(const int32 InstanceIndex);

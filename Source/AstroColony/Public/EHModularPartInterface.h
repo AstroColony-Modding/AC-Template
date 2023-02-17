@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHSceneInteractionInterface.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "EEHVehiclePartType.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "EHSceneInteractionInterface.h"
 #include "EHModularPartInterface.generated.h"
 
 class UMaterialInterface;

@@ -3,8 +3,8 @@
 #include "UObject/NoExportTypes.h"
 #include "GameplayEffectContext.generated.h"
 
-class UAbilitySystemComponent;
 class AActor;
+class UAbilitySystemComponent;
 class UGameplayAbility;
 class UObject;
 
@@ -13,28 +13,28 @@ struct GAMEPLAYABILITIES_API FGameplayEffectContext {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> Instigator;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> EffectCauser;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UGameplayAbility> AbilityCDO;
     
-    UPROPERTY(EditAnywhere, NotReplicated)
+    UPROPERTY(EditAnywhere, NotReplicated, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UGameplayAbility> AbilityInstanceNotReplicated;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 AbilityLevel;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UObject> SourceObject;
     
-    UPROPERTY(EditAnywhere, Export, NotReplicated)
+    UPROPERTY(EditAnywhere, Export, NotReplicated, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UAbilitySystemComponent> InstigatorAbilitySystemComponent;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<AActor>> Actors;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

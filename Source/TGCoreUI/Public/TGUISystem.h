@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/Object.h"
 #include "TGIUISystem.h"
+#include "Templates/SubclassOf.h"
 #include "TGUISystem.generated.h"
 
-class UTGUILoadingScreenManager;
-class UTGUILayerManager;
-class UTGUIScreenManager;
 class UTGUIAchievementsManager;
-class UTGUISceneContextManager;
-class UTGUIPopupManager;
 class UTGUIAudioManager;
-class UTGUINarrationManager;
 class UTGUIFocusManager;
+class UTGUILayerManager;
+class UTGUILoadingScreenManager;
+class UTGUINarrationManager;
+class UTGUIPopupManager;
+class UTGUISceneContextManager;
+class UTGUIScreenManager;
 
 UCLASS(Blueprintable)
 class TGCOREUI_API UTGUISystem : public UObject, public ITGIUISystem {

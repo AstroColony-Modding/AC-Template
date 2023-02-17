@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MaterialExpressionIO.h"
 #include "UObject/NoExportTypes.h"
+#include "MaterialExpressionIO.h"
 #include "MaterialPackInput.generated.h"
 
 USTRUCT(BlueprintType)

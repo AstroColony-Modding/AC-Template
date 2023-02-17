@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelNode_IQNoiseBase.h"
 #include "UObject/NoExportTypes.h"
+#include "VoxelNode_IQNoiseBase.h"
 #include "VoxelNode_3DIQNoiseBase.generated.h"
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)

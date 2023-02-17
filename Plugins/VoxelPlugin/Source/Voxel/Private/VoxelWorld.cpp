@@ -1,11 +1,11 @@
 #include "VoxelWorld.h"
 #include "Templates/SubclassOf.h"
-#include "VoxelWorldRootComponent.h"
 #include "VoxelLineBatchComponent.h"
+#include "VoxelWorldRootComponent.h"
 
 class UVoxelGenerator;
-class UVoxelMultiplayerInterface;
 class UVoxelGeneratorCache;
+class UVoxelMultiplayerInterface;
 
 void AVoxelWorld::SetWorldSize(int32 NewWorldSizeInVoxels) {
 }

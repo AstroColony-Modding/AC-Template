@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "BPUniqueNetId.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
 #include "BlueprintGroupOfficerDetailsDelegateDelegate.h"
-#include "BPUniqueNetId.h"
 #include "SteamRequestGroupOfficersCallbackProxy.generated.h"
 
-class USteamRequestGroupOfficersCallbackProxy;
 class UObject;
+class USteamRequestGroupOfficersCallbackProxy;
 
 UCLASS(Blueprintable, MinimalAPI)
 class USteamRequestGroupOfficersCallbackProxy : public UOnlineBlueprintCallProxyBase {

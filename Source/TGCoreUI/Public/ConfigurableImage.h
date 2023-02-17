@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Styling/SlateBrush.h"
 #include "UObject/NoExportTypes.h"
+#include "Styling/SlateBrush.h"
 #include "ConfigurableImage.generated.h"
 
 USTRUCT(BlueprintType)

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
-#include "GameplayEffectAppliedSelfDelegateDelegate.h"
 #include "AbilityTask_WaitGameplayEffectApplied.h"
-#include "GameplayTargetDataFilterHandle.h"
+#include "GameplayEffectAppliedSelfDelegateDelegate.h"
 #include "GameplayTagRequirements.h"
+#include "GameplayTargetDataFilterHandle.h"
 #include "AbilityTask_WaitGameplayEffectApplied_Self.generated.h"
 
+class AActor;
 class UAbilityTask_WaitGameplayEffectApplied_Self;
 class UGameplayAbility;
-class AActor;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitGameplayEffectApplied_Self : public UAbilityTask_WaitGameplayEffectApplied {

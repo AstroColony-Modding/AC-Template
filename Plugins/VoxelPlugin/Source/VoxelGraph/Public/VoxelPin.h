@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EVoxelPinCategory.h"
 #include "UObject/NoExportTypes.h"
+#include "EVoxelPinCategory.h"
 #include "VoxelPin.generated.h"
 
 class UVoxelNode;

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHInt32OptionViewModel.h"
 #include "BoolBindable.h"
-#include "TextBindable.h"
 #include "Int32Bindable.h"
+#include "TextBindable.h"
+#include "EHInt32OptionViewModel.h"
 #include "EHStepperViewModel.generated.h"
 
 UCLASS(Blueprintable)

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelNodeHelper.h"
 #include "EVoxelNodeIfBranchToUseForRangeAnalysis.h"
+#include "VoxelNodeHelper.h"
 #include "VoxelNode_If.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

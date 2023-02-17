@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHScreenViewModel.h"
 #include "TextBindable.h"
 #include "EEHBackgroundType.h"
+#include "EHScreenViewModel.h"
 #include "EHSettingsViewModel.generated.h"
 
 class UEHGameUserSettings;
-class UEHSettingsPreviewViewModel;
 class UEHSettingsCategoryViewModel;
-class UEHTabCategoryViewModel;
+class UEHSettingsPreviewViewModel;
 class UEHSettingsWarningViewModel;
+class UEHTabCategoryViewModel;
 class UTGUIAudioManager;
 
 UCLASS(Blueprintable)

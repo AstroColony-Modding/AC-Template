@@ -1,9 +1,9 @@
 #include "VoxelAssetTools.h"
 
+class AVoxelWorld;
+class UObject;
 class UVoxelDataAsset;
 class UVoxelTransformableGeneratorInstanceWrapper;
-class UObject;
-class AVoxelWorld;
 
 void UVoxelAssetTools::SetDataAssetMaterial(UVoxelDataAsset* Asset, UVoxelDataAsset*& NewAsset, FVoxelMaterial Material) {
 }

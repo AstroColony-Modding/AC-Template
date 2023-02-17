@@ -4,13 +4,13 @@
 #include "EMissionState.h"
 #include "Mission.generated.h"
 
-class UTexture2D;
 class UEdGraph;
-class UReferencedMissionObject;
 class UMOBaseNode;
+class UMOObjectiveNode;
 class UMOTextNode;
 class UMission;
-class UMOObjectiveNode;
+class UReferencedMissionObject;
+class UTexture2D;
 
 UCLASS(Blueprintable)
 class MISSIONOBJECTIVES_API UMission : public UObject {
@@ -34,7 +34,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FText MissionDescription;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 ChangeLastActiveReasons;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

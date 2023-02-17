@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHTextOptionViewModel.h"
-#include "VisibilityBindable.h"
 #include "TextBindable.h"
+#include "VisibilityBindable.h"
+#include "EHTextOptionViewModel.h"
 #include "EHInputBindingDisplayViewModel.generated.h"
 
 UCLASS(Blueprintable)

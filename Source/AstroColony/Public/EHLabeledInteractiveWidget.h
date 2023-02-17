@@ -4,10 +4,10 @@
 #include "EHLabeledInteractiveWidget.generated.h"
 
 class UEHLabeledInteractiveWidgetViewModel;
-class UTGInputActionWidget;
 class UTGConfigurableTextBlock;
-class UTGWidget;
+class UTGInputActionWidget;
 class UTGViewModel;
+class UTGWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHLabeledInteractiveWidget : public UTGUserWidget {

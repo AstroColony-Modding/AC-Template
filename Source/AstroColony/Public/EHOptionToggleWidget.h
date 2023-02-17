@@ -3,8 +3,8 @@
 #include "EHOptionWidget.h"
 #include "EHOptionToggleWidget.generated.h"
 
-class UTGCheckBox;
 class UEHToggleViewModel;
+class UTGCheckBox;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHOptionToggleWidget : public UEHOptionWidget {

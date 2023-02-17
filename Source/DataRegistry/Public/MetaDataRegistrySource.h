@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "DataRegistrySource.h"
 #include "Engine/AssetManagerTypes.h"
+#include "DataRegistrySource.h"
 #include "EMetaDataRegistrySourceAssetUsage.h"
 #include "MetaDataRegistrySource.generated.h"
 
@@ -16,7 +16,7 @@ public:
     FAssetManagerSearchRules SearchRules;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TMap<FName, UDataRegistrySource*> RuntimeChildren;
     
 public:

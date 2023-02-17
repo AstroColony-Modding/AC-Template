@@ -1,8 +1,8 @@
 #include "VoxelToolBase.h"
 
-class UStaticMesh;
-class UMaterialInterface;
 class UMaterialInstanceDynamic;
+class UMaterialInterface;
+class UStaticMesh;
 
 void UVoxelToolBase::UpdateToolMesh(UStaticMesh* Mesh, UMaterialInterface* Material, const FTransform& Transform, FName ID) {
 }

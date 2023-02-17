@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHViewModel.h"
 #include "Int32Bindable.h"
 #include "TextBindable.h"
+#include "EHViewModel.h"
 #include "EHMenuOptionViewModel.generated.h"
 
 UCLASS(Blueprintable)

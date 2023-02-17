@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Net/OnlineBlueprintCallProxyBase.h"
-#include "BlueprintGetRecentPlayersDelegateDelegate.h"
 #include "BPUniqueNetId.h"
+#include "BlueprintGetRecentPlayersDelegateDelegate.h"
 #include "GetRecentPlayersCallbackProxy.generated.h"
 
-class UObject;
 class UGetRecentPlayersCallbackProxy;
+class UObject;
 
 UCLASS(Blueprintable, MinimalAPI)
 class UGetRecentPlayersCallbackProxy : public UOnlineBlueprintCallProxyBase {

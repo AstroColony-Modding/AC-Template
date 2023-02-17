@@ -1,30 +1,30 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "GameplayTagContainer.h"
 #include "UObject/Object.h"
+#include "GameplayTagContainer.h"
 #include "GameplayTagAssetInterface.h"
 #include "GameplayTagContainer.h"
-#include "GameplayEffectExecutionDefinition.h"
-#include "ScalableFloat.h"
+#include "ConditionalGameplayEffect.h"
 #include "EGameplayEffectDurationType.h"
-#include "GameplayEffectModifierMagnitude.h"
-#include "GameplayEffectCue.h"
 #include "EGameplayEffectPeriodInhibitionRemovedPolicy.h"
+#include "EGameplayEffectStackingDurationPolicy.h"
+#include "EGameplayEffectStackingExpirationPolicy.h"
+#include "EGameplayEffectStackingPeriodPolicy.h"
+#include "EGameplayEffectStackingType.h"
+#include "GameplayAbilitySpecDef.h"
+#include "GameplayEffectCue.h"
+#include "GameplayEffectExecutionDefinition.h"
+#include "GameplayEffectModifierMagnitude.h"
+#include "GameplayEffectQuery.h"
 #include "GameplayModifierInfo.h"
 #include "GameplayTagRequirements.h"
-#include "ConditionalGameplayEffect.h"
 #include "InheritedTagContainer.h"
-#include "GameplayEffectQuery.h"
-#include "EGameplayEffectStackingType.h"
-#include "EGameplayEffectStackingDurationPolicy.h"
-#include "EGameplayEffectStackingPeriodPolicy.h"
-#include "EGameplayEffectStackingExpirationPolicy.h"
-#include "GameplayAbilitySpecDef.h"
+#include "ScalableFloat.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayEffect.generated.h"
 
-class UGameplayEffectCustomApplicationRequirement;
 class UGameplayEffect;
+class UGameplayEffectCustomApplicationRequirement;
 class UGameplayEffectUIData;
 
 UCLASS(Blueprintable)

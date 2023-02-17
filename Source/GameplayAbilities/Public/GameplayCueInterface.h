@@ -16,7 +16,7 @@ public:
     UFUNCTION(BlueprintCosmetic)
     virtual void ForwardGameplayCueToParent() PURE_VIRTUAL(ForwardGameplayCueToParent,);
     
-    /*UFUNCTION(BlueprintCosmetic, BlueprintImplementableEvent)
+    /*UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintImplementableEvent)
     void BlueprintCustomHandler(TEnumAsByte<EGameplayCueEvent::Type> EventType, const FGameplayCueParameters& Parameters);*/
     
 };

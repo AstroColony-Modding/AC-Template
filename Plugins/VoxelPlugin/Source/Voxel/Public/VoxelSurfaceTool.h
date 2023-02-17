@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelToolBase.h"
 #include "UObject/NoExportTypes.h"
-#include "VoxelSurfaceToolMask.h"
 #include "EVoxelFalloff.h"
+#include "VoxelSurfaceToolMask.h"
+#include "VoxelToolBase.h"
 #include "VoxelSurfaceTool.generated.h"
 
-class UTexture2D;
 class UMaterialInterface;
+class UTexture2D;
 
 UCLASS(Blueprintable)
 class VOXEL_API UVoxelSurfaceTool : public UVoxelToolBase {

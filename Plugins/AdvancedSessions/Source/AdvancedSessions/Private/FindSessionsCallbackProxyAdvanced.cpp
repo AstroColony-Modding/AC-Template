@@ -1,8 +1,8 @@
 #include "FindSessionsCallbackProxyAdvanced.h"
 
-class UObject;
 class APlayerController;
 class UFindSessionsCallbackProxyAdvanced;
+class UObject;
 
 UFindSessionsCallbackProxyAdvanced* UFindSessionsCallbackProxyAdvanced::FindSessionsAdvanced(UObject* WorldContextObject, APlayerController* PlayerController, int32 MaxResults, bool bUseLAN, EBPServerPresenceSearchType ServerTypeToSearch, const TArray<FSessionsSearchSetting>& Filters, bool bEmptyServersOnly, bool bNonEmptyServersOnly, bool bSecureServersOnly, bool bSearchLobbies, int32 MinSlotsAvailable) {
     return NULL;

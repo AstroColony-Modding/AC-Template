@@ -3,8 +3,8 @@
 #include "EHCraftingObject.h"
 #include "EHBarrierGenerator.generated.h"
 
-class AEHGamePlayerController;
 class AActor;
+class AEHGamePlayerController;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHBarrierGenerator : public UEHCraftingObject {

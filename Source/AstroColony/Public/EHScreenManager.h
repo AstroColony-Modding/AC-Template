@@ -6,15 +6,15 @@
 #include "ScreenDefinition.h"
 #include "EHScreenManager.generated.h"
 
-class UTGUIScreen;
 class UEHScreenViewModel;
+class UTGUIScreen;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHScreenManager : public UTGUIScreenManager {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TMap<EEHUIScreenID, UTGUIScreen*> ScreenMap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "InputCoreTypes.h"
 #include "ETGInputControllerType.h"
 #include "Components/RichTextBlock.h"
-#include "InputCoreTypes.h"
 #include "TGRichTextBlock.generated.h"
 
 class UDataTable;
@@ -27,7 +27,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FKey EditorPreviewKey;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ETGInputControllerType> PreviewControllerType;
     
     UTGRichTextBlock();

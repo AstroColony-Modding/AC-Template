@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EHBasicUnlockData.generated.h"
 
-class UTexture2D;
 class UEHAsset;
+class UTexture2D;
 
 USTRUCT(BlueprintType)
 struct ASTROCOLONY_API FEHBasicUnlockData {

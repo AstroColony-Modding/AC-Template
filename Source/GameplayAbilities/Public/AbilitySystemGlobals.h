@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EGameplayModEvaluationChannel.h"
 #include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "GameplayTagContainer.h"
-#include "UObject/NoExportTypes.h"
+#include "EGameplayModEvaluationChannel.h"
 #include "NetSerializeScriptStructCache.h"
-#include "UObject/NoExportTypes.h"
 #include "AbilitySystemGlobals.generated.h"
 
 class UCurveTable;
 class UDataTable;
-class UGameplayTagReponseTable;
 class UGameplayCueManager;
+class UGameplayTagReponseTable;
 
 UCLASS(Blueprintable, Config=Game)
 class GAMEPLAYABILITIES_API UAbilitySystemGlobals : public UObject {
@@ -69,7 +69,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     EGameplayModEvaluationChannel DefaultGameplayModEvaluationChannel;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName GameplayModEvaluationChannelAliases[10];
     
     UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))

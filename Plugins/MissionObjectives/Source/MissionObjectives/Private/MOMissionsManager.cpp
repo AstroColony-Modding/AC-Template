@@ -1,11 +1,11 @@
 #include "MOMissionsManager.h"
 
 class UMOObjectiveNode;
+class UMOTextNode;
 class UMission;
+class UObjectiveAsset;
 class UReferencedMissionObject;
 class USaveGame;
-class UMOTextNode;
-class UObjectiveAsset;
 
 void UMOMissionsManager::SwapWithNextMission(UMission* SelectedMission) {
 }
@@ -26,9 +26,6 @@ void UMOMissionsManager::NotifyLastMissionNodeActivated(UMission* Mission) {
 }
 
 void UMOMissionsManager::MultiStartMission_Implementation(UMission* Mission, const FName MissionID, UReferencedMissionObject* ReferencedMissionObject) {
-}
-
-void UMOMissionsManager::MultiCompleteObjective_Implementation(FName ObjectiveName, UMission* Mission, uint8 RepetitionsCount) {
 }
 
 void UMOMissionsManager::LoadMissionsFromSlot(const FString& SlotName, const int32 UserIndex) {
@@ -81,6 +78,9 @@ void UMOMissionsManager::CompleteObjective(FName ObjectiveName, UMission* Missio
 }
 
 void UMOMissionsManager::ClientRecovery_Implementation(const FMissionSavegameData& MissionSavegameData) {
+}
+
+void UMOMissionsManager::Client_CompleteObjective_Implementation(FName ObjectiveName, UMission* Mission, uint8 RepetitionsCount) {
 }
 
 UMOMissionsManager::UMOMissionsManager() {

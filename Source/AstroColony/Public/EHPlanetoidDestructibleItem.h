@@ -3,8 +3,8 @@
 #include "EHDeviceItem.h"
 #include "EHPlanetoidDestructibleItem.generated.h"
 
-class UMaterialInterface;
 class UEHItem;
+class UMaterialInterface;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHPlanetoidDestructibleItem : public UEHDeviceItem {
@@ -16,10 +16,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEHItem* DestructibleResoruce;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 DstructibleSpawnChance[6];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     float SpawnDensity[6];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

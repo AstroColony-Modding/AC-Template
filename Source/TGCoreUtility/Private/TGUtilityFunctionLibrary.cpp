@@ -1,11 +1,11 @@
 #include "TGUtilityFunctionLibrary.h"
 #include "Templates/SubclassOf.h"
 
+class AActor;
+class APlayerController;
 class UActorComponent;
 class UCurveFloat;
-class AActor;
 class UObject;
-class APlayerController;
 
 AActor* UTGUtilityFunctionLibrary::SpawnAttachedActor(const FAttachedActorSpawnParams& Params) {
     return NULL;

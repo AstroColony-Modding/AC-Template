@@ -1,7 +1,7 @@
 #include "SendFriendInviteCallbackProxy.h"
 
-class UObject;
 class APlayerController;
+class UObject;
 class USendFriendInviteCallbackProxy;
 
 USendFriendInviteCallbackProxy* USendFriendInviteCallbackProxy::SendFriendInvite(UObject* WorldContextObject, APlayerController* PlayerController, const FBPUniqueNetId& UniqueNetIDInvited) {

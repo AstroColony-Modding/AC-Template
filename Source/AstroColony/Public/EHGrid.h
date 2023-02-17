@@ -1,51 +1,57 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "GameFramework/Actor.h"
-#include "EEHInstanceRotation.h"
-#include "EHIndicationInterface.h"
-#include "EHSaveGameInterface.h"
-#include "EHMapTrackableInterface.h"
-#include "EHCellType.h"
-#include "UObject/NoExportTypes.h"
-#include "EInstanceCellType.h"
-#include "UObject/NoExportTypes.h"
 #include "EAIProfession.h"
-#include "InstancesContainer.h"
+#include "EEHInstanceRotation.h"
 #include "EEHRotationDirection.h"
+#include "EHCellType.h"
+#include "EHIndicationInterface.h"
 #include "EHInstanceCellDefinition.h"
+#include "EHMapTrackableInterface.h"
+#include "EHPushOut.h"
+#include "EHSaveGameInterface.h"
+#include "EHSimpleCell.h"
+#include "EInstanceCellType.h"
+#include "InstancesContainer.h"
+#include "IntVector16.h"
 #include "EHGrid.generated.h"
 
-class UEHAIDirectorComponent;
-class UEHPathfindingComponent;
-class USceneComponent;
-class UEHElectricNetwork;
-class UInstancedStaticMeshComponent;
-class UEHDevicesComponent;
-class UEHThrusterNetwork;
-class UPrimitiveComponent;
-class AEHGrid;
-class UHierarchicalInstancedStaticMeshComponent;
-class UEHHISMComponent;
-class UEHBoxComponent;
 class AEHBlackHole;
-class UEHItem;
-class UStaticMeshComponent;
-class UMaterialInstanceDynamic;
-class UEHFlareComponent;
-class UEHBillboardsLineComponent;
-class UEHReactiveMeshComponent;
-class UEHGridDataObject;
-class UEHInteractableObject;
+class AEHGrid;
+class AEHMovableSpaceActor;
+class UEHAIDirectorComponent;
 class UEHAIObject;
-class UEHItemsContainer;
+class UEHBillboardsLineComponent;
+class UEHBoxComponent;
+class UEHConveyorObject;
+class UEHDevicesComponent;
+class UEHElectricNetwork;
+class UEHFlareComponent;
+class UEHGridComponent;
+class UEHGridDataObject;
+class UEHHISMComponent;
+class UEHInteractableObject;
 class UEHInventoryComponent;
-
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDockedGridsChanged);
+class UEHItem;
+class UEHItemsContainer;
+class UEHPathfindingComponent;
+class UEHReactiveMeshComponent;
+class UEHThrusterNetwork;
+class UHierarchicalInstancedStaticMeshComponent;
+class UInstancedStaticMeshComponent;
+class UMaterialInstanceDynamic;
+class UPrimitiveComponent;
+class USceneComponent;
+class UStaticMeshComponent;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API AEHGrid : public AActor, public IEHSaveGameInterface, public IEHMapTrackableInterface, public IEHIndicationInterface {
     GENERATED_BODY()
 public:
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnDockedGridsChanged);
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FString GridName;
     
@@ -133,6 +139,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsReplicationReady, meta=(AllowPrivateAccess=true))
     bool IsReplicationReady;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsReplicationReady, meta=(AllowPrivateAccess=true))
+    uint8 UniverseIndex;
+    
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<UEHItem*, FInstancesContainer> ItemComponents;
@@ -152,13 +161,13 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UStaticMeshComponent*> CustomHighlightMeshes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TMap<FIntVector, UEHFlareComponent*> FlaresMap;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TMap<FIntVector, UEHBillboardsLineComponent*> BillboardsMap;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TMap<FIntVector, UEHReactiveMeshComponent*> ReactiveMeshMap;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -181,6 +190,12 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FEHCellType, EEHInstanceRotation> PendingUpgradeClientInstances;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TMap<FIntVector, UEHConveyorObject*> PendingRemovedPushes;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FEHPushOut> PendingClientPushes;
     
 public:
     AEHGrid();
@@ -216,46 +231,82 @@ public:
     void Multi_UpgradePendingInstance(UEHItem* Item, const FIntVector& CellCoords, UEHInteractableObject* InteractableObject, const EEHInstanceRotation Rotation);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void Multi_UpgradeInstance(const EInstanceCellType InstanceCellType, const FIntVector& CellCoords, const EEHInstanceRotation Rotation);
+    void Multi_UpgradeInstance(const EInstanceCellType InstanceCellType, const FIntVector& CellCoords, UEHInteractableObject* InteractableObject, const EEHInstanceRotation Rotation);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_TransferResourceCell(const FIntVector& ResourceCoord, const FIntVector& Direction);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void Multi_TransferAICell(const FIntVector& AICoord, const FIntVector& Direction);
+    void Multi_TransferAICell(const FIntVector16& AICoord, uint8 DirectionPacked);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void Multi_SwapAIChain(const TArray<UEHAIObject*>& ChainAIs);
+    void Multi_SwapAIChain(const TArray<UEHAIObject*>& ChainAIs, const TArray<FIntVector>& AICoords, const TArray<uint8>& PathIndexes);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void Multi_StopAnimationBlending(const FIntVector& CellCoords);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_StartSimulation();
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_RotateInstance(const FIntVector& CellCoords, const EEHRotationDirection RotationDirection, EInstanceCellType InstanceCellType, const EEHInstanceRotation Rotation);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_RemoveResource(const FIntVector16& ResourceCoord);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_RemoveInstanceBulk(const TArray<FEHSimpleCell>& Cells);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_RemoveInstance(const EInstanceCellType InstanceCellType, const FIntVector& CellCoords, const EEHInstanceRotation Rotation);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void Multi_PushOutResource(UEHItemsContainer* PushContainer, UEHItem* ResourceToPush, const FIntVector& PushCoords, const FIntVector& PushDirection, const FVector& TransferOffset);
+    void Multi_RemoveAI(UEHAIObject* AIObject);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_PushOutResource(UEHItemsContainer* PushContainer, UEHItem* Resource, const uint8& PushIndex);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_PushOutAI(UEHItemsContainer* PushContainer, UEHItem* AIItemToPush, const FIntVector& AISpawnCoord, const FIntVector& PushCoords);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void Multi_OnAILeft(UEHInteractableObject* InteractableObject, UEHAIObject* AIObject);
+    void Multi_OnAILeft(const FIntVector& DeviceCoord, UEHAIObject* AIObject);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_OnAIEntered(UEHInteractableObject* InteractableObject, UEHAIObject* AIObject);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_NotifyTransferedResourceRemoved(const FIntVector& ResourceCoord, const FIntVector& Direction);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_NotifyPossiblyTransferedResourceRemoved(const FIntVector& ResourceCoord);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_HitExtract(UEHInventoryComponent* PlayerInventoryComponent, const FIntVector& HitCoord, const FVector& HitLocation);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_FarmerEntered(const FIntVector& FarmCoord, UEHAIObject* NewFarmer);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_ExtractResource(const FIntVector& ResourceCoord);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_EnsureResourceRemoved(const FIntVector& ResourceCoord, const FIntVector& DirectionFrom);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_EnsureResourcePushed(const FIntVector& ResourceCoord, const FIntVector& Direction);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_BreederEntered(const FIntVector& PastureCoord, UEHAIObject* NewBreeder);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_AddPendingInstance(UEHItem* Item, const FIntVector& CellCoords, UEHInteractableObject* InteractableObject, const EEHInstanceRotation Rotation);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_AddInstanceBulk(const TArray<FEHSimpleCell>& Cells, const TArray<UEHInteractableObject*>& InteractableObjects, UEHGridComponent* ClientGridComponent);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_AddInstanceAndTransfer(UEHItem* Item, const FIntVector& CellCoords, const FIntVector& Direction);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_AddInstance(UEHItem* Item, const FIntVector& CellCoords, const EEHInstanceRotation Rotation);
@@ -276,6 +327,9 @@ private:
     void HandleGameStarted();
     
     UFUNCTION(BlueprintCallable)
+    void HandleGameSimulationStarted();
+    
+    UFUNCTION(BlueprintCallable)
     void HandleAssetsLoaded();
     
 public:
@@ -284,6 +338,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     FIntVector GetPointForImpact(bool& Found);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    AEHMovableSpaceActor* GetMovableSpaceActor();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FVector GetLocalPositionFromWorldPosition(const FVector& WorldPosition);
@@ -317,6 +374,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void DebugDestroyInteractable(UEHInteractableObject* Interactable);
+    
+    UFUNCTION(BlueprintCallable)
+    void DebugClearReplcatedDevices();
     
     UFUNCTION(BlueprintCallable)
     void BlackHoleDestroyInstances(AEHBlackHole* BlackHoleActor, const TSet<FEHInstanceCellDefinition>& InstancesToDestroy);

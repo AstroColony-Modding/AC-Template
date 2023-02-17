@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FVoxelRange {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     double Min;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     double Max;
     
     VOXEL_API FVoxelRange();

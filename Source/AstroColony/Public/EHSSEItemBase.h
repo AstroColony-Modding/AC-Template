@@ -3,8 +3,8 @@
 #include "GameFramework/Actor.h"
 #include "EHSSEItemBase.generated.h"
 
-class UEHSSEInitializer;
 class UEHItem;
+class UEHSSEInitializer;
 
 UCLASS(Abstract, Blueprintable)
 class ASTROCOLONY_API AEHSSEItemBase : public AActor {

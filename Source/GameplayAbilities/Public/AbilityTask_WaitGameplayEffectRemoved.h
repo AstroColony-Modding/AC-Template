@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AbilityTask.h"
-#include "WaitGameplayEffectRemovedDelegateDelegate.h"
-#include "GameplayEffectRemovalInfo.h"
 #include "ActiveGameplayEffectHandle.h"
+#include "GameplayEffectRemovalInfo.h"
+#include "WaitGameplayEffectRemovedDelegateDelegate.h"
 #include "AbilityTask_WaitGameplayEffectRemoved.generated.h"
 
 class UAbilityTask_WaitGameplayEffectRemoved;

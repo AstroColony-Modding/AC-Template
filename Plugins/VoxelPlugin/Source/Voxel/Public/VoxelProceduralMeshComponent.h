@@ -87,5 +87,5 @@ public:
 	 *	@return	bool				true if successful, false if not.
 	 */
 	virtual bool GenerateElements(bool bBuildRenderData);
-//#endif // WITH_EDITOR
+//#endif // WITH_EDITOR  
 };

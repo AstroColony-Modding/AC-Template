@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "MenuWidget.h"
+#include "Templates/SubclassOf.h"
 #include "InteractMenuWidget.generated.h"
 
 class UEHInteractableObject;

@@ -1,42 +1,42 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "EVoxelSpawnerActorSpawnType.h"
-#include "VoxelInstancedMeshSettings.h"
-#include "UObject/NoExportTypes.h"
-#include "VoxelIntBox.h"
-#include "VoxelToolRenderingRef.h"
-#include "UObject/NoExportTypes.h"
-#include "VoxelFloatTexture.h"
-#include "UObject/NoExportTypes.h"
-#include "VoxelMaterial.h"
-#include "UObject/NoExportTypes.h"
-#include "VoxelSpawnersSave.h"
-#include "UObject/NoExportTypes.h"
-#include "VoxelColorTexture.h"
-#include "VoxelPaintMaterialFiveWayBlend.h"
+#include "ChunkDynamicDelegateDelegate.h"
 #include "EVoxelMemoryUsageType.h"
 #include "EVoxelRGBA.h"
+#include "EVoxelSpawnerActorSpawnType.h"
+#include "VoxelColorTexture.h"
+#include "VoxelFloatTexture.h"
+#include "VoxelInstancedMeshSettings.h"
+#include "VoxelIntBox.h"
+#include "VoxelMaterial.h"
 #include "VoxelPaintMaterial.h"
-#include "VoxelPaintMaterialUV.h"
 #include "VoxelPaintMaterialColor.h"
-#include "VoxelPaintMaterialSingleIndex.h"
-#include "VoxelPaintMaterialMultiIndexRaw.h"
+#include "VoxelPaintMaterialFiveWayBlend.h"
 #include "VoxelPaintMaterialMultiIndex.h"
-#include "ChunkDynamicDelegateDelegate.h"
-#include "UObject/NoExportTypes.h"
+#include "VoxelPaintMaterialMultiIndexRaw.h"
+#include "VoxelPaintMaterialSingleIndex.h"
+#include "VoxelPaintMaterialUV.h"
 #include "VoxelSpawnerActorSettings.h"
+#include "VoxelSpawnersSave.h"
+#include "VoxelToolRenderingRef.h"
 #include "VoxelBlueprintLibrary.generated.h"
 
-class AVoxelWorld;
+class AActor;
 class AVoxelSpawnerActor;
-class UVoxelHierarchicalInstancedStaticMeshComponent;
+class AVoxelWorld;
 class UMaterialInterface;
 class UObject;
 class UStaticMesh;
-class AActor;
 class UTexture2D;
+class UVoxelHierarchicalInstancedStaticMeshComponent;
 
 UCLASS(Blueprintable)
 class VOXEL_API UVoxelBlueprintLibrary : public UBlueprintFunctionLibrary {
@@ -127,7 +127,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void MarkSpawnersDirty(AVoxelWorld* World, FVoxelIntBox Bounds);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FVoxelMaterial MakeRawMaterial(uint8 R, uint8 G, uint8 B, uint8 A, uint8 U0, uint8 V0, uint8 U1, uint8 v1, uint8 U2, uint8 v2, uint8 U3, uint8 V3);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -190,13 +190,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static FVoxelSpawnersSave GetSpawnersSave(AVoxelWorld* World);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static uint8 GetSingleIndex(FVoxelMaterial Material);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FVoxelIntBox GetRenderBoundsOverlappingDataBounds(AVoxelWorld* World, FVoxelIntBox DataBounds, int32 LOD);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetRawMaterial(FVoxelMaterial Material, uint8& R, uint8& G, uint8& B, uint8& A, uint8& U0, uint8& V0, uint8& U1, uint8& v1, uint8& U2, uint8& v2, uint8& U3, uint8& V3);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -208,7 +208,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static FVector GetNormal(AVoxelWorld* World, FIntVector position);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetMultiIndex(FVoxelMaterial Material, bool bSortByStrength, float& Strength0, uint8& Index0, float& Strength1, uint8& Index1, float& Strength2, uint8& Index2, float& Strength3, uint8& Index3, float& Wetness);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

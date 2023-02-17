@@ -1,20 +1,23 @@
 #include "EHInventoryComponent.h"
 #include "Net/UnrealNetwork.h"
 
-class UEHItem;
-class UEHProductionObject;
-class UEHItemsContainer;
-class UEHDeviceObject;
-class UEHSchoolObject;
-class UEHThrusterObject;
-class UEHLogicObject;
-class UEHFarmObject;
-class UEHBarnObject;
-class UEHMineObject;
 class UEHAsteroidsCatcher;
+class UEHBarnObject;
+class UEHDeciderCombinatorObject;
+class UEHDeviceObject;
+class UEHFarmObject;
+class UEHItem;
+class UEHItemsContainer;
+class UEHLogicObject;
+class UEHLogicSplitterObject;
+class UEHMineObject;
+class UEHProductionObject;
+class UEHResourceItem;
+class UEHSchoolObject;
 class UEHSignalObject;
-class UStaticMesh;
+class UEHThrusterObject;
 class UObject;
+class UStaticMesh;
 
 void UEHInventoryComponent::UpdatePlayerActions(const FEHPlayerActionSet& PlayerActionSet) {
 }
@@ -28,6 +31,12 @@ void UEHInventoryComponent::SetVisibleResourcesCount(const int32 VisibleResource
 void UEHInventoryComponent::SetDefaultNoInteractionPlayerActions(const FEHPlayerActionSet PlayerActionsIn) {
 }
 
+void UEHInventoryComponent::Server_UpdateMathCondition_Implementation(UEHDeciderCombinatorObject* DeciderObject, uint8 MathConditionIndex) {
+}
+
+void UEHInventoryComponent::Server_UpdateConditionValue_Implementation(UEHDeciderCombinatorObject* DeciderObject, int32 ConditionValue) {
+}
+
 void UEHInventoryComponent::Server_UpdateAutoDeactivateCounts_Implementation(UEHProductionObject* ProductionObject, const FName Name, const int32 Counts) {
 }
 
@@ -38,6 +47,9 @@ void UEHInventoryComponent::Server_TransferItemsForRecipe_Implementation(UEHItem
 }
 
 void UEHInventoryComponent::Server_TransferItem_Implementation(UEHItemsContainer* ContainerFrom, const uint8 IndexFrom, UEHItemsContainer* ContainerTo, const bool IsEntireStack) {
+}
+
+void UEHInventoryComponent::Server_TransferAllRecyclablesToInventory_Implementation(UEHItemsContainer* ContainerFrom) {
 }
 
 void UEHInventoryComponent::Server_TransferAllRecyclables_Implementation(UEHItemsContainer* ContainerTo) {
@@ -61,6 +73,9 @@ void UEHInventoryComponent::Server_TakeItems_Implementation(UEHItemsContainer* C
 void UEHInventoryComponent::Server_SwapContainerItems_Implementation(UEHItemsContainer* Container, const uint8 IndexFrom, const uint8 IndexTo) {
 }
 
+void UEHInventoryComponent::Server_SplitterUpdateSplittingRatios_Implementation(UEHLogicSplitterObject* SplitterObject, const TArray<int32>& SplittingRatios) {
+}
+
 void UEHInventoryComponent::Server_SplitContainerItem_Implementation(UEHItemsContainer* Container, const uint8 ItemIndex, const int32 Quantity) {
 }
 
@@ -73,7 +88,13 @@ void UEHInventoryComponent::Server_SetThrustDirectionManual_Implementation(UEHTh
 void UEHInventoryComponent::Server_SetItem_Implementation(UEHItemsContainer* Container, const uint8 ItemIndex, const FEHItemInstance& ItemInstance) {
 }
 
+void UEHInventoryComponent::Server_ResetRequestedItems_Implementation(UEHItemsContainer* Container) {
+}
+
 void UEHInventoryComponent::Server_RemoveSelectedRecipe_Implementation(UEHProductionObject* ProductionObject, const FName Name) {
+}
+
+void UEHInventoryComponent::Server_RemoveRequestedItem_Implementation(UEHItemsContainer* Container, UEHItem* Item) {
 }
 
 void UEHInventoryComponent::Server_ProduceItems_Implementation(UEHProductionObject* ProductionObject, const TArray<FEHItemInstance>& ProducedItems) {
@@ -130,6 +151,9 @@ void UEHInventoryComponent::Server_DecreaseDedicatedWorkplaceAI_Implementation(U
 void UEHInventoryComponent::Server_ChangeSelectedRecipe_Implementation(UEHProductionObject* ProductionObject, const FName Name, const bool ShouldSelect) {
 }
 
+void UEHInventoryComponent::Server_ChangeResource_Implementation(UEHAsteroidsCatcher* AsteroidCatcher, UEHResourceItem* Item) {
+}
+
 void UEHInventoryComponent::Server_ChangePlant_Implementation(UEHFarmObject* FarmObject, const EHHarvestPlantTypes Plant) {
 }
 
@@ -154,6 +178,12 @@ void UEHInventoryComponent::Server_ApplyThrusterSetupToConnected_Implementation(
 void UEHInventoryComponent::Server_AddSelectedRecipe_Implementation(UEHProductionObject* ProductionObject, const FName& Name, const FEHRecipe& Recipe) {
 }
 
+void UEHInventoryComponent::Server_AddRequestedItem_Implementation(UEHItemsContainer* Container, UEHItem* Item, const uint8 MaxWorkersAssigned, const int32 MaxResources) {
+}
+
+void UEHInventoryComponent::Server_AddItems(UEHItemsContainer* Container, const TArray<FEHItemInstance>& Items) {
+}
+
 void UEHInventoryComponent::SelectSlot(int32 IndexToSelect) {
 }
 
@@ -166,10 +196,20 @@ void UEHInventoryComponent::RemovePlayerAction(const EPlayerActionType PlayerAct
 void UEHInventoryComponent::PreviousSelectedItem() {
 }
 
+void UEHInventoryComponent::PickTracedItem() {
+}
+
+
 
 
 
 void UEHInventoryComponent::NextSelectedItem() {
+}
+
+void UEHInventoryComponent::Multi_UpdateMathCondition_Implementation(UEHDeciderCombinatorObject* DeciderObject, uint8 MathConditionIndex) {
+}
+
+void UEHInventoryComponent::Multi_UpdateConditionValue_Implementation(UEHDeciderCombinatorObject* DeciderObject, int32 ConditionValue) {
 }
 
 void UEHInventoryComponent::Multi_TrainSpecialist_Implementation(UEHSchoolObject* SchoolObject, EAIProfession Specialization) {
@@ -181,19 +221,25 @@ void UEHInventoryComponent::Multi_ToggleSwitchState_Implementation(UEHDeviceObje
 void UEHInventoryComponent::Multi_TakePoints_Implementation(UEHProductionObject* ProductionObject, const TArray<FEHGlobalPointInstance>& PointInstances) {
 }
 
+void UEHInventoryComponent::Multi_SplitterUpdateSplittingRatios_Implementation(UEHLogicSplitterObject* SplitterObject, const TArray<int32>& SplittingRatios) {
+}
+
 void UEHInventoryComponent::Multi_SetThrustPowerManual_Implementation(UEHThrusterObject* ThrusterObject, const float Power) {
 }
 
 void UEHInventoryComponent::Multi_SetThrustDirectionManual_Implementation(UEHThrusterObject* ThrusterObject, const float AngleYAxis, const float AngleZAxis) {
 }
 
+void UEHInventoryComponent::Multi_ResetRequestedItems_Implementation(UEHItemsContainer* Container) {
+}
+
+void UEHInventoryComponent::Multi_RemoveRequestedItem_Implementation(UEHItemsContainer* Container, UEHItem* Item) {
+}
+
 void UEHInventoryComponent::Multi_ProduceGlobalPoints_Implementation(UEHProductionObject* ProductionObject, const TArray<FEHGlobalPointInstance>& GeneratedPoints) {
 }
 
 void UEHInventoryComponent::Multi_NotifyTrancheChanged_Implementation(UEHAsteroidsCatcher* AsteroidCatcher) {
-}
-
-void UEHInventoryComponent::Multi_NotifyProductionStateChanged_Implementation(UEHProductionObject* ProductionObject, const bool IsProducing) {
 }
 
 void UEHInventoryComponent::Multi_LogicSelectDevice_Implementation(UEHSignalObject* SignalObject, UEHDeviceObject* Device) {
@@ -211,6 +257,9 @@ void UEHInventoryComponent::Multi_LogicAddSelectedResource_Implementation(UEHLog
 void UEHInventoryComponent::Multi_InvertPushDefinitions_Implementation(UEHItemsContainer* Container) {
 }
 
+void UEHInventoryComponent::Multi_ChangeResource_Implementation(UEHAsteroidsCatcher* AsteroidCatcher, UEHResourceItem* Item) {
+}
+
 void UEHInventoryComponent::Multi_ChangePlant_Implementation(UEHFarmObject* FarmObject, const EHHarvestPlantTypes Plant) {
 }
 
@@ -224,6 +273,9 @@ void UEHInventoryComponent::Multi_CancelTrainedSpecialist_Implementation(UEHScho
 }
 
 void UEHInventoryComponent::Multi_ApplyThrusterSetupToConnected_Implementation(UEHThrusterObject* ThrusterObject) {
+}
+
+void UEHInventoryComponent::Multi_AddRequestedItem_Implementation(UEHItemsContainer* Container, UEHItem* Item, const uint8 MaxWorkersAssigned, const int32 MaxResources) {
 }
 
 void UEHInventoryComponent::InitStartingTool() {
@@ -305,7 +357,7 @@ void UEHInventoryComponent::Client_TransferItemsForRecipe_Implementation(UEHItem
 void UEHInventoryComponent::Client_TransferItem_Implementation(UEHItemsContainer* ContainerFrom, const uint8 IndexFrom, UEHItemsContainer* ContainerTo, const bool IsEntireStack) {
 }
 
-void UEHInventoryComponent::Client_TransferAllItems_Implementation(UEHItemsContainer* ContainerFrom, UEHItemsContainer* ContainerTo) {
+void UEHInventoryComponent::Client_TransferAllItems_Implementation(UEHItemsContainer* ContainerFrom, UEHItemsContainer* ContainerTo, const TArray<FEHItemInstance>& Items) {
 }
 
 void UEHInventoryComponent::Client_TakeSingleItem_Implementation(UEHItemsContainer* Container, const UEHItem* Item) {
@@ -327,6 +379,9 @@ void UEHInventoryComponent::Client_ProduceItems_Implementation(UEHProductionObje
 }
 
 void UEHInventoryComponent::Client_PickTransferredItem_Implementation(UEHItemsContainer* Container, UEHItem* Item) {
+}
+
+void UEHInventoryComponent::Client_PickSingleItemBulk_Implementation(const TArray<UEHItem*>& Items) {
 }
 
 void UEHInventoryComponent::Client_PickSingleItem_Implementation(UEHItem* Item) {
@@ -375,6 +430,9 @@ void UEHInventoryComponent::Client_DecreaseDedicatedWorkplaceAI_Implementation(U
 }
 
 void UEHInventoryComponent::Client_AddSelectedRecipe_Implementation(UEHProductionObject* ProductionObject, const FName& Name, const FEHRecipe& Recipe) {
+}
+
+void UEHInventoryComponent::Client_AddItems_Implementation(UEHItemsContainer* Container, const TArray<FEHItemInstance>& Items) {
 }
 
 void UEHInventoryComponent::ClickTransferItem(UEHItemsContainer* ContainerFrom, const uint8 IndexFrom, UEHItemsContainer* ContainerTo) {

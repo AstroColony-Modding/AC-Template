@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESettingsCategoryType.h"
 #include "Engine/DataTable.h"
+#include "ESettingsCategoryType.h"
 #include "SettingsCategoryData.generated.h"
 
 USTRUCT(BlueprintType)

@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "TGHUDWidget.h"
+#include "Templates/SubclassOf.h"
 #include "EHHUDWidget.generated.h"
 
-class UInteractBaseWidget;
-class UEHScenarioOverlayWidget;
+class UCanvasPanel;
 class UEHHUDIndicatorsWidget;
 class UEHPhotoModeWidget;
-class UCanvasPanel;
+class UEHScenarioOverlayWidget;
+class UInteractBaseWidget;
 class UUserWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -42,9 +42,6 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UUserWidget* PlayerStats;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UUserWidget* MissionsLog;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> HandledActions;

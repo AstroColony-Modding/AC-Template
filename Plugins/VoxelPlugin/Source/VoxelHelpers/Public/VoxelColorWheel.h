@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/Widget.h"
 #include "OnVoxelColorWheelColorChangedEventDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "VoxelColorWheel.generated.h"
 
 UCLASS(Blueprintable)

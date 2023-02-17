@@ -1,50 +1,50 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "VoxelShapeData.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "EEHInstanceRotation.h"
-#include "VoxelTerrainDigData.h"
-#include "EVoxelTerrainType.h"
 #include "EVoxelShapeType.h"
-#include "EHItemInstance.h"
-#include "EEHVehiclePartType.h"
-#include "UObject/NoExportTypes.h"
-#include "EHPartScheme.h"
+#include "EVoxelTerrainType.h"
 #include "EAIProfession.h"
-#include "EHJobModeType.h"
+#include "EEHInstanceRotation.h"
+#include "EEHVehiclePartType.h"
 #include "EGlobalPointType.h"
-#include "EHGameplayAspectUnlock.h"
 #include "EHBasicUnlockData.h"
+#include "EHGameplayAspectUnlock.h"
+#include "EHItemInstance.h"
+#include "EHJobModeType.h"
+#include "EHPartScheme.h"
+#include "Templates/SubclassOf.h"
+#include "VoxelShapeData.h"
+#include "VoxelTerrainDigData.h"
 #include "EHBlueprintFunctionLibrary.generated.h"
 
-class UObject;
-class UWidget;
 class AActor;
-class UStaticMeshComponent;
-class UEHItem;
-class APlayerController;
-class UEHResourceItem;
-class UEHGlobalPointAsset;
-class UActorComponent;
 class APawn;
-class UEHAnimalMeshAsset;
-class UEHProfessionMeshAsset;
-class UEHPlantMeshAsset;
-class UInterface;
+class APlayerController;
 class IInterface;
-class UEHWorldItem;
-class UEHJobModeAsset;
-class UEHAsset;
-class UEHGameUserSettings;
-class UEHDataProvider;
+class UInterface;
+class UActorComponent;
 class UEHAIObject;
+class UEHAnimalMeshAsset;
+class UEHAsset;
+class UEHDataProvider;
 class UEHDevicesComponent;
+class UEHGameUserSettings;
+class UEHGlobalPointAsset;
+class UEHItem;
+class UEHJobModeAsset;
+class UEHPlantMeshAsset;
+class UEHProfessionMeshAsset;
+class UEHResourceItem;
+class UEHWorldItem;
+class UObject;
+class UStaticMeshComponent;
+class UWidget;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHBlueprintFunctionLibrary : public UBlueprintFunctionLibrary {
@@ -95,6 +95,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsHorizontalRotation(const EEHInstanceRotation Rotation);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    static bool IsGameStarted();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsGameLoadedFromSavegame();

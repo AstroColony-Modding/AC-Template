@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "AbilityTask.h"
 #include "WaitOverlapDelegateDelegate.h"
-#include "Engine/EngineTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "AbilityTask_WaitOverlap.generated.h"
 
+class AActor;
 class UAbilityTask_WaitOverlap;
 class UGameplayAbility;
 class UPrimitiveComponent;
-class AActor;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitOverlap : public UAbilityTask {

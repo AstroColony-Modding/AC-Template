@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EHInteractionInterface.h"
 #include "UObject/NoExportTypes.h"
-#include "EPlayerActionType.h"
+#include "EHInteractionInterface.h"
 #include "EHJobModeType.h"
+#include "EPlayerActionType.h"
+#include "Templates/SubclassOf.h"
 #include "EHPlayerWorldInteractionInterface.generated.h"
 
 class UTexture2D;

@@ -1,9 +1,9 @@
 #include "EHLayerManager.h"
 
-class UTGViewModel;
-class UTexture2D;
 class UEHTechnologyAsset;
 class UTGUILayer;
+class UTGViewModel;
+class UTexture2D;
 
 void UEHLayerManager::SetDataContextForOpenUnderlay(const EEHUIUnderlayID UnderlayID, UTGViewModel* ViewModel) {
 }
@@ -25,7 +25,14 @@ UTGUILayer* UEHLayerManager::OpenOverlay(const EEHUIOverlayID OverlayID, UTGView
     return NULL;
 }
 
+void UEHLayerManager::OpenModsHUBWidget(const FString& ModToNavigate) {
+}
+
 void UEHLayerManager::OpenAllAvailableLayers() {
+}
+
+bool UEHLayerManager::IsOverlayOpen(const EEHUIOverlayID OverlayID) {
+    return false;
 }
 
 void UEHLayerManager::CloseUnderlay(const EEHUIUnderlayID UnderlayID, bool bRelease) {
@@ -34,10 +41,14 @@ void UEHLayerManager::CloseUnderlay(const EEHUIUnderlayID UnderlayID, bool bRele
 void UEHLayerManager::CloseOverlay(const EEHUIOverlayID OverlayID, bool bRelease) {
 }
 
+void UEHLayerManager::CloseModsHUBWidget() {
+}
+
 UEHLayerManager::UEHLayerManager() {
     this->OverlayContainerZOrder = 10;
     this->UnderlayContainerZOrder = -10;
     this->ButtonBarDataTable = NULL;
     this->ToastContainerViewModel = NULL;
+    this->ModsListViewModel = NULL;
 }
 

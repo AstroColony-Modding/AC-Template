@@ -1,7 +1,7 @@
 #include "VoxelDataTools.h"
 
-class UObject;
 class AVoxelWorld;
+class UObject;
 class UVoxelHeightmapAsset;
 
 void UVoxelDataTools::SetValueAsync(UObject* WorldContextObject, FLatentActionInfo LatentInfo, AVoxelWorld* World, FIntVector position, float Value, bool bHideLatentWarnings) {

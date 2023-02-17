@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "EHOptionWidget.h"
+#include "Templates/SubclassOf.h"
 #include "EHOptionRadioButtonsWidget.generated.h"
 
+class UEHRadioButton;
 class UEHRadioButtonsViewModel;
 class UHorizontalBox;
-class UEHRadioButton;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHOptionRadioButtonsWidget : public UEHOptionWidget {
@@ -29,7 +29,7 @@ protected:
     void UpdateToggledRadiobuttonVisual(const uint8 RadioButtonID);
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void HandleToggleStateChanged(uint8 RadioButtonID, bool bIsToggled);
     
 };

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHVisualMeshAsset.h"
-#include "EHBreedAnimalTypes.h"
 #include "EHAnimalSize.h"
+#include "EHBreedAnimalTypes.h"
+#include "EHVisualMeshAsset.h"
 #include "EHAnimalMeshAsset.generated.h"
 
 class UEHItem;
@@ -20,10 +20,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float GrowingPhaseTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 ConsumedPhaseWater;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 ConsumedPhaseGrain;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

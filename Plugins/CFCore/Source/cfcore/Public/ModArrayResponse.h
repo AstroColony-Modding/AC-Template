@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "CFCoreMod.h"
 #include "CFCoreApiResponsePagination.h"
+#include "CFCoreMod.h"
 #include "ModArrayResponse.generated.h"
 
 USTRUCT(BlueprintType)

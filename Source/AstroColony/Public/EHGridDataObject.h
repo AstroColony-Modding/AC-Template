@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHDataObject.h"
-#include "SaveGridItemContainer.h"
-#include "SaveGridItem.h"
-#include "SaveTransferCell.h"
 #include "UObject/NoExportTypes.h"
+#include "EHDataObject.h"
+#include "SaveGridItem.h"
+#include "SaveGridItemContainer.h"
+#include "SaveTransferCell.h"
 #include "EHGridDataObject.generated.h"
 
 UCLASS(Blueprintable)
@@ -23,7 +23,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FIntVector, FSaveTransferCell> TransferedResources;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint8> ThrusterNetworkData;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

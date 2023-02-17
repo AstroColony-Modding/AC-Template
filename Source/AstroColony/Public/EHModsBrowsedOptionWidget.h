@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "TGUserWidget.h"
 #include "ESettingWidgetType.h"
+#include "Templates/SubclassOf.h"
 #include "EHModsBrowsedOptionWidget.generated.h"
 
-class UTGWidget;
+class UEHModsBrowsedOptionViewModel;
 class UEHOptionWidget;
 class UTGViewModel;
-class UEHModsBrowsedOptionViewModel;
+class UTGWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHModsBrowsedOptionWidget : public UTGUserWidget {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelNode.h"
 #include "VoxelNamedDataPin.h"
+#include "VoxelNode.h"
 #include "VoxelNode_FlowMerge.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

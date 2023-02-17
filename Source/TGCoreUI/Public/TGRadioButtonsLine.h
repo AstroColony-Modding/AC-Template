@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "Types/SlateEnums.h"
-#include "Components/TextWidgetTypes.h"
-#include "Styling/SlateColor.h"
 #include "Styling/SlateTypes.h"
+#include "Types/SlateEnums.h"
+#include "Types/SlateEnums.h"
+#include "Types/SlateEnums.h"
 #include "Layout/Margin.h"
+#include "Styling/SlateColor.h"
 #include "Fonts/SlateFontInfo.h"
-#include "Types/SlateEnums.h"
-#include "Types/SlateEnums.h"
+#include "Components/TextWidgetTypes.h"
 #include "OnRadiobuttonsStateChangeDelegate.h"
 #include "TGRadioButtonsLine.generated.h"
 
@@ -23,7 +23,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 DefaultSelectedIndex;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EOrientation> Orientation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -50,10 +50,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor BackgroundColor;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EButtonClickMethod::Type> ClickMethod;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EButtonTouchMethod::Type> TouchMethod;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

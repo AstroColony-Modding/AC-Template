@@ -3,9 +3,9 @@
 #include "TGUILayer.h"
 #include "EHNotificationDialogWidget.generated.h"
 
-class UWidgetAnimation;
 class UEHNotificationDialogViewModel;
 class UTGWidget;
+class UWidgetAnimation;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHNotificationDialogWidget : public UTGUILayer {

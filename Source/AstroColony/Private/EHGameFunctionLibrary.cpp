@@ -1,26 +1,26 @@
 #include "EHGameFunctionLibrary.h"
 
-class UObject;
-class UEHAsset;
-class UEHModularVehicleWidget;
-class UEHSpaceCarryComponent;
-class UEHHUDWidget;
-class UEHMapWidget;
-class AEHGamePlayerController;
-class UEHTechTreeComponent;
-class AEHHUDGame;
-class UEHScenarioComponent;
-class UEHModularVehicles;
-class UEHMissionsComponent;
-class AEHLobbyGameState;
-class UEHLayerManager;
-class UEHInventoryComponent;
-class UEHGridComponent;
-class AEHGameState;
-class UEHGameInstance;
-class UEHCheatComponent;
 class AEHCharacter;
+class AEHGamePlayerController;
+class AEHGameState;
+class AEHHUDGame;
+class AEHLobbyGameState;
 class UEHAchievementsManager;
+class UEHAsset;
+class UEHCheatComponent;
+class UEHGameInstance;
+class UEHGridComponent;
+class UEHHUDWidget;
+class UEHInventoryComponent;
+class UEHLayerManager;
+class UEHMapWidget;
+class UEHMissionsComponent;
+class UEHModularVehicleWidget;
+class UEHModularVehicles;
+class UEHScenarioComponent;
+class UEHSpaceCarryComponent;
+class UEHTechTreeComponent;
+class UObject;
 
 bool UEHGameFunctionLibrary::IsItemDisabledForDemo(const UObject* WorldContextObject, UEHAsset* Item) {
     return false;
@@ -100,6 +100,10 @@ UEHCheatComponent* UEHGameFunctionLibrary::GetEHCheatComponent(const UObject* Wo
 
 AEHCharacter* UEHGameFunctionLibrary::GetEHCharacter(const UObject* WorldContextObject) {
     return NULL;
+}
+
+TArray<AEHGamePlayerController*> UEHGameFunctionLibrary::GetAllPlayerControllers(const UObject* WorldContextObject) {
+    return TArray<AEHGamePlayerController*>();
 }
 
 UEHAchievementsManager* UEHGameFunctionLibrary::GetAchievementsManager(const UObject* WorldContextObject) {

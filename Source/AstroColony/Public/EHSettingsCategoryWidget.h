@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "TGUserWidget.h"
+#include "Widgets/Layout/SScrollBox.h"
 #include "Types/SlateEnums.h"
 #include "Layout/Margin.h"
-#include "Widgets/Layout/SScrollBox.h"
+#include "TGUserWidget.h"
+#include "Templates/SubclassOf.h"
 #include "EHSettingsCategoryWidget.generated.h"
 
+class UEHSettingsCategoryViewModel;
 class UEHSplitterWidget;
+class UScrollBox;
 class UTGViewModel;
 class UUserWidget;
-class UEHSettingsCategoryViewModel;
 class UVerticalBox;
-class UScrollBox;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHSettingsCategoryWidget : public UTGUserWidget {
@@ -24,7 +24,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEHSplitterWidget> SplitterWidgetClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EHorizontalAlignment> HortizontalSlotAligment;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

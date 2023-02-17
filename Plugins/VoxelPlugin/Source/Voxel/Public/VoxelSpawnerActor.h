@@ -4,8 +4,8 @@
 #include "PhysicsEngine/BodyInstance.h"
 #include "VoxelSpawnerActor.generated.h"
 
-class UStaticMesh;
 class UMaterialInterface;
+class UStaticMesh;
 
 UCLASS(Blueprintable)
 class VOXEL_API AVoxelSpawnerActor : public AActor {

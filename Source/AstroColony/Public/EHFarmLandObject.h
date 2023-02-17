@@ -4,9 +4,9 @@
 #include "EHMetamorphosisInterface.h"
 #include "EHFarmLandObject.generated.h"
 
-class UParticleSystem;
 class UEHAIFarmerObject;
 class UEHFarmLandObject;
+class UParticleSystem;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHFarmLandObject : public UEHInteractableServiceObject, public IEHMetamorphosisInterface {
@@ -26,14 +26,13 @@ private:
     UEHAIFarmerObject* WorkingFarmer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UEHAIFarmerObject* AssignedFarmer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UEHFarmLandObject*> SiblingsFarmLands;
     
 public:
     UEHFarmLandObject();
-protected:
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void Multi_FarmerEntered(UEHAIFarmerObject* NewFarmer);
-    
     
     // Fix for true pure virtual functions not being implemented
 };

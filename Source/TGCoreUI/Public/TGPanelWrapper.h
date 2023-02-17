@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "TGWidget.h"
 #include "Types/SlateEnums.h"
-#include "Components/SlateWrapperTypes.h"
 #include "Types/SlateEnums.h"
 #include "Layout/Margin.h"
+#include "Components/SlateWrapperTypes.h"
+#include "TGWidget.h"
+#include "Templates/SubclassOf.h"
 #include "TGPanelWrapper.generated.h"
 
 class UTGUserWidget;
@@ -14,10 +14,10 @@ UCLASS(Abstract, Blueprintable)
 class TGCOREUI_API UTGPanelWrapper : public UTGWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EHorizontalAlignment> ChildHorizontalAlignment;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EVerticalAlignment> ChildVerticalAlignment;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -32,7 +32,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool UsePooling;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 PreviewItemsNumber;
     
 protected:

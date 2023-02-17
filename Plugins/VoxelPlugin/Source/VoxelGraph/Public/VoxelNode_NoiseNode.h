@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelNodeWithContext.h"
 #include "EVoxelNoiseInterpolation.h"
 #include "VoxelRange.h"
+#include "VoxelNodeWithContext.h"
 #include "VoxelNode_NoiseNode.generated.h"
 
 UCLASS(Abstract, Blueprintable, EditInlineNew)
@@ -15,7 +15,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EVoxelNoiseInterpolation Interpolation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint32 NumberOfSamples;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

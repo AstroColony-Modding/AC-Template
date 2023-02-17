@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHVehicleDefinition.h"
 #include "UObject/Interface.h"
 #include "EEHVehicleAction.h"
+#include "EHVehicleDefinition.h"
 #include "EHModularVehicleInterface.generated.h"
 
 class AEHGrid;

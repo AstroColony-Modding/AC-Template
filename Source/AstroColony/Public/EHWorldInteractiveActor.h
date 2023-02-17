@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "EHJobModeType.h"
 #include "EHPlayerWorldInteractionInterface.h"
 #include "EPlayerActionType.h"
-#include "EHJobModeType.h"
 #include "EHWorldInteractiveActor.generated.h"
 
 class UTexture2D;

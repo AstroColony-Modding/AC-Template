@@ -3,8 +3,8 @@
 #include "EHOptionWidget.h"
 #include "EHOptionInputBindingDisplayWidget.generated.h"
 
-class UTGButton;
 class UEHInputBindingDisplayViewModel;
+class UTGButton;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHOptionInputBindingDisplayWidget : public UEHOptionWidget {

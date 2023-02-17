@@ -6,7 +6,7 @@ USTRUCT(BlueprintType)
 struct VOXEL_API FVoxelTextureStructBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint64 ID;
     
     FVoxelTextureStructBase();

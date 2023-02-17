@@ -1,9 +1,9 @@
 #include "TGRadialPanel.h"
 
-class UWidget;
 class UTGRadialPanelSlot;
+class UWidget;
 
-UTGRadialPanelSlot* UTGRadialPanel::AddChildToCanvas(UWidget* Content) {
+UTGRadialPanelSlot* UTGRadialPanel::AddChildToCanvas(UWidget* content) {
     return NULL;
 }
 

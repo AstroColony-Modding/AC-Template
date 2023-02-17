@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHUserWidget.h"
+#include "ETGInputControllerType.h"
 #include "ConfigurableUIInterface.h"
 #include "EHBaseButtonProperties.h"
+#include "EHUserWidget.h"
 #include "OnClickedDelegateDelegate.h"
-#include "ETGInputControllerType.h"
 #include "Components/HorizontalBox.h"
 #include "Components/BackgroundBlur.h"
 #include "Components/SizeBox.h"
 #include "EHBaseButtonWidget.generated.h"
 
-class UTGConfigurableTextBlock;
-class UWidgetAnimation;
-class UImage;
-class UTGTile;
 class UEHBaseButtonViewModel;
+class UImage;
+class UTGConfigurableTextBlock;
+class UTGTile;
+class UWidgetAnimation;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHBaseButtonWidget : public UEHUserWidget, public IConfigurableUIInterface {
@@ -89,9 +89,6 @@ private:
     
 public:
     UEHBaseButtonWidget();
-
-    /*UFUNCTION(BlueprintImplementableEvent)
-    void OnInputControllerChanged(TEnumAsByte<ETGInputControllerType> InputControllerType);*/
 protected:
     UFUNCTION(BlueprintCallable)
     void ReturnFocusAfterClick();
@@ -104,6 +101,9 @@ protected:
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnPressedEvent();
+    
+    /*UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnInputControllerChanged(TEnumAsByte<ETGInputControllerType> InputControllerType);*/
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnHoveredEvent();

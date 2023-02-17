@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "EHBaseButtonProperties.h"
 #include "EHUIScreen.h"
+#include "Templates/SubclassOf.h"
 #include "EHPauseScreen.generated.h"
 
-class UVerticalBox;
-class UEHPauseViewModel;
 class UEHBaseButtonWidget;
+class UEHPauseViewModel;
+class UVerticalBox;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHPauseScreen : public UEHUIScreen {

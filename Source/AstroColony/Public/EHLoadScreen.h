@@ -3,9 +3,9 @@
 #include "EHUIScreen.h"
 #include "EHLoadScreen.generated.h"
 
+class UEHBaseButtonWidget;
 class UEHSaveLoadListWidget;
 class UEHSaveLoadViewModel;
-class UEHBaseButtonWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHLoadScreen : public UEHUIScreen {

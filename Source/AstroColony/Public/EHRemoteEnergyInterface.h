@@ -3,8 +3,8 @@
 #include "EHInteractionInterface.h"
 #include "EHRemoteEnergyInterface.generated.h"
 
-class UTexture2D;
 class UEHEnergyTransmitterObject;
+class UTexture2D;
 
 UINTERFACE()
 class ASTROCOLONY_API UEHRemoteEnergyInterface : public UEHInteractionInterface {

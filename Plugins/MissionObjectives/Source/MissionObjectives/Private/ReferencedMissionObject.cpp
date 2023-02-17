@@ -1,7 +1,7 @@
 #include "ReferencedMissionObject.h"
 
-class UMOMissionsManager;
 class APlayerController;
+class UMOMissionsManager;
 class UMission;
 
 

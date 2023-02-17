@@ -1,45 +1,45 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EHInterpolateCellParams.h"
-#include "EHItemInstance.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
-#include "EHSaveGameInterface.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "VoxelCompressedWorldSave.h"
+#include "EEHInstanceRotation.h"
+#include "EEHRotationDirection.h"
+#include "EGlobalPointType.h"
+#include "EHAsteroidData.h"
+#include "EHAsteroidExtraction.h"
 #include "EHDeviceReplicationData.h"
 #include "EHGridCellType.h"
-#include "EEHRotationDirection.h"
-#include "EEHInstanceRotation.h"
-#include "EHAsteroidData.h"
+#include "EHInterpolateCellParams.h"
+#include "EHItemInstance.h"
 #include "EHRecipe.h"
-#include "EGlobalPointType.h"
-#include "EHAsteroidExtraction.h"
-#include "VoxelCompressedWorldSave.h"
+#include "EHSaveGameInterface.h"
+#include "Templates/SubclassOf.h"
 #include "EHGridComponent.generated.h"
 
-class UEHOxygenGenerator;
-class UEHInstancedStaticMeshComponent;
-class UPrimitiveComponent;
-class AEHGrid;
-class UEHItem;
-class UEHDockingStationObject;
-class UEHBoxComponent;
-class UEHHISMComponent;
 class AActor;
 class AEHChunk;
+class AEHGrid;
+class UEHAsteroidsCatcher;
+class UEHBillboardsLineComponent;
+class UEHBoxComponent;
+class UEHConnectorStationObject;
+class UEHDeviceObject;
+class UEHDockingStationObject;
+class UEHHISMComponent;
+class UEHInstancedStaticMeshComponent;
+class UEHInteractableObject;
+class UEHItem;
+class UEHOxygenGenerator;
+class UEHSignalObject;
 class UEHThrusterNetwork;
 class UMaterialInterface;
-class UEHBillboardsLineComponent;
+class UPrimitiveComponent;
 class UTexture2D;
-class UEHInteractableObject;
-class UEHAsteroidsCatcher;
-class UEHDeviceObject;
-class UEHSignalObject;
-class UEHConnectorStationObject;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ASTROCOLONY_API UEHGridComponent : public UActorComponent, public IEHSaveGameInterface {
@@ -48,6 +48,7 @@ public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnWarehouseItemsChange);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPlayerScannerActiveStateChanged, bool, ScannerActive);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPlanetoidLoaded, FName, PlanetoidName);
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMultiplayerRebaseWorldOrigin);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnMapRadarActiveStateChanged);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnLastStreamingLevelLoaded);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnItemConstructed, UEHItem*, ConstructedItem, FIntVector, Coords);
@@ -162,9 +163,6 @@ public:
     FIntVector ActorCoordinates;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    UEHItem* CurrentLookAtItem;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<FIntVector> ConstructionPreviewCoords;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -209,10 +207,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEHThrusterNetwork> ThrusterNetworkTemplate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PlanetoidDetailsDefaultSpawnChances[19];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint8> PlanetoidDetailDefaultSpawnChanceIndexes;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -244,6 +242,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsPlayerReady;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float ClientSimulationSyncTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UMaterialInterface* HighlightPreviewMaterial;
@@ -311,10 +312,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector DissolveShiftTwo;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UEHBillboardsLineComponent> BillboardLineTemplates[4];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* BillboardTextures[14];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -337,6 +338,9 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnGameStarted OnGameStarted;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOnGameStarted OnGameSimulationStarted;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnWarehouseItemsChange OnWarehouseItemsChange;
@@ -373,6 +377,9 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintCallable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnLastStreamingLevelLoaded OnLastStreamingLevelLoaded;
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOnMultiplayerRebaseWorldOrigin OnMultiplayerRebaseWorldOrigin;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -429,6 +436,11 @@ public:
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Server_StopDocking(AEHGrid* GridReference);
     
+private:
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_StartSimulation();
+    
+public:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SetDesiredMovement(UEHThrusterNetwork* ThrusterNetwork, const FVector& DesiredMovement);
     
@@ -478,6 +490,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_DestructConveyorLine(UEHConnectorStationObject* ConnectorObject, const uint8 LineNumber);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_CreateStationOrigin(const FString& StationName, const FVector& Location);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_ConstructItems(AEHGrid* GridReference, UEHItem* Item, const TArray<FIntVector>& ConstructCoords, EEHInstanceRotation Rotation);
@@ -543,6 +558,9 @@ public:
     void OnItemConstructionPerformed(const bool WasConstructionSuccessful);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnInvalidItemPick();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnDockingFailed(const bool DockWasTooFar);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -582,7 +600,7 @@ public:
     void InitGrid(AEHGrid* GridReference);
     
 private:
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void HandleUniverseChanged(uint8 PreviousIndex, uint8 NewIndex);
     
     UFUNCTION(BlueprintCallable)
@@ -667,9 +685,18 @@ public:
     UFUNCTION(BlueprintCallable)
     void DebugRemoveAllChunks();
     
+private:
+    UFUNCTION(BlueprintCallable)
+    void ClientCheckSimulationReady();
+    
+protected:
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void Client_StartSimulation();
+    
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_Start();
     
+public:
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_PayWarehouseItemCost(const TArray<FEHItemInstance>& Cost, UEHItem* RecyclableItem);
     

@@ -1,13 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
+#include "EHCustomMeshInterface.h"
 #include "EHObjectLoaderInterface.h"
 #include "EHCustomMeshAsset.generated.h"
 
+class UMaterialInterface;
 class UStaticMesh;
 
 UCLASS(Blueprintable)
-class ASTROCOLONY_API UEHCustomMeshAsset : public UPrimaryDataAsset, public IEHObjectLoaderInterface {
+class ASTROCOLONY_API UEHCustomMeshAsset : public UPrimaryDataAsset, public IEHObjectLoaderInterface, public IEHCustomMeshInterface {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -16,10 +18,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<TSoftObjectPtr<UStaticMesh>> StaticMeshes;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<TSoftObjectPtr<UMaterialInterface>> Materials;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 NumCustomDataFloats;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 TranslucencySortPriority;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

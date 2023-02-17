@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "Engine/EngineTypes.h"
-#include "VoxelInt32Interval.h"
 #include "PhysicsEngine/BodyInstance.h"
 #include "Components/PrimitiveComponent.h"
+#include "Engine/EngineTypes.h"
+#include "Templates/SubclassOf.h"
+#include "VoxelInt32Interval.h"
 #include "VoxelInstancedMeshSettings.generated.h"
 
 class UVoxelHierarchicalInstancedStaticMeshComponent;
@@ -37,7 +37,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBodyInstance BodyInstance;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EHasCustomNavigableGeometry::Type> CustomNavigableGeometry;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EAIProfession.h"
+#include "EHGlobalPointInstance.h"
 #include "EHItemInstance.h"
 #include "EHItemsContainer.h"
-#include "EHGlobalPointInstance.h"
-#include "EAIProfession.h"
 #include "EHProductionProgress.h"
 #include "EHRecipe.h"
 #include "EHProductionObject.generated.h"
@@ -28,10 +28,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EAIProfession RequiredJobProfession;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 MaximumSpecialistsNumber;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 DedicatedSpecialistsNumber;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -58,11 +58,14 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnCraftingStateChanged OnCraftingStateChanged;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSet<UEHItem*> ProducedItemsCached;
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UEHAIObject*> AIsInside;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 AIInsideCount;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -74,13 +77,16 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, int32> RecipesAutoDeactivateCounts;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSet<UEHItem*> ProducedItemsCached;
-    
 public:
     UEHProductionObject();
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool UsesRecipesForProduction();
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    void Multi_ProductionStateChanged_Inactive();
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    void Multi_ProductionStateChanged_Active();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsWorkplaceForAI();

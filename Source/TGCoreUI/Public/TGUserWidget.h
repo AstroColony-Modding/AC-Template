@@ -4,9 +4,9 @@
 #include "Blueprint/UserWidget.h"
 #include "TGUserWidget.generated.h"
 
-class UTGViewModel;
-class UTGUIConfigMain;
 class UTGUIConfigCustom;
+class UTGUIConfigMain;
+class UTGViewModel;
 class UTGWidgetAnimationsManager;
 
 UCLASS(Blueprintable, EditInlineNew)

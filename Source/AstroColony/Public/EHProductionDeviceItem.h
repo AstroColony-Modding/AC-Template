@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHDeviceItem.h"
 #include "Engine/DataTable.h"
 #include "EGlobalPointType.h"
+#include "EHDeviceItem.h"
 #include "EHProductionDeviceItem.generated.h"
 
 class UEHItem;

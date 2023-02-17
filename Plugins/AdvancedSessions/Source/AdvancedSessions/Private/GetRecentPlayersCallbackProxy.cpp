@@ -1,7 +1,7 @@
 #include "GetRecentPlayersCallbackProxy.h"
 
-class UObject;
 class UGetRecentPlayersCallbackProxy;
+class UObject;
 
 UGetRecentPlayersCallbackProxy* UGetRecentPlayersCallbackProxy::GetAndStoreRecentPlayersList(UObject* WorldContextObject, const FBPUniqueNetId& UniqueNetId) {
     return NULL;

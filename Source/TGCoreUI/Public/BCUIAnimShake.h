@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TGUIAnim.h"
 #include "BCShakeAnimationConfig.h"
+#include "TGUIAnim.h"
 #include "BCUIAnimShake.generated.h"
 
-class UTGUserWidget;
 class UBCUIAnimShake;
+class UTGUserWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class TGCOREUI_API UBCUIAnimShake : public UTGUIAnim {

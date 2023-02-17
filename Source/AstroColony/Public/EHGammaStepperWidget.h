@@ -3,10 +3,10 @@
 #include "EHOptionWidget.h"
 #include "EHGammaStepperWidget.generated.h"
 
+class UEHGammaStepperViewModel;
 class UHorizontalBox;
 class UImage;
 class UTGTile;
-class UEHGammaStepperViewModel;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHGammaStepperWidget : public UEHOptionWidget {

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHFloatOptionViewModel.h"
 #include "FloatBindable.h"
 #include "TextBindable.h"
+#include "EHFloatOptionViewModel.h"
 #include "SettingsSlidersData.h"
 #include "EHSliderViewModel.generated.h"
 

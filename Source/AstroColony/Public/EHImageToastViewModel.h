@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHToastViewModel.h"
 #include "TextBindable.h"
-#include "EEHToastNature.h"
 #include "Texture2DBindable.h"
+#include "EEHToastNature.h"
+#include "EHToastViewModel.h"
 #include "EHImageToastViewModel.generated.h"
 
 UCLASS(Blueprintable)

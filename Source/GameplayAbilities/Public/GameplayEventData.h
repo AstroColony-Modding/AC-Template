@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
+#include "GameplayTagContainer.h"
 #include "GameplayAbilityTargetDataHandle.h"
 #include "GameplayEffectContextHandle.h"
-#include "GameplayTagContainer.h"
 #include "GameplayEventData.generated.h"
 
-class UObject;
 class AActor;
+class UObject;
 
 USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayEventData {

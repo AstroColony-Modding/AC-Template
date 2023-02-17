@@ -48,7 +48,7 @@ void UEHInteractableObject::AddCustomMesh(const FGeneratedCustomMesh& CustomMesh
 void UEHInteractableObject::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
-    DOREPLIFETIME(UEHInteractableObject, CachedCellCoord);
+    DOREPLIFETIME(UEHInteractableObject, CreationCellCoord);
     DOREPLIFETIME(UEHInteractableObject, FormerItem);
 }
 

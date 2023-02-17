@@ -10,7 +10,7 @@ class TGCOREUI_API UTGHUDWidget : public UTGListenerWidget {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<ATGHUD> HUD;
     
 public:

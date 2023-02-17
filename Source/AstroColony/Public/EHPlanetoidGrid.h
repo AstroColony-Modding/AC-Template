@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHGrid.h"
 #include "UObject/NoExportTypes.h"
-#include "VoxelIntBox.h"
-#include "InteractableObjectArray.h"
 #include "UObject/NoExportTypes.h"
-#include "EEHMiningResourceType.h"
 #include "UObject/NoExportTypes.h"
-#include "VoxelTerrainDigData.h"
+#include "UObject/NoExportTypes.h"
 #include "EVoxelNoiseInterpolation.h"
-#include "UObject/NoExportTypes.h"
+#include "VoxelIntBox.h"
+#include "EEHMiningResourceType.h"
+#include "EHGrid.h"
+#include "InteractableObjectArray.h"
+#include "VoxelTerrainDigData.h"
 #include "EHPlanetoidGrid.generated.h"
 
 class AEHVoxelWorld;
@@ -69,7 +69,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LowerNoise;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<uint8> PlanetoidDetailSpawnChanceIndexes;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -93,8 +93,14 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_VoxelWorld, meta=(AllowPrivateAccess=true))
     AEHVoxelWorld* VoxelWorld;
     
-    UPROPERTY(EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CorrectionLocation, meta=(AllowPrivateAccess=true))
+    FIntVector CorrectionLocation;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     uint8 PlanetIndex;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    uint8 PlanetoidTerrainID;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -103,6 +109,9 @@ private:
 public:
     AEHPlanetoidGrid();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+    
+    UFUNCTION(BlueprintCallable)
+    void UpdateMPCorrectionPosition();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void TraceHeightFound(const FVector& ImpactPoint);
@@ -125,6 +134,9 @@ public:
 private:
     UFUNCTION(BlueprintCallable)
     void OnRep_VoxelWorld();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnRep_CorrectionLocation();
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

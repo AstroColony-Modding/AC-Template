@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHRecipeReplicationData.h"
 #include "EHRecipe.h"
+#include "EHRecipeReplicationData.h"
 #include "EHProductionReplicationData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -11,7 +11,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEHRecipeReplicationData> ReplicatedRecipes;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 DedicatedSpecialistsNumber;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

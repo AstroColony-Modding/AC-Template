@@ -2,14 +2,14 @@
 #include "CoreMinimal.h"
 #include "GameplayTagContainer.h"
 #include "AbilityTask_WaitGameplayEffectApplied.h"
-#include "GameplayTargetDataFilterHandle.h"
 #include "GameplayEffectAppliedTargetDelegateDelegate.h"
 #include "GameplayTagRequirements.h"
+#include "GameplayTargetDataFilterHandle.h"
 #include "AbilityTask_WaitGameplayEffectApplied_Target.generated.h"
 
+class AActor;
 class UAbilityTask_WaitGameplayEffectApplied_Target;
 class UGameplayAbility;
-class AActor;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitGameplayEffectApplied_Target : public UAbilityTask_WaitGameplayEffectApplied {

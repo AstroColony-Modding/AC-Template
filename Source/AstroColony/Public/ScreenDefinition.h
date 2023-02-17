@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ScreenDefinition.generated.h"
 
-class UTGUIScreen;
 class UEHScreenViewModel;
+class UTGUIScreen;
 
 USTRUCT(BlueprintType)
 struct FScreenDefinition {

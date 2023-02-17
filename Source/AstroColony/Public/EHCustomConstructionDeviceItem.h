@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHDeviceItem.h"
 #include "UObject/NoExportTypes.h"
+#include "EHDeviceItem.h"
 #include "EHCustomConstructionDeviceItem.generated.h"
 
 UCLASS(Blueprintable)

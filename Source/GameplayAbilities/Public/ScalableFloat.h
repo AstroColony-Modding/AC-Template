@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/CurveTable.h"
 #include "DataRegistryType.h"
+#include "Engine/CurveTable.h"
 #include "ScalableFloat.generated.h"
 
 USTRUCT(BlueprintType)

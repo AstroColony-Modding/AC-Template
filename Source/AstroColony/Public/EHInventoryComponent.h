@@ -1,41 +1,44 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "EHItemInstance.h"
-#include "EHSaveGameInterface.h"
-#include "EHGlobalPointInstance.h"
-#include "EEHMiningResourceType.h"
-#include "EHJobModeType.h"
-#include "EHPlayerActionSet.h"
-#include "EHPlayerAction.h"
-#include "EEHInstanceRotation.h"
 #include "ContainersMap.h"
-#include "ItemArray.h"
-#include "EHRecipe.h"
 #include "EAIProfession.h"
-#include "EHHarvestPlantTypes.h"
-#include "EHBreedAnimalTypes.h"
+#include "EEHInstanceRotation.h"
+#include "EEHMiningResourceType.h"
 #include "EEHRotationDirection.h"
-#include "EPlayerActionType.h"
-#include "EInstanceCellType.h"
+#include "EHBreedAnimalTypes.h"
+#include "EHGlobalPointInstance.h"
+#include "EHHarvestPlantTypes.h"
+#include "EHItemInstance.h"
+#include "EHJobModeType.h"
+#include "EHPlayerAction.h"
+#include "EHPlayerActionSet.h"
 #include "EHProductionReplicationData.h"
+#include "EHRecipe.h"
+#include "EHSaveGameInterface.h"
+#include "EInstanceCellType.h"
+#include "EPlayerActionType.h"
+#include "ItemArray.h"
 #include "EHInventoryComponent.generated.h"
 
-class UEHItem;
-class UEHCraftingObject;
-class UEHItemsContainer;
 class UEHAsteroidsCatcher;
-class UEHFarmObject;
-class UEHProductionObject;
-class UEHSchoolObject;
-class UEHDeviceObject;
-class UEHThrusterObject;
-class UEHLogicObject;
 class UEHBarnObject;
+class UEHCraftingObject;
+class UEHDeciderCombinatorObject;
+class UEHDeviceObject;
+class UEHFarmObject;
+class UEHItem;
+class UEHItemsContainer;
+class UEHLogicObject;
+class UEHLogicSplitterObject;
 class UEHMineObject;
+class UEHProductionObject;
+class UEHResourceItem;
+class UEHSchoolObject;
 class UEHSignalObject;
-class UStaticMesh;
+class UEHThrusterObject;
 class UObject;
+class UStaticMesh;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ASTROCOLONY_API UEHInventoryComponent : public UActorComponent, public IEHSaveGameInterface {
@@ -158,16 +161,25 @@ public:
     void SetDefaultNoInteractionPlayerActions(const FEHPlayerActionSet PlayerActionsIn);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_UpdateMathCondition(UEHDeciderCombinatorObject* DeciderObject, uint8 MathConditionIndex);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_UpdateConditionValue(UEHDeciderCombinatorObject* DeciderObject, int32 ConditionValue);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_UpdateAutoDeactivateCounts(UEHProductionObject* ProductionObject, const FName Name, const int32 Counts);
     
-    UFUNCTION(Reliable, Server)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_TransferSlot(UEHItemsContainer* ContainerFrom, const uint8 IndexFrom, UEHItemsContainer* ContainerTo, const uint8 IndexTo);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_TransferItemsForRecipe(UEHItemsContainer* ContainerTo, const FEHRecipe& Recipe, int32 DesiredCount);
     
-    UFUNCTION(Reliable, Server)
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_TransferItem(UEHItemsContainer* ContainerFrom, const uint8 IndexFrom, UEHItemsContainer* ContainerTo, const bool IsEntireStack);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_TransferAllRecyclablesToInventory(UEHItemsContainer* ContainerFrom);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_TransferAllRecyclables(UEHItemsContainer* ContainerTo);
@@ -191,6 +203,9 @@ public:
     void Server_SwapContainerItems(UEHItemsContainer* Container, const uint8 IndexFrom, const uint8 IndexTo);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_SplitterUpdateSplittingRatios(UEHLogicSplitterObject* SplitterObject, const TArray<int32>& SplittingRatios);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_SplitContainerItem(UEHItemsContainer* Container, const uint8 ItemIndex, const int32 Quantity);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
@@ -203,7 +218,13 @@ public:
     void Server_SetItem(UEHItemsContainer* Container, const uint8 ItemIndex, const FEHItemInstance& ItemInstance);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_ResetRequestedItems(UEHItemsContainer* Container);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_RemoveSelectedRecipe(UEHProductionObject* ProductionObject, const FName Name);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_RemoveRequestedItem(UEHItemsContainer* Container, UEHItem* Item);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_ProduceItems(UEHProductionObject* ProductionObject, const TArray<FEHItemInstance>& ProducedItems);
@@ -260,6 +281,9 @@ public:
     void Server_ChangeSelectedRecipe(UEHProductionObject* ProductionObject, const FName Name, const bool ShouldSelect);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_ChangeResource(UEHAsteroidsCatcher* AsteroidCatcher, UEHResourceItem* Item);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_ChangePlant(UEHFarmObject* FarmObject, const EHHarvestPlantTypes Plant);
     
     UFUNCTION(BlueprintCallable, Reliable, Server)
@@ -285,6 +309,12 @@ public:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_AddSelectedRecipe(UEHProductionObject* ProductionObject, const FName& Name, const FEHRecipe& Recipe);
     
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void Server_AddRequestedItem(UEHItemsContainer* Container, UEHItem* Item, const uint8 MaxWorkersAssigned, const int32 MaxResources);
+    
+    UFUNCTION(BlueprintCallable)
+    void Server_AddItems(UEHItemsContainer* Container, const TArray<FEHItemInstance>& Items);
+    
     UFUNCTION(BlueprintCallable)
     void SelectSlot(int32 IndexToSelect);
     
@@ -297,6 +327,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void PreviousSelectedItem();
     
+    UFUNCTION(BlueprintCallable)
+    void PickTracedItem();
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnRep_CurrentJobMode();
     
@@ -304,12 +337,21 @@ protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnLogicAddSelectedResource(const bool Successful);
     
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    void OnContainerAddRequestedResource(const bool Successful);
+    
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void NoItemsLeft();
     
     UFUNCTION(BlueprintCallable)
     void NextSelectedItem();
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_UpdateMathCondition(UEHDeciderCombinatorObject* DeciderObject, uint8 MathConditionIndex);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_UpdateConditionValue(UEHDeciderCombinatorObject* DeciderObject, int32 ConditionValue);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_TrainSpecialist(UEHSchoolObject* SchoolObject, EAIProfession Specialization);
@@ -321,19 +363,25 @@ public:
     void Multi_TakePoints(UEHProductionObject* ProductionObject, const TArray<FEHGlobalPointInstance>& PointInstances);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_SplitterUpdateSplittingRatios(UEHLogicSplitterObject* SplitterObject, const TArray<int32>& SplittingRatios);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_SetThrustPowerManual(UEHThrusterObject* ThrusterObject, const float Power);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_SetThrustDirectionManual(UEHThrusterObject* ThrusterObject, const float AngleYAxis, const float AngleZAxis);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_ResetRequestedItems(UEHItemsContainer* Container);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_RemoveRequestedItem(UEHItemsContainer* Container, UEHItem* Item);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_ProduceGlobalPoints(UEHProductionObject* ProductionObject, const TArray<FEHGlobalPointInstance>& GeneratedPoints);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_NotifyTrancheChanged(UEHAsteroidsCatcher* AsteroidCatcher);
-    
-    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void Multi_NotifyProductionStateChanged(UEHProductionObject* ProductionObject, const bool IsProducing);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_LogicSelectDevice(UEHSignalObject* SignalObject, UEHDeviceObject* Device);
@@ -351,6 +399,9 @@ public:
     void Multi_InvertPushDefinitions(UEHItemsContainer* Container);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_ChangeResource(UEHAsteroidsCatcher* AsteroidCatcher, UEHResourceItem* Item);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_ChangePlant(UEHFarmObject* FarmObject, const EHHarvestPlantTypes Plant);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
@@ -359,11 +410,14 @@ public:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_ChangeAnimal(UEHBarnObject* BarnObject, const EHBreedAnimalTypes Animal);
     
-    UFUNCTION(NetMulticast, Reliable)
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_CancelTrainedSpecialist(UEHSchoolObject* SchoolObject, const uint8 AwaitingSpecialistIndex);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_ApplyThrusterSetupToConnected(UEHThrusterObject* ThrusterObject);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_AddRequestedItem(UEHItemsContainer* Container, UEHItem* Item, const uint8 MaxWorkersAssigned, const int32 MaxResources);
     
     UFUNCTION(BlueprintCallable)
     void InitStartingTool();
@@ -424,17 +478,17 @@ public:
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_UpdateAutoDeactivateCounts(UEHProductionObject* ProductionObject, const FName Name, const int32 Counts);
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_TransferSlot(UEHItemsContainer* ContainerFrom, const uint8 IndexFrom, UEHItemsContainer* ContainerTo, const uint8 IndexTo);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_TransferItemsForRecipe(UEHItemsContainer* PlayerContainerFrom, UEHItemsContainer* ContainerTo, const FEHRecipe& Recipe, int32 DesiredCount);
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_TransferItem(UEHItemsContainer* ContainerFrom, const uint8 IndexFrom, UEHItemsContainer* ContainerTo, const bool IsEntireStack);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
-    void Client_TransferAllItems(UEHItemsContainer* ContainerFrom, UEHItemsContainer* ContainerTo);
+    void Client_TransferAllItems(UEHItemsContainer* ContainerFrom, UEHItemsContainer* ContainerTo, const TArray<FEHItemInstance>& Items);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_TakeSingleItem(UEHItemsContainer* Container, const UEHItem* Item);
@@ -442,10 +496,10 @@ public:
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_TakeItems(UEHItemsContainer* Container, const TArray<FEHItemInstance>& ItemInstances);
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_SwapContainerItems(UEHItemsContainer* Container, const uint8 IndexFrom, const uint8 IndexTo);
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_SplitContainerItem(UEHItemsContainer* Container, const uint8 ItemIndex, const int32 Quantity);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
@@ -456,6 +510,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_PickTransferredItem(UEHItemsContainer* Container, UEHItem* Item);
+    
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void Client_PickSingleItemBulk(const TArray<UEHItem*>& Items);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_PickSingleItem(UEHItem* Item);
@@ -481,13 +538,13 @@ public:
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_NotifyCraftingStateChanged(UEHProductionObject* ProductionObject, const FName Name, bool IsEnabled, const float Ratio, const float PreviouslyCompletedProgress);
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_NotifyAssignedWorplaceAIChanged(UEHProductionObject* ProductionObject, uint8 AssignedAICount);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_NotifyAllItemsCleared(UEHItemsContainer* Container);
     
-    UFUNCTION(Client, Reliable)
+    UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_MergeContainerItems(UEHItemsContainer* Container, const uint8 IndexFrom, const uint8 IndexTo);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
@@ -504,6 +561,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_AddSelectedRecipe(UEHProductionObject* ProductionObject, const FName& Name, const FEHRecipe& Recipe);
+    
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void Client_AddItems(UEHItemsContainer* Container, const TArray<FEHItemInstance>& Items);
     
     UFUNCTION(BlueprintCallable)
     void ClickTransferItem(UEHItemsContainer* ContainerFrom, const uint8 IndexFrom, UEHItemsContainer* ContainerTo);

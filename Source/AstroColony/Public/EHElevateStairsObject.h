@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHElevateObject.h"
 #include "EHColliderInterface.h"
+#include "EHElevateObject.h"
 #include "EHElevateStairsObject.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

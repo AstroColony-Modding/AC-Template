@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHWaterDeviceInterface.h"
 #include "EHPipeObject.h"
+#include "EHWaterDeviceInterface.h"
 #include "EHWaterPipe.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

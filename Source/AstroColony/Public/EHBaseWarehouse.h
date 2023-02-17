@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHStorageObject.h"
 #include "EHItemInstance.h"
+#include "EHStorageObject.h"
 #include "EHBaseWarehouse.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

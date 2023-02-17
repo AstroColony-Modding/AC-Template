@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Components/StaticMeshComponent.h"
+#include "Templates/SubclassOf.h"
 #include "EHStaticMeshChildComponent.generated.h"
 
 class AActor;

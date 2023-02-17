@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHOptionWidget.h"
 #include "Types/SlateEnums.h"
+#include "EHOptionWidget.h"
 #include "EHOptionSliderWidget.generated.h"
 
 class UEHSliderViewModel;
@@ -35,7 +35,7 @@ protected:
     UFUNCTION(BlueprintCallable)
     void SetSliderValue(float ChangedValue);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void HandleTextComitted(const FText& NewText, TEnumAsByte<ETextCommit::Type> CommitMethod);
     
     UFUNCTION(BlueprintCallable)

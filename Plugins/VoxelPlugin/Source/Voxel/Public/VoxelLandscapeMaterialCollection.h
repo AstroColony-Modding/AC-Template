@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelMaterialCollectionBase.h"
-#include "VoxelLandscapeMaterialCollectionPermutation.h"
 #include "VoxelLandscapeMaterialCollectionLayer.h"
+#include "VoxelLandscapeMaterialCollectionPermutation.h"
+#include "VoxelMaterialCollectionBase.h"
 #include "VoxelLandscapeMaterialCollection.generated.h"
 
-class UMaterialInterface;
 class UMaterialInstanceConstant;
+class UMaterialInterface;
 
 UCLASS(Blueprintable)
 class VOXEL_API UVoxelLandscapeMaterialCollection : public UVoxelMaterialCollectionBase {

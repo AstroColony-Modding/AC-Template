@@ -1,16 +1,16 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AbilityTask_ApplyRootMotion_Base.h"
 #include "UObject/NoExportTypes.h"
-#include "ApplyRootMotionJumpForceDelegateDelegate.h"
-#include "Engine/EngineTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "GameFramework/RootMotionSource.h"
-#include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
+#include "AbilityTask_ApplyRootMotion_Base.h"
+#include "ApplyRootMotionJumpForceDelegateDelegate.h"
 #include "AbilityTask_ApplyRootMotionJumpForce.generated.h"
 
-class UCurveVector;
 class UAbilityTask_ApplyRootMotionJumpForce;
 class UCurveFloat;
+class UCurveVector;
 class UGameplayAbility;
 
 UCLASS(Blueprintable)

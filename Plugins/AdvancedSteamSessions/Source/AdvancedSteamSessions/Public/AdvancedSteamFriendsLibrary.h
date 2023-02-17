@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EBlueprintAsyncResultSwitch.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "BPUniqueNetId.h"
+#include "EBlueprintAsyncResultSwitch.h"
 #include "EBlueprintResultSwitch.h"
-#include "ESteamUserOverlayType.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "BPSteamGroupInfo.h"
-#include "SteamAvatarSize.h"
 #include "EBPTextFilteringContext.h"
+#include "ESteamUserOverlayType.h"
+#include "SteamAvatarSize.h"
 #include "AdvancedSteamFriendsLibrary.generated.h"
 
 class UTexture2D;

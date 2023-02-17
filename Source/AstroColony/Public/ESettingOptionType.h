@@ -29,6 +29,7 @@ enum class ESettingOptionType : uint8 {
     GameplayJetpackMaintainHeight,
     GameplayAutosaveInterval,
     GameplayAutosaveMaxCount,
+    GameplayRecoverysaveMaxCount,
     GameplayFOV,
     GameplayVerticalMouseSensitivity,
     GameplayVerticalMouseInverted,

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "VoxelIntBox.h"
 #include "ModifiedVoxelMaterial.h"
 #include "ModifiedVoxelValue.h"
+#include "VoxelIntBox.h"
 #include "VoxelToolsBase.generated.h"
 
 UCLASS(Blueprintable)

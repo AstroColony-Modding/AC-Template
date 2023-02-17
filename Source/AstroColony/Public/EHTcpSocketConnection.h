@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
-#include "TcpSocketDisconnectDelegateDelegate.h"
 #include "TcpSocketConnectDelegateDelegate.h"
+#include "TcpSocketDisconnectDelegateDelegate.h"
 #include "TcpSocketReceivedMessageDelegateDelegate.h"
 #include "EHTcpSocketConnection.generated.h"
 
@@ -44,22 +44,22 @@ public:
     UFUNCTION(BlueprintCallable)
     void Disconnect(int32 ConnectionId);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<uint8> Conv_StringToBytes(const FString& InStr);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<uint8> Conv_IntToBytes(int32 inInt);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<uint8> Conv_FloatToBytes(float InFloat);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<uint8> Conv_ByteToBytes(uint8 InByte);
     
     UFUNCTION(BlueprintCallable)
     void Connect(const FString& ipAddress, int32 Port, const FTcpSocketDisconnectDelegate& OnDisconnected, const FTcpSocketConnectDelegate& OnConnected, const FTcpSocketReceivedMessageDelegate& OnMessageReceived, int32& ConnectionId);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<uint8> Concat_BytesBytes(TArray<uint8> A, TArray<uint8> B);
     
 };

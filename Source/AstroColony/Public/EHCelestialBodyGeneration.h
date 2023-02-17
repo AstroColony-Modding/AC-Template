@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EChunkGenerationType.h"
 #include "UObject/NoExportTypes.h"
+#include "EChunkGenerationType.h"
 #include "EHCelestialBodyGeneration.generated.h"
 
 class UEHCelestialGenerationObject;

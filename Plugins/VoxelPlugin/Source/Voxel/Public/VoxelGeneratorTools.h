@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "VoxelTransformableGeneratorPicker.h"
-#include "VoxelColorTexture.h"
-#include "VoxelGeneratorPicker.h"
-#include "VoxelGeneratorInit.h"
 #include "Engine/LatentActionManager.h"
+#include "Templates/SubclassOf.h"
+#include "VoxelColorTexture.h"
 #include "VoxelFloatTexture.h"
+#include "VoxelGeneratorInit.h"
+#include "VoxelGeneratorPicker.h"
+#include "VoxelTransformableGeneratorPicker.h"
 #include "VoxelGeneratorTools.generated.h"
 
+class UObject;
 class UVoxelGenerator;
+class UVoxelGeneratorInstanceWrapper;
 class UVoxelTransformableGenerator;
 class UVoxelTransformableGeneratorInstanceWrapper;
-class UVoxelGeneratorInstanceWrapper;
-class UObject;
 
 UCLASS(Blueprintable)
 class VOXEL_API UVoxelGeneratorTools : public UBlueprintFunctionLibrary {

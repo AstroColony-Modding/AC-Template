@@ -1,14 +1,17 @@
 #include "EHGameInstance.h"
 
-class UEHScreenManager;
 class AEHPlayerController;
-class UEHLayerManager;
 class UEHAchievementsManager;
+class UEHLayerManager;
+class UEHScreenManager;
 
 void UEHGameInstance::StartAsyncSoftAssetsLoading() {
 }
 
 void UEHGameInstance::ResetState() {
+}
+
+void UEHGameInstance::RecoverySave() {
 }
 
 void UEHGameInstance::QuickSave() {

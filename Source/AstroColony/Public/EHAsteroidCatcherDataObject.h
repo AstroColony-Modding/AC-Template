@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "EHAsteroidData.h"
 #include "EHDataObject.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "EHAsteroidCatcherDataObject.generated.h"
 
 UCLASS(Blueprintable)

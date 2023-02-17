@@ -1,11 +1,11 @@
 #include "VoxelMeshImporterLibrary.h"
 
-class UVoxelMeshImporterInputData;
-class UTextureRenderTarget2D;
-class UObject;
 class UMaterialInterface;
+class UObject;
 class UStaticMesh;
+class UTextureRenderTarget2D;
 class UVoxelDataAsset;
+class UVoxelMeshImporterInputData;
 
 UTextureRenderTarget2D* UVoxelMeshImporterLibrary::CreateTextureFromMaterial(UObject* WorldContextObject, UMaterialInterface* Material, int32 Width, int32 Height) {
     return NULL;

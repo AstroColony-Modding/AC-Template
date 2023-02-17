@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TGToggle.h"
 #include "Styling/SlateBrush.h"
+#include "TGToggle.h"
 #include "TGToggleButton.generated.h"
 
 UCLASS(Blueprintable)

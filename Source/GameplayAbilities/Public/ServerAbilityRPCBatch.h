@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameplayAbilitySpecHandle.h"
-#include "PredictionKey.h"
 #include "GameplayAbilityTargetDataHandle.h"
+#include "PredictionKey.h"
 #include "ServerAbilityRPCBatch.generated.h"
 
 USTRUCT(BlueprintType)

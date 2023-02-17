@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Materials/MaterialExpression.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "MaterialExpressionBlendMaterialAttributesBarycentric.generated.h"
 
 UCLASS(Blueprintable, CollapseCategories, MinimalAPI)

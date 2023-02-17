@@ -1,22 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHPartSuffix.h"
-#include "EHItemInstance.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/ActorComponent.h"
-#include "EHSaveGameInterface.h"
-#include "EHObjectLoaderInterface.h"
-#include "EHVehicleDefinition.h"
-#include "EHVehicleTypeData.h"
 #include "EEHVehicleAction.h"
-#include "EHVehiclePartTypeData.h"
-#include "EEHVehicleType.h"
-#include "UObject/NoExportTypes.h"
-#include "EHPawns.h"
-#include "UObject/NoExportTypes.h"
 #include "EEHVehiclePartMirrorType.h"
 #include "EEHVehiclePartType.h"
+#include "EEHVehicleType.h"
+#include "EHItemInstance.h"
+#include "EHObjectLoaderInterface.h"
+#include "EHPartSuffix.h"
+#include "EHPawns.h"
+#include "EHSaveGameInterface.h"
+#include "EHVehicleDefinition.h"
 #include "EHVehiclePart.h"
-#include "UObject/NoExportTypes.h"
+#include "EHVehiclePartTypeData.h"
+#include "EHVehicleTypeData.h"
 #include "EHModularVehicles.generated.h"
 
 class APawn;
@@ -31,10 +31,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEHVehicleDefinition> DefaultVehicles;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FEHVehicleTypeData VehiclesDatas[3];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FEHVehiclePartTypeData VehiclesPartDatas[14];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

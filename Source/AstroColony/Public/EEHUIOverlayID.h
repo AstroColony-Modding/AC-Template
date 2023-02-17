@@ -15,6 +15,7 @@ enum class EEHUIOverlayID : uint8 {
     TextChat,
     Tooltip,
     NotificationDialog,
+    ModsHUB,
     _MAX UMETA(Hidden),
 };
 

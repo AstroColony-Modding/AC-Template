@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESliderStepType.h"
 #include "Engine/DataTable.h"
 #include "ESettingOptionType.h"
+#include "ESliderStepType.h"
 #include "SettingsSlidersData.generated.h"
 
 USTRUCT(BlueprintType)

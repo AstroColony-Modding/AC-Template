@@ -3,9 +3,9 @@
 #include "EHSpecialisticProductionObject.h"
 #include "EHBarnObject.generated.h"
 
+class UEHAnimalMeshAsset;
 class UEHDeviceItem;
 class UEHItem;
-class UEHAnimalMeshAsset;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHBarnObject : public UEHSpecialisticProductionObject {

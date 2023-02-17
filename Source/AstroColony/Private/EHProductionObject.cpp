@@ -4,6 +4,12 @@ bool UEHProductionObject::UsesRecipesForProduction() {
     return false;
 }
 
+void UEHProductionObject::Multi_ProductionStateChanged_Inactive_Implementation() {
+}
+
+void UEHProductionObject::Multi_ProductionStateChanged_Active_Implementation() {
+}
+
 bool UEHProductionObject::IsWorkplaceForAI() {
     return false;
 }

@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "TGUserWidget.h"
-#include "Types/SlateEnums.h"
 #include "Widgets/Layout/SScrollBox.h"
+#include "Types/SlateEnums.h"
 #include "Layout/Margin.h"
+#include "TGUserWidget.h"
+#include "Templates/SubclassOf.h"
 #include "EHCampaignListWidget.generated.h"
 
-class UUserWidget;
-class UVerticalBox;
-class UScrollBox;
 class UEHCampaignListViewModel;
 class UEHCampaignOptionViewModel;
+class UScrollBox;
+class UUserWidget;
+class UVerticalBox;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHCampaignListWidget : public UTGUserWidget {
@@ -20,7 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<UUserWidget> CampaignOptionWidgetClass;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EHorizontalAlignment> HortizontalSlotAligment;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

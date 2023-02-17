@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelBasicSpawnerScaleSettings.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "EVoxelBasicSpawnerRotation.h"
-#include "UObject/NoExportTypes.h"
 #include "EVoxelMeshSpawnerInstanceRandom.h"
-#include "VoxelSpawnerActorSettings.h"
+#include "VoxelBasicSpawnerScaleSettings.h"
 #include "VoxelInstancedMeshSettings.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "VoxelSpawnerActorSettings.h"
 #include "VoxelMeshSpawner.generated.h"
 
-class UStaticMesh;
 class UMaterialInterface;
+class UStaticMesh;
 
 UCLASS(Blueprintable)
 class VOXEL_API UVoxelMeshSpawner : public UObject {
@@ -45,13 +45,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVoxelInstancedMeshSettings InstancedMeshSettings;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FFloatInterval GroundSlopeAngle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnableHeightRestriction;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FFloatInterval HeightRestriction;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

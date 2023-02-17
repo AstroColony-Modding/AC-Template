@@ -1,33 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "GameplayAbilityActorInfo.h"
-#include "GameplayAbilityActivationInfo.h"
-#include "GameplayTagContainer.h"
 #include "UObject/Object.h"
-#include "EGameplayAbilityNetExecutionPolicy.h"
-#include "GameplayTaskOwnerInterface.h"
-#include "EGameplayAbilityReplicationPolicy.h"
 #include "GameplayTagContainer.h"
-#include "EGameplayAbilityInstancingPolicy.h"
-#include "GameplayEventData.h"
-#include "EGameplayAbilityNetSecurityPolicy.h"
+#include "GameplayTagContainer.h"
+#include "GameplayTaskOwnerInterface.h"
 #include "AbilityTriggerData.h"
-#include "GameplayAbilityTargetDataHandle.h"
-#include "GameplayEffectContextHandle.h"
-#include "GameplayAbilityTargetingLocationInfo.h"
-#include "GameplayEffectSpecHandle.h"
-#include "GameplayCueParameters.h"
-#include "GameplayAbilitySpecHandle.h"
 #include "ActiveGameplayEffectHandle.h"
+#include "EGameplayAbilityInstancingPolicy.h"
+#include "EGameplayAbilityNetExecutionPolicy.h"
+#include "EGameplayAbilityNetSecurityPolicy.h"
+#include "EGameplayAbilityReplicationPolicy.h"
+#include "GameplayAbilityActivationInfo.h"
+#include "GameplayAbilityActorInfo.h"
+#include "GameplayAbilitySpecHandle.h"
+#include "GameplayAbilityTargetDataHandle.h"
+#include "GameplayAbilityTargetingLocationInfo.h"
+#include "GameplayCueParameters.h"
+#include "GameplayEffectContextHandle.h"
+#include "GameplayEffectSpecHandle.h"
+#include "GameplayEventData.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayAbility.generated.h"
 
-class UGameplayEffect;
-class UAnimMontage;
-class UGameplayTask;
-class USkeletalMeshComponent;
 class AActor;
 class UAbilitySystemComponent;
+class UAnimMontage;
+class UGameplayEffect;
+class UGameplayTask;
+class USkeletalMeshComponent;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UGameplayAbility : public UObject, public IGameplayTaskOwnerInterface {
@@ -43,10 +43,10 @@ public:
     bool RemoteInstanceEnded;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EGameplayAbilityReplicationPolicy::Type> ReplicationPolicy;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EGameplayAbilityInstancingPolicy::Type> InstancingPolicy;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -61,10 +61,10 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayEventData CurrentEventData;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EGameplayAbilityNetExecutionPolicy::Type> NetExecutionPolicy;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EGameplayAbilityNetSecurityPolicy::Type> NetSecurityPolicy;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

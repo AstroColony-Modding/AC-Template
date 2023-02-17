@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/PanelSlot.h"
 #include "UObject/NoExportTypes.h"
+#include "Components/PanelSlot.h"
 #include "TGRadialPanelSlot.generated.h"
 
 UCLASS(Blueprintable)

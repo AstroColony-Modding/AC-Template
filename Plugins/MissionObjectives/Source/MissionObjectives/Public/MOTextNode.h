@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "MOBaseNode.h"
 #include "ENodeCharacter.h"
+#include "MOBaseNode.h"
 #include "MOTextNode.generated.h"
 
-class UTexture2D;
 class UScriptedAction;
+class UTexture2D;
 
 UCLASS(Blueprintable)
 class MISSIONOBJECTIVES_API UMOTextNode : public UMOBaseNode {

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Engine/NetSerialization.h"
+#include "Engine/NetSerialization.h"
+#include "GameplayTagContainer.h"
+#include "GameplayTagContainer.h"
 #include "GameplayEffectContextHandle.h"
-#include "GameplayTagContainer.h"
-#include "GameplayTagContainer.h"
-#include "Engine/NetSerialization.h"
-#include "Engine/NetSerialization.h"
 #include "GameplayCueParameters.generated.h"
 
-class UPhysicalMaterial;
-class UObject;
 class AActor;
+class UObject;
+class UPhysicalMaterial;
 class USceneComponent;
 
 USTRUCT(BlueprintType)
@@ -43,16 +43,16 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector_NetQuantizeNormal Normal;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> Instigator;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> EffectCauser;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UObject> SourceObject;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UPhysicalMaterial> PhysicalMaterial;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -61,7 +61,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 AbilityLevel;
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<USceneComponent> TargetAttachComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -5,11 +5,11 @@
 #include "InputInfo.h"
 #include "VehiclePhysicsActor.generated.h"
 
-class ULandVehicle_EngineComponent;
-class UWheelManager_Component;
-class UPrimitiveComponent;
 class UClientSidePrediction_Component;
 class ULandVehicle_DragComponent;
+class ULandVehicle_EngineComponent;
+class UPrimitiveComponent;
+class UWheelManager_Component;
 
 UCLASS(Blueprintable)
 class BLUEMANVEHICLEPHYSICS_API AVehiclePhysicsActor : public APawn {

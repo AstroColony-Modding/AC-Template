@@ -1,26 +1,26 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "EVoxelShapeType.h"
 #include "EVoxelTerrainType.h"
-#include "VoxelShapeData.h"
+#include "ModifiedVoxelValue.h"
+#include "VoxelIntBox.h"
 #include "VoxelWorld.h"
 #include "EHSaveGameInterface.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "VoxelShapeData.h"
 #include "VoxelTerrainDigData.h"
-#include "VoxelIntBox.h"
-#include "ModifiedVoxelValue.h"
 #include "EHVoxelWorld.generated.h"
 
+class AEHCharacter;
 class AEHColliderWorld;
 class AEHPlanetoidGrid;
-class AEHCharacter;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API AEHVoxelWorld : public AVoxelWorld, public IEHSaveGameInterface {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FName VoxelWorldUniqueID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -62,6 +62,8 @@ protected:
     
 public:
     AEHVoxelWorld();
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void VoxelRemoved(const FIntVector& Coord, const int32 VoxelType);
     
@@ -92,11 +94,6 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool HasParam(const FName ParamName);
     
-private:
-    UFUNCTION(BlueprintCallable)
-    void HandleVoxelWorldLoaded(AVoxelWorld* VoxelWorld);
-    
-public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     EVoxelTerrainType GetVoxelTypeFromLayer(const int32 LayerIndex);
     

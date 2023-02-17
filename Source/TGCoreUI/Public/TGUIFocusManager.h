@@ -3,8 +3,8 @@
 #include "TGUISubsystem.h"
 #include "TGUIFocusManager.generated.h"
 
-class UTGUserWidget;
 class UTGUIScene;
+class UTGUserWidget;
 
 UCLASS(Blueprintable)
 class TGCOREUI_API UTGUIFocusManager : public UTGUISubsystem {

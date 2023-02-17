@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
-#include "DataRegistryIdFormat.h"
 #include "DataRegistryCachePolicy.h"
+#include "DataRegistryIdFormat.h"
 #include "DataRegistry.generated.h"
 
-class UScriptStruct;
 class UDataRegistrySource;
+class UScriptStruct;
 
 UCLASS(Blueprintable)
 class DATAREGISTRY_API UDataRegistry : public UObject {

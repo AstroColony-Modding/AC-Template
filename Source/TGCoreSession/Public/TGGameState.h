@@ -4,8 +4,8 @@
 #include "TGEventStreamOwner.h"
 #include "TGGameState.generated.h"
 
-class UTGEventStreamComponent;
 class AActor;
+class UTGEventStreamComponent;
 
 UCLASS(Blueprintable)
 class TGCORESESSION_API ATGGameState : public AGameStateBase, public ITGEventStreamOwner {

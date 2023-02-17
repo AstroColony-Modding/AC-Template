@@ -7,10 +7,10 @@ UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHPlanetoidVisualItem : public UEHVisualItem {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 VisualSpawnChance[6];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     float SpawnDensity[6];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

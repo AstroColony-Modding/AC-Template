@@ -3,8 +3,8 @@
 #include "TGUserWidget.h"
 #include "EHToastWidget.generated.h"
 
-class UWidgetAnimation;
 class UEHToastViewModel;
+class UWidgetAnimation;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHToastWidget : public UTGUserWidget {

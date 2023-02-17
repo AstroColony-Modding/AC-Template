@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "EHHeadGroom.generated.h"
 
-class UStaticMesh;
 class UGroomAsset;
 class UMaterialInterface;
+class UStaticMesh;
 
 USTRUCT(BlueprintType)
 struct ASTROCOLONY_API FEHHeadGroom {

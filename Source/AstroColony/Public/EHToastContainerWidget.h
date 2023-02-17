@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "TGUILayer.h"
+#include "Templates/SubclassOf.h"
 #include "EHToastContainerWidget.generated.h"
 
-class UEHToastWidget;
-class UEHToastContainerViewModel;
-class UTGUserWidget;
-class UEHToastViewModel;
 class UCanvasPanel;
+class UEHToastContainerViewModel;
+class UEHToastViewModel;
+class UEHToastWidget;
+class UTGUserWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class UEHToastContainerWidget : public UTGUILayer {

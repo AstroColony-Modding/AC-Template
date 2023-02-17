@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/EditableTextBox.h"
 #include "Fonts/SlateFontInfo.h"
+#include "Components/EditableTextBox.h"
 #include "ETextBoxContentType.h"
 #include "TGEditableTextBox.generated.h"
 

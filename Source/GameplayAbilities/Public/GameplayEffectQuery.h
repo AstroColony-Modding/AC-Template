@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "ActiveGameplayEffectQueryCustomMatch_DynamicDelegate.h"
 #include "GameplayTagContainer.h"
+#include "ActiveGameplayEffectQueryCustomMatch_DynamicDelegate.h"
 #include "GameplayAttribute.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayEffectQuery.generated.h"
 
-class UObject;
 class UGameplayEffect;
+class UObject;
 
 USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayEffectQuery {

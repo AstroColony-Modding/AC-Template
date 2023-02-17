@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Styling/SlateWidgetStyle.h"
 #include "Styling/SlateBrush.h"
+#include "Styling/SlateWidgetStyle.h"
 #include "2DSliderStyle.generated.h"
 
 USTRUCT(BlueprintType)

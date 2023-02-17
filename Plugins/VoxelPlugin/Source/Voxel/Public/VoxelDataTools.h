@@ -1,20 +1,20 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelMaterial.h"
-#include "VoxelUncompressedWorldSave.h"
 #include "UObject/NoExportTypes.h"
-#include "Engine/LatentActionManager.h"
+#include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "VoxelIntBox.h"
+#include "Engine/LatentActionManager.h"
 #include "VoxelCompressedWorldSave.h"
-#include "VoxelValueMaterial.h"
-#include "UObject/NoExportTypes.h"
 #include "VoxelDataMemoryUsageInMB.h"
 #include "VoxelFindClosestNonEmptyVoxelResult.h"
+#include "VoxelIntBox.h"
+#include "VoxelMaterial.h"
+#include "VoxelUncompressedWorldSave.h"
+#include "VoxelValueMaterial.h"
 #include "VoxelDataTools.generated.h"
 
-class UObject;
 class AVoxelWorld;
+class UObject;
 class UVoxelHeightmapAsset;
 
 UCLASS(Blueprintable)

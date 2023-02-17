@@ -2,36 +2,36 @@
 #include "CoreMinimal.h"
 #include "GameplayAbilityActorInfo.generated.h"
 
-class USkeletalMeshComponent;
-class UAbilitySystemComponent;
 class AActor;
 class APlayerController;
+class UAbilitySystemComponent;
 class UAnimInstance;
 class UMovementComponent;
+class USkeletalMeshComponent;
 
 USTRUCT(BlueprintType)
 struct GAMEPLAYABILITIES_API FGameplayAbilityActorInfo {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> OwnerActor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AActor> AvatarActor;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<APlayerController> PlayerController;
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UAbilitySystemComponent> AbilitySystemComponent;
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<USkeletalMeshComponent> SkeletalMeshComponent;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UAnimInstance> AnimInstance;
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<UMovementComponent> MovementComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

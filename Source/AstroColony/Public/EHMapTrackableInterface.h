@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/Interface.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "EVoxelShapeType.h"
 #include "EVoxelTerrainType.h"
-#include "UObject/Interface.h"
 #include "EEHTrackableType.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "EHMapTrackableInterface.generated.h"
 
 UINTERFACE(Blueprintable)

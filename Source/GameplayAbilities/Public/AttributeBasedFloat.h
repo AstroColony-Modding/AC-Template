@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayTagContainer.h"
-#include "ScalableFloat.h"
-#include "GameplayEffectAttributeCaptureDefinition.h"
-#include "EAttributeBasedFloatCalculationType.h"
 #include "Engine/CurveTable.h"
+#include "GameplayTagContainer.h"
+#include "EAttributeBasedFloatCalculationType.h"
 #include "EGameplayModEvaluationChannel.h"
+#include "GameplayEffectAttributeCaptureDefinition.h"
+#include "ScalableFloat.h"
 #include "AttributeBasedFloat.generated.h"
 
 USTRUCT(BlueprintType)

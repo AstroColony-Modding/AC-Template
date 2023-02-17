@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TechnologyAsset.h"
 #include "Engine/DataTable.h"
+#include "TechnologyAsset.h"
 #include "EHGlobalPointInstance.h"
 #include "EHTechnologyAsset.generated.h"
 

@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHInteractableServiceContainer.h"
 #include "UObject/NoExportTypes.h"
+#include "EHInteractableServiceContainer.h"
 #include "EHCanteenObject.generated.h"
 
-class UEHItem;
 class UEHFoodItem;
+class UEHItem;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHCanteenObject : public UEHInteractableServiceContainer {

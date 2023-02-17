@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHInteractableItem.h"
-#include "EEHMiningResourceType.h"
 #include "UObject/NoExportTypes.h"
+#include "EEHMiningResourceType.h"
+#include "EHInteractableItem.h"
 #include "EHWorldItem.generated.h"
 
 class UEHItem;

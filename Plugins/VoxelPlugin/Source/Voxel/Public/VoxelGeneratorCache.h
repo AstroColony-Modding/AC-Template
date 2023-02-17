@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
-#include "VoxelTransformableGeneratorPicker.h"
 #include "VoxelGeneratorPicker.h"
+#include "VoxelTransformableGeneratorPicker.h"
 #include "VoxelGeneratorCache.generated.h"
 
-class UVoxelTransformableGeneratorInstanceWrapper;
 class UVoxelGeneratorInstanceWrapper;
+class UVoxelTransformableGeneratorInstanceWrapper;
 
 UCLASS(Blueprintable)
 class VOXEL_API UVoxelGeneratorCache : public UObject {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayAbilityTargetData.h"
 #include "Engine/EngineTypes.h"
+#include "GameplayAbilityTargetData.h"
 #include "GameplayAbilityTargetData_SingleTargetHit.generated.h"
 
 USTRUCT(BlueprintType)

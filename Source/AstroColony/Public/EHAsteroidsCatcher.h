@@ -1,20 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHCatchedAsteroid.h"
-#include "EHCraftingObject.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "EAsteroidCatchStateChanged.h"
-#include "UObject/NoExportTypes.h"
-#include "EHAsteroidData.h"
+#include "EHCatchedAsteroid.h"
+#include "EHCraftingObject.h"
 #include "EHAsteroidsCatcher.generated.h"
 
+class UEHResourceItem;
 class UParticleSystem;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHAsteroidsCatcher : public UEHCraftingObject {
     GENERATED_BODY()
 public:
+    DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnCatchedResourceChanged);
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnAsteroidCatchStateChanged, EAsteroidCatchStateChanged, CatchStateChange);
+    
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOnCatchedResourceChanged OnCatchedResourceChanged;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 AttractedAsteroidIndex;
@@ -40,6 +44,9 @@ public:
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnAsteroidCatchStateChanged OnAsteroidCatchStateChanged;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UEHResourceItem* CatchResourceType;
+    
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEHCatchedAsteroid AttractedAsteroid;
@@ -58,21 +65,14 @@ public:
     UFUNCTION(BlueprintCallable)
     bool RemoveAttractedAsteroid();
     
-    UFUNCTION(BlueprintCallable)
-    void NotifyAsteroidCatched();
-    
-    UFUNCTION(BlueprintCallable)
-    void NotifyAsteroidAttraceted(const FEHAsteroidData& AsteroidData, const FTransform& Transform);
-    
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsProcessingAsteroid();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsAttractingAsteroid();
     
-private:
     UFUNCTION(BlueprintCallable)
-    void HandleGameStarted();
+    bool ChangeCatchedResource(UEHResourceItem* Resource);
     
 };
 

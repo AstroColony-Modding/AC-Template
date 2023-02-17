@@ -4,8 +4,8 @@
 #include "EMenuType.h"
 #include "EHMainMenuScreen.generated.h"
 
-class UEHMenuWidget;
 class UEHMainMenuViewModel;
+class UEHMenuWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHMainMenuScreen : public UEHUIScreen {

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHInteractableServiceObject.h"
 #include "UObject/NoExportTypes.h"
+#include "EHInteractableServiceObject.h"
 #include "EHEatStationObject.generated.h"
 
 class UEHAIHumanObject;

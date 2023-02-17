@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/PanelWidget.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "TGRadialPanel.generated.h"
 
 class UTGRadialPanelSlot;
@@ -32,7 +32,7 @@ public:
     
     UTGRadialPanel();
     UFUNCTION(BlueprintCallable)
-    UTGRadialPanelSlot* AddChildToCanvas(UWidget* Content);
+    UTGRadialPanelSlot* AddChildToCanvas(UWidget* content);
     
 };
 

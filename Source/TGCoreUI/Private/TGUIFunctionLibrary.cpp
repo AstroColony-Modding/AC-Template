@@ -1,17 +1,17 @@
 #include "TGUIFunctionLibrary.h"
 
-class UTextBlock;
-class UWidget;
-class UWidgetSwitcher;
+class UComboBoxString;
+class UEditableText;
 class UImage;
 class UObject;
+class USlider;
 class UTGEditableTextBox;
 class UTGRichTextBlock;
-class UEditableText;
-class UComboBoxString;
 class UTGToggle;
-class USlider;
+class UTextBlock;
 class UUserWidget;
+class UWidget;
+class UWidgetSwitcher;
 
 void UTGUIFunctionLibrary::Visibility_BindWidgetVisibility(FVisibilityBindable& VisibilityBindable, UWidget* Widget) {
 }
@@ -71,6 +71,10 @@ void UTGUIFunctionLibrary::Bool_BindToggleState(FBoolBindable& BoolBindable, UTG
 }
 
 void UTGUIFunctionLibrary::Bool_BindIsEnabled(FBoolBindable& BoolBindable, UWidget* Widget) {
+}
+
+bool UTGUIFunctionLibrary::ActionHasKey(const FName ActionName, const FKey& Key) {
+    return false;
 }
 
 UTGUIFunctionLibrary::UTGUIFunctionLibrary() {

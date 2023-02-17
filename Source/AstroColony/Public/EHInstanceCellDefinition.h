@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EInstanceCellType.h"
 #include "UObject/NoExportTypes.h"
 #include "EEHInstanceRotation.h"
+#include "EInstanceCellType.h"
 #include "EHInstanceCellDefinition.generated.h"
 
 USTRUCT(BlueprintType)
@@ -21,4 +21,3 @@ public:
     FEHInstanceCellDefinition();
 };
 
-FORCEINLINE uint32 GetTypeHash(const FEHInstanceCellDefinition) { return 0; }

@@ -4,8 +4,8 @@
 #include "EHOptionStepperWidget.generated.h"
 
 class UEHStepperViewModel;
-class UTGTile;
 class UTGConfigurableTextBlock;
+class UTGTile;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHOptionStepperWidget : public UEHOptionWidget {

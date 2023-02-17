@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHItemInstance.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "EHPartScheme.h"
 #include "EEHVehiclePartScale.h"
+#include "EHItemInstance.h"
+#include "EHPartScheme.h"
 #include "EHVehiclePartTypeData.generated.h"
 
-class UTexture2D;
 class USceneComponent;
 class UStaticMesh;
+class UTexture2D;
 
 USTRUCT(BlueprintType)
 struct ASTROCOLONY_API FEHVehiclePartTypeData {
@@ -69,7 +69,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FVector> PredefinedLocation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 NumberOfUses;
     
     FEHVehiclePartTypeData();

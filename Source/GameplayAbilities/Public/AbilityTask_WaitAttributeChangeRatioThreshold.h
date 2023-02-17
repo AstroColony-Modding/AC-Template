@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AbilityTask.h"
-#include "WaitAttributeChangeRatioThresholdDelegateDelegate.h"
-#include "GameplayAttribute.h"
 #include "EWaitAttributeChangeComparison.h"
+#include "GameplayAttribute.h"
+#include "WaitAttributeChangeRatioThresholdDelegateDelegate.h"
 #include "AbilityTask_WaitAttributeChangeRatioThreshold.generated.h"
 
 class AActor;

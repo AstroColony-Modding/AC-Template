@@ -1,8 +1,8 @@
 #include "LogoutUserCallbackProxy.h"
 
-class UObject;
 class APlayerController;
 class ULogoutUserCallbackProxy;
+class UObject;
 
 ULogoutUserCallbackProxy* ULogoutUserCallbackProxy::LogoutUser(UObject* WorldContextObject, APlayerController* PlayerController) {
     return NULL;

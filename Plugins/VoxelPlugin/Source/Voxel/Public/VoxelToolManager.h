@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "UObject/Object.h"
+#include "Templates/SubclassOf.h"
 #include "VoxelToolManager.generated.h"
 
-class UVoxelToolSharedConfig;
 class UVoxelTool;
+class UVoxelToolSharedConfig;
 
 UCLASS(Blueprintable)
 class VOXEL_API UVoxelToolManager : public UObject {

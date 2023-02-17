@@ -5,6 +5,9 @@ class UEHBaseButtonWidget;
 void UEHModsScreen::HandleRemoveModClicked(UEHBaseButtonWidget* ButtonWidget) {
 }
 
+void UEHModsScreen::HandleOpenModClicked(UEHBaseButtonWidget* ButtonWidget) {
+}
+
 void UEHModsScreen::HandleInstallModButtonClicked(UEHBaseButtonWidget* ButtonWidget) {
 }
 
@@ -17,5 +20,6 @@ UEHModsScreen::UEHModsScreen() {
     this->BrowseModsList = NULL;
     this->InstalModButton = NULL;
     this->RemoveModButton = NULL;
+    this->OpenModButton = NULL;
 }
 

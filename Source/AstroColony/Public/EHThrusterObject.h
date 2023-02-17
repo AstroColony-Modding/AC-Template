@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHCraftingObject.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "EEHThrusterSize.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "EHCraftingObject.h"
 #include "EHThrusterObject.generated.h"
 
 class UEHFlareComponent;

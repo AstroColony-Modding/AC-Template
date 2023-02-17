@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
-#include "ETechTreeOrientation.h"
 #include "Styling/SlateBrush.h"
+#include "ETechTreeOrientation.h"
+#include "Templates/SubclassOf.h"
 #include "TechnologyTree.generated.h"
 
-class UTechNodeWidget;
-class UTTTechNode;
-class UTechnologyAsset;
-class UTechNodeArrowWidget;
 class UEdGraph;
+class UTTTechNode;
+class UTechNodeArrowWidget;
+class UTechNodeWidget;
+class UTechnologyAsset;
 class UTechnologyTree;
 
 UCLASS(Blueprintable)

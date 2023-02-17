@@ -1,8 +1,8 @@
 #include "AbilityTask_PlayMontageAndWait.h"
 
+class UAbilityTask_PlayMontageAndWait;
 class UAnimMontage;
 class UGameplayAbility;
-class UAbilityTask_PlayMontageAndWait;
 
 void UAbilityTask_PlayMontageAndWait::OnMontageInterrupted() {
 }

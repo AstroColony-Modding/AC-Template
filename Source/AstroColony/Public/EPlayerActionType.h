@@ -23,5 +23,6 @@ enum class EPlayerActionType : uint8 {
     Turbo,
     NextVariant,
     PreviousVariant,
+    Pick,
 };
 

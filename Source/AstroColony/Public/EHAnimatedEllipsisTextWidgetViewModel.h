@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "BoolBindable.h"
-#include "EHViewModel.h"
 #include "TextBindable.h"
+#include "EHViewModel.h"
 #include "EHAnimatedEllipsisTextWidgetViewModel.generated.h"
 
 UCLASS(Blueprintable)

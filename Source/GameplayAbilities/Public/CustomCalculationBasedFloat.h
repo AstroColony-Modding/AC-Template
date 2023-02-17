@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "ScalableFloat.h"
 #include "Engine/CurveTable.h"
+#include "ScalableFloat.h"
+#include "Templates/SubclassOf.h"
 #include "CustomCalculationBasedFloat.generated.h"
 
 class UGameplayModMagnitudeCalculation;

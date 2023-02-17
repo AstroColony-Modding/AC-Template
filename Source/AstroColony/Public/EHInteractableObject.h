@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/Object.h"
-#include "GeneratedCustomMesh.h"
+#include "UObject/NoExportTypes.h"
 #include "EEHInstanceRotation.h"
-#include "UObject/NoExportTypes.h"
-#include "UObject/NoExportTypes.h"
+#include "GeneratedCustomMesh.h"
 #include "EHInteractableObject.generated.h"
 
-class UEHItem;
 class AEHGrid;
 class UEHDeviceItem;
+class UEHItem;
 
 UCLASS(Blueprintable, DefaultToInstanced, EditInlineNew)
 class ASTROCOLONY_API UEHInteractableObject : public UObject {
@@ -17,7 +17,7 @@ class ASTROCOLONY_API UEHInteractableObject : public UObject {
 public:
     DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnInteractableRotationChanged, EEHInstanceRotation, Rotation);
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FIntVector CachedCellCoord;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -34,6 +34,9 @@ public:
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnInteractableRotationChanged OnInteractableRotationChanged;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    FIntVector CreationCellCoord;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     UEHItem* FormerItem;

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "BoolBindable.h"
-#include "EHViewModel.h"
 #include "TextBindable.h"
 #include "Texture2DBindable.h"
+#include "EHViewModel.h"
 #include "EHCampaignOptionViewModel.generated.h"
 
 UCLASS(Blueprintable)

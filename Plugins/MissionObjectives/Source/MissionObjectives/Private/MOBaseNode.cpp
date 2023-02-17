@@ -12,6 +12,6 @@ UMission* UMOBaseNode::GetMission() {
 
 UMOBaseNode::UMOBaseNode() {
     this->bNodeIsActive = false;
-    this->UniqueID = 16805;
+    this->UniqueID = 16987;
 }
 

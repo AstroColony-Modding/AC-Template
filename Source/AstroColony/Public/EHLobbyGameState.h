@@ -45,7 +45,7 @@ private:
     UFUNCTION(BlueprintCallable)
     void OnRep_MaxLobbyPlayers();
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void OnMessageReceived(int32 ConId, TArray<uint8>& Message);
     
     UFUNCTION(BlueprintCallable)

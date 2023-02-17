@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EHItemInstance.h"
 #include "EHLogicObject.h"
 #include "EHSignalDeviceInterface.h"
-#include "EHItemInstance.h"
 #include "EHSignalObject.generated.h"
 
 class UEHSignalNetwork;

@@ -3,8 +3,8 @@
 #include "TGUserWidget.h"
 #include "EHButtonBarEntryWidget.generated.h"
 
-class UTGTile;
 class UEHButtonBarEntryViewModel;
+class UTGTile;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHButtonBarEntryWidget : public UTGUserWidget {

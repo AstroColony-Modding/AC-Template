@@ -4,27 +4,27 @@
 #include "EEHDebugMode.h"
 #include "EHGameFunctionLibrary.generated.h"
 
-class UEHModularVehicleWidget;
-class UObject;
-class UEHAsset;
-class UEHHUDWidget;
-class UEHMapWidget;
-class AEHGamePlayerController;
-class UEHTechTreeComponent;
-class AEHHUDGame;
-class UEHSpaceCarryComponent;
-class UEHScenarioComponent;
-class UEHModularVehicles;
-class UEHMissionsComponent;
-class AEHLobbyGameState;
-class UEHLayerManager;
-class UEHInventoryComponent;
-class UEHGridComponent;
-class AEHGameState;
-class UEHGameInstance;
-class UEHCheatComponent;
 class AEHCharacter;
+class AEHGamePlayerController;
+class AEHGameState;
+class AEHHUDGame;
+class AEHLobbyGameState;
 class UEHAchievementsManager;
+class UEHAsset;
+class UEHCheatComponent;
+class UEHGameInstance;
+class UEHGridComponent;
+class UEHHUDWidget;
+class UEHInventoryComponent;
+class UEHLayerManager;
+class UEHMapWidget;
+class UEHMissionsComponent;
+class UEHModularVehicleWidget;
+class UEHModularVehicles;
+class UEHScenarioComponent;
+class UEHSpaceCarryComponent;
+class UEHTechTreeComponent;
+class UObject;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHGameFunctionLibrary : public UBlueprintFunctionLibrary {
@@ -90,6 +90,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static AEHCharacter* GetEHCharacter(const UObject* WorldContextObject);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
+    static TArray<AEHGamePlayerController*> GetAllPlayerControllers(const UObject* WorldContextObject);
     
     UFUNCTION(BlueprintCallable, BlueprintPure, meta=(WorldContext="WorldContextObject"))
     static UEHAchievementsManager* GetAchievementsManager(const UObject* WorldContextObject);

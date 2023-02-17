@@ -4,4 +4,3 @@
     this->Ability = NULL;
     this->AbilitySystemComponent = NULL;
 }*/
-

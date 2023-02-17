@@ -4,8 +4,9 @@
 #include "EHSaveGameInterface.h"
 #include "EHTechTreeComponent.generated.h"
 
-class UEHTechnologyAsset;
 class UEHAsset;
+class UEHTechnologyAsset;
+class UTechnologyAsset;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ASTROCOLONY_API UEHTechTreeComponent : public UTechTreeManager, public IEHSaveGameInterface {
@@ -64,11 +65,17 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void TechnologyUnlockFeedback(UEHAsset* Item, bool UnlockSuccess);
     
+    UFUNCTION(BlueprintCallable)
+    void Server_UpdateTechNotificationsAllPlayers(const bool EnableTechNotificationsIn);
+    
 private:
-    UFUNCTION(BlueprintCallable, Reliable, Server)
+    UFUNCTION(BlueprintCallable)
     void Server_TryUnlockTechnology();
     
 public:
+    UFUNCTION(BlueprintCallable)
+    void Server_DebugUnlockTechnologyAllPlayers(UTechnologyAsset* Technology);
+    
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void Server_ChangeResearchedTechnology(UEHTechnologyAsset* TechnologyToResearch);
     
@@ -106,6 +113,10 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UEHTechnologyAsset* GetTechnologyToUnlock(UEHAsset* Asset);
+    
+private:
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void Client_UpdateTechNotifications(const bool EnableTechNotificationsIn);
     
     
     // Fix for true pure virtual functions not being implemented

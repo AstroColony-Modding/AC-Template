@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHTrainingObject.h"
 #include "EAIProfession.h"
+#include "EHTrainingObject.h"
 #include "EHSchoolObject.generated.h"
 
 class UEHAIHumanObject;

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelGeneratorPicker.h"
 #include "EVoxelRGBA.h"
 #include "EVoxelSurfaceToolMaskType.h"
+#include "VoxelGeneratorPicker.h"
 #include "VoxelSurfaceToolMask.generated.h"
 
 class UTexture2D;

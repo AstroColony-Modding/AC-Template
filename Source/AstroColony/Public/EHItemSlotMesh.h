@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EHItemSlotMesh.generated.h"
 
-class UStaticMesh;
 class UMaterialInterface;
+class UStaticMesh;
 
 USTRUCT(BlueprintType)
 struct ASTROCOLONY_API FEHItemSlotMesh {

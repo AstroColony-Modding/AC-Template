@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelSpawnerCollection.h"
 #include "EVoxelSpawnerConfigRayWorldType.h"
+#include "VoxelSpawnerCollection.h"
 #include "VoxelSpawnerConfigFiveWayBlendSetup.h"
 #include "VoxelSpawnerConfig.generated.h"
 

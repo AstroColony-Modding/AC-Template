@@ -4,6 +4,9 @@
 void AEHGameState::OnRep_GlobalPoints() {
 }
 
+void AEHGameState::Multi_SetGlobalTimeDilation_Implementation(float GlobalTimeDilation) {
+}
+
 int32 AEHGameState::GetPointByType(const EGlobalPointType GlobalPointType) {
     return 0;
 }

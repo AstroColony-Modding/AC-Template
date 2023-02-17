@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHPopupViewModel.h"
 #include "TextBindable.h"
 #include "Texture2DBindable.h"
 #include "VisibilityBindable.h"
+#include "EHPopupViewModel.h"
 #include "EHDialogBoxViewModel.generated.h"
 
 class UEHDialogBoxElementViewModel;

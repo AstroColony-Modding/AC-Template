@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
-#include "EHBlockItem.h"
-#include "EEHBillboardTemplateType.h"
 #include "UObject/NoExportTypes.h"
+#include "EEHBillboardTemplateType.h"
+#include "EHBlockItem.h"
+#include "Templates/SubclassOf.h"
 #include "EHInteractableItem.generated.h"
 
 class AActor;
-class UEHSSEInitializer;
 class UEHInteractableObject;
+class UEHSSEInitializer;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API UEHInteractableItem : public UEHBlockItem {

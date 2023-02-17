@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelExposedNode.h"
 #include "EVoxelSamplerMode.h"
 #include "VoxelFloatTexture.h"
+#include "VoxelExposedNode.h"
 #include "VoxelNode_VoxelTextureSampler.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

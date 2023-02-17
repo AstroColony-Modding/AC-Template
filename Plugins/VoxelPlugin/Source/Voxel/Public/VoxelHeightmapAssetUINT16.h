@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelHeightmapImporterWeightmapInfos.h"
-#include "VoxelHeightmapAsset.h"
 #include "EVoxelHeightmapImporterMaterialConfig.h"
+#include "VoxelHeightmapAsset.h"
+#include "VoxelHeightmapImporterWeightmapInfos.h"
 #include "VoxelHeightmapAssetUINT16.generated.h"
 
 UCLASS(Blueprintable, HideDropdown)

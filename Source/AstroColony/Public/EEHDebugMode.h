@@ -8,5 +8,6 @@ enum class EEHDebugMode : uint8 {
     Grid,
     Universe,
     PriorityOrder,
+    SmoothMovement,
 };
 

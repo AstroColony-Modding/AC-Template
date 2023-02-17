@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESettingsCategoryType.h"
 #include "Engine/DataTable.h"
-#include "ESettingPreviewType.h"
 #include "ESettingOptionType.h"
+#include "ESettingPreviewType.h"
 #include "ESettingWidgetType.h"
+#include "ESettingsCategoryType.h"
 #include "SettingsOptionData.generated.h"
 
 class UTexture2D;

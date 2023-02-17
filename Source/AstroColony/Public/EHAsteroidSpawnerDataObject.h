@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHDataObject.h"
 #include "UObject/NoExportTypes.h"
+#include "EHDataObject.h"
 #include "EHAsteroidSpawnerDataObject.generated.h"
 
 UCLASS(Blueprintable)

@@ -1,6 +1,6 @@
 #include "UpdateVoteRequestDto.h"
 
 FUpdateVoteRequestDto::FUpdateVoteRequestDto() {
-    this->Direction = ECFCoreThumbsUpDirection::None;
+    this->Direction = 0;
 }
 

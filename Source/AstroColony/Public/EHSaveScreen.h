@@ -3,10 +3,10 @@
 #include "EHUIScreen.h"
 #include "EHSaveScreen.generated.h"
 
+class UEHBaseButtonWidget;
 class UEHSaveLoadListWidget;
 class UEHSaveLoadViewModel;
 class UTGEditableTextBox;
-class UEHBaseButtonWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHSaveScreen : public UEHUIScreen {

@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelToolsBase.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/LatentActionManager.h"
-#include "ModifiedVoxelValue.h"
 #include "ModifiedVoxelMaterial.h"
+#include "ModifiedVoxelValue.h"
 #include "VoxelIntBox.h"
 #include "VoxelPaintMaterial.h"
+#include "VoxelToolsBase.h"
 #include "VoxelBoxTools.generated.h"
 
 class AVoxelWorld;

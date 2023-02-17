@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
-#include "EHSaveGameInterface.h"
 #include "CampaignData.h"
+#include "EHSaveGameInterface.h"
+#include "Templates/SubclassOf.h"
 #include "EHScenarioComponent.generated.h"
 
 class UEHScenarioOverlayWidget;
-class UMission;
 class UEHTechnologyAsset;
+class UMission;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ASTROCOLONY_API UEHScenarioComponent : public UActorComponent, public IEHSaveGameInterface {

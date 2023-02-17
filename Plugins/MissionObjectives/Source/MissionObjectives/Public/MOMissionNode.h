@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "MOTextNode.h"
 #include "EMissionState.h"
+#include "MOTextNode.h"
 #include "MOMissionNode.generated.h"
 
 UCLASS(Blueprintable)

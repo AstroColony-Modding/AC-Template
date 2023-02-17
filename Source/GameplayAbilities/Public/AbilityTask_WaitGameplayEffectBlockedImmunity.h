@@ -6,8 +6,8 @@
 #include "AbilityTask_WaitGameplayEffectBlockedImmunity.generated.h"
 
 class AActor;
-class UAbilityTask_WaitGameplayEffectBlockedImmunity;
 class UAbilitySystemComponent;
+class UAbilityTask_WaitGameplayEffectBlockedImmunity;
 class UGameplayAbility;
 
 UCLASS(Blueprintable)

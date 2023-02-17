@@ -1,11 +1,11 @@
 #include "UtilityBlueprintFunctionLibrary.h"
 
 class AActor;
+class AEHGrid;
+class UDataTable;
+class ULevel;
 class UObject;
 class UWorld;
-class ULevel;
-class UDataTable;
-class AEHGrid;
 
 void UUtilityBlueprintFunctionLibrary::WriteStringToFile(const FString& AssetPath, const FString& StringToWrite) {
 }
@@ -74,6 +74,9 @@ void UUtilityBlueprintFunctionLibrary::GenerateMissingDatatableRows(const TArray
 
 AEHGrid* UUtilityBlueprintFunctionLibrary::FindGrid(const UObject* WorldContextObject, const FName GridUniqueID) {
     return NULL;
+}
+
+void UUtilityBlueprintFunctionLibrary::CopyToClipboard(const FString& StringToCopy) {
 }
 
 void UUtilityBlueprintFunctionLibrary::CopyPropertiesFromOneObjectToAnother(UObject* SourceObject, UObject* TargetObject) {

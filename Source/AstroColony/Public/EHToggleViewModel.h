@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHBoolOptionViewModel.h"
 #include "BoolBindable.h"
+#include "EHBoolOptionViewModel.h"
 #include "EHToggleViewModel.generated.h"
 
 UCLASS(Blueprintable)

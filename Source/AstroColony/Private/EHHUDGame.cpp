@@ -1,8 +1,8 @@
 #include "EHHUDGame.h"
 #include "Templates/SubclassOf.h"
 
-class UObject;
 class UMenuWidget;
+class UObject;
 
 void AEHHUDGame::UnregisterScreenIndicator(UObject* IndicatedObject) {
 }
@@ -41,6 +41,7 @@ void AEHHUDGame::CreateMapWidget() {
 
 
 AEHHUDGame::AEHHUDGame() {
+    this->TechTreeScrollOffset = 0.00f;
     this->OpenedMenuInteractable = NULL;
     this->ShowBlackScreen = false;
     this->OpenedMenu = NULL;

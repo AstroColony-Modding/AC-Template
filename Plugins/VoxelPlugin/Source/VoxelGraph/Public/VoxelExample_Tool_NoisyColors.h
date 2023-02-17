@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelGraphGeneratorHelper.h"
 #include "UObject/NoExportTypes.h"
+#include "VoxelGraphGeneratorHelper.h"
 #include "VoxelExample_Tool_NoisyColors.generated.h"
 
 UCLASS(Blueprintable)

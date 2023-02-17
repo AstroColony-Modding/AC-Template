@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "AbilityTask.h"
 #include "MoveToLocationDelegateDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "AbilityTask_MoveToLocation.generated.h"
 
-class UCurveVector;
-class UCurveFloat;
-class UGameplayAbility;
 class UAbilityTask_MoveToLocation;
+class UCurveFloat;
+class UCurveVector;
+class UGameplayAbility;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_MoveToLocation : public UAbilityTask {

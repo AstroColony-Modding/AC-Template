@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "GameplayTagResponseTableEntry.h"
 #include "GameplayTagContainer.h"
+#include "GameplayTagResponseTableEntry.h"
 #include "GameplayTagReponseTable.generated.h"
 
 class UAbilitySystemComponent;

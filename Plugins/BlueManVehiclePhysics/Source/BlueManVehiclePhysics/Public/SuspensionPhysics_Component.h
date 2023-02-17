@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "Engine/EngineTypes.h"
 #include "Components/SceneComponent.h"
 #include "FrictionData.h"
-#include "UObject/NoExportTypes.h"
-#include "Engine/EngineTypes.h"
+#include "Templates/SubclassOf.h"
 #include "WheelDataStruct.h"
 #include "SuspensionPhysics_Component.generated.h"
 
+class APawn;
+class UCurveFloat;
+class UPrimitiveComponent;
 class UStaticMesh;
 class UStaticMeshComponent;
-class UWorld;
-class UCurveFloat;
 class USuspensionPhysics_Component;
-class APawn;
-class UPrimitiveComponent;
+class UWorld;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class BLUEMANVEHICLEPHYSICS_API USuspensionPhysics_Component : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ECollisionChannel> SuspensionTraceChannel;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

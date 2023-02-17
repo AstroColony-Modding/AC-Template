@@ -4,9 +4,9 @@
 #include "TechTreeWidget.generated.h"
 
 class UTechNodeArrowWidget;
-class UTechnologyTree;
 class UTechNodeWidget;
 class UTechnologyAsset;
+class UTechnologyTree;
 
 UCLASS(Blueprintable)
 class TECHTREE_API UTechTreeWidget : public UWidget {
@@ -16,10 +16,10 @@ public:
     UTechnologyTree* TechTree;
     
 private:
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<UTechNodeWidget>> SlotWidgetsCached;
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<UTechNodeArrowWidget>> ArrowWidgetsCached;
     
 public:

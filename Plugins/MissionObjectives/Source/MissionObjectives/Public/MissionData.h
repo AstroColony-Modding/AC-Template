@@ -28,10 +28,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     TArray<FName> HistoryNodesNames;
     
-    UPROPERTY(EditAnywhere, SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     TArray<uint8> MissionData;
     
-    UPROPERTY(EditAnywhere, SaveGame)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     TArray<uint8> ReferencedMissionObjectData;
     
     MISSIONOBJECTIVES_API FMissionData();

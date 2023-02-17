@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayCueTranslationLink.h"
 #include "GameplayTagContainer.h"
+#include "GameplayCueTranslationLink.h"
 #include "GameplayCueTranslatorNodeIndex.h"
 #include "GameplayCueTranslatorNode.generated.h"
 

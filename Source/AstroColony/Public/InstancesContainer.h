@@ -14,4 +14,3 @@ public:
     FInstancesContainer();
 };
 
-FORCEINLINE uint32 GetTypeHash(const FInstancesContainer) { return 0; }

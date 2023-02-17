@@ -4,14 +4,14 @@
 #include "ETGInputControllerType.h"
 #include "TGControllerKeySymbolsDefinition.generated.h"
 
-class UFont;
 class UDataTable;
+class UFont;
 
 USTRUCT(BlueprintType)
 struct FTGControllerKeySymbolsDefinition : public FTableRowBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ETGInputControllerType> ControllerType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

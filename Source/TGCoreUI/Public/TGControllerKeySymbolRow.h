@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/DataTable.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/DataTable.h"
 #include "InputCoreTypes.h"
 #include "TGControllerKeySymbolRow.generated.h"
 

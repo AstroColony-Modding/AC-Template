@@ -1,22 +1,23 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHTraceInterface.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "VoxelCharacter.h"
 #include "EHSaveGameInterface.h"
-#include "UObject/NoExportTypes.h"
+#include "EHTraceInterface.h"
 #include "EHCharacter.generated.h"
 
-class UCameraComponent;
-class USpringArmComponent;
-class UEHInventoryComponent;
 class AActor;
 class AEHGamePlayerController;
 class AEHGrid;
+class AEHMovableSpaceActor;
+class UCameraComponent;
+class UEHCharacterMovementComponent;
+class UEHInventoryComponent;
 class UPrimitiveComponent;
 class USceneComponent;
 class USphereComponent;
-class UEHCharacterMovementComponent;
-class AEHMovableSpaceActor;
+class USpringArmComponent;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API AEHCharacter : public AVoxelCharacter, public IEHSaveGameInterface, public IEHTraceInterface {
@@ -48,7 +49,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_StationaryJetpack, meta=(AllowPrivateAccess=true))
     bool StationaryJetpack;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Booster, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool Booster;
     
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -102,12 +103,12 @@ private:
     UFUNCTION(BlueprintCallable)
     void OnRep_StationaryJetpack();
     
-    UFUNCTION(BlueprintCallable)
-    void OnRep_Booster();
-    
 public:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_UpdateHidden(const bool NewHidden);
+    
+    UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void Multi_Teleport(const FVector& Location, const FRotator& Rotation);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void Multi_DetachActor();
@@ -123,7 +124,7 @@ private:
     void HandlePlayerEnteredGrid(AEHGrid* Grid);
     
     UFUNCTION(BlueprintCallable)
-    void HandleGameStarted();
+    void HandleMovingChanged(bool IsMoving);
     
 public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
@@ -154,6 +155,15 @@ public:
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_UpdateBaseComponent(AEHMovableSpaceActor* MovableSpaceActor);
+    
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void Client_NotifyStationaryJetpackChanged(bool JetpackOn);
+    
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void Client_NotifyClientMovingChanged(bool IsMoving);
+    
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void Client_NotifyBoosterChanged(bool IsOn);
     
     UFUNCTION(BlueprintCallable)
     void Activate();

@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Components/ActorComponent.h"
+#include "Templates/SubclassOf.h"
 #include "TechTreeManager.generated.h"
 
-class UTechnologyTree;
+class USaveGame;
 class UTTTechNode;
-class UTechnologySaveGame;
 class UTechTreeWidget;
 class UTechnologyAsset;
-class USaveGame;
+class UTechnologySaveGame;
+class UTechnologyTree;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class TECHTREE_API UTechTreeManager : public UActorComponent {

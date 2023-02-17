@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ECFCoreSortOrder.h"
-#include "ECFCoreModsSearchSortField.h"
 #include "ECFCoreModLoaderType.h"
+#include "ECFCoreModsSearchSortField.h"
+#include "ECFCoreSortOrder.h"
 #include "CFCoreSearchModsFilter.generated.h"
 
 USTRUCT(BlueprintType)

@@ -1,10 +1,10 @@
 #include "AbilityTask_ApplyRootMotionJumpForce.h"
 #include "Net/UnrealNetwork.h"
 
-class UGameplayAbility;
-class UCurveVector;
-class UCurveFloat;
 class UAbilityTask_ApplyRootMotionJumpForce;
+class UCurveFloat;
+class UCurveVector;
+class UGameplayAbility;
 
 void UAbilityTask_ApplyRootMotionJumpForce::OnLandedCallback(const FHitResult& Hit) {
 }

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayAttribute.h"
 #include "ActiveGameplayEffectHandle.h"
 #include "EGameplayModOp.h"
+#include "GameplayAttribute.h"
 #include "GameplayModifierEvaluatedData.generated.h"
 
 USTRUCT(BlueprintType)
@@ -12,7 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGameplayAttribute Attribute;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EGameplayModOp::Type> ModifierOp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

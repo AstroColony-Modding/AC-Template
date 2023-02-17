@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "EBlueprintResultSwitch.h"
 #include "BPUniqueNetId.h"
+#include "EBlueprintResultSwitch.h"
 #include "AdvancedExternalUILibrary.generated.h"
 
 class APlayerController;

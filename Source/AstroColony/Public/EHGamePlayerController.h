@@ -1,16 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "EEHDebugMode.h"
 #include "EHPlayerController.h"
 #include "EHSaveGameInterface.h"
-#include "EEHDebugMode.h"
-#include "UObject/NoExportTypes.h"
 #include "EHGamePlayerController.generated.h"
 
-class UEHScenarioComponent;
-class UEHBarrierNetwork;
-class APawn;
-class AEHGrid;
 class AEHCharacter;
+class APawn;
+class UEHBarrierNetwork;
+class UEHScenarioComponent;
 
 UCLASS(Blueprintable)
 class ASTROCOLONY_API AEHGamePlayerController : public AEHPlayerController, public IEHSaveGameInterface {
@@ -37,7 +36,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float Oxygen;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 UniverseIndex;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -54,9 +53,6 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool EnableDebugMode;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    bool HasPlayerVisitedPlanet;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EEHDebugMode DebugMode;
@@ -112,8 +108,14 @@ public:
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ToggleCharacterRefillingOxygen(const bool IsBarrierRefillingOxygen, UEHBarrierNetwork* BarrierNetwork);
     
+    UFUNCTION(BlueprintCallable)
+    void ShowUniverseActors(const uint8 ActorsUniverseIndex);
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool ShowActors();
+    
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, BlueprintPure)
+    bool ShouldRebaseWorldOrigin();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool SetVirtualCamera(bool IsActive);
@@ -139,25 +141,23 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsCharacterPossesed();
     
+    UFUNCTION(BlueprintCallable)
+    void HideUniverseActors(const uint8 ActorsUniverseIndex);
+    
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     bool HideActors();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void HandlePossessImpossible();
     
-private:
-    UFUNCTION(BlueprintCallable)
-    void HandlePlayerEnteredGrid(AEHGrid* Grid);
-    
-public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void HandlePlayerAction(FName PlayerActionName);
     
     UFUNCTION(BlueprintCallable)
-    void GoToPreviousUniverse();
+    void GoToPreviousUniverse(const bool UpdateActorsVisibility);
     
     UFUNCTION(BlueprintCallable)
-    void GoToNextUniverse();
+    void GoToNextUniverse(const bool UpdateActorsVisibility);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FName GetUniverseSignature();
@@ -165,6 +165,11 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     AEHCharacter* GetEHCharacter();
     
+protected:
+    UFUNCTION(BlueprintCallable)
+    void DebugShowActors(bool On, const uint8 Index);
+    
+public:
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void Client_NotifyPossessImpossible();
     

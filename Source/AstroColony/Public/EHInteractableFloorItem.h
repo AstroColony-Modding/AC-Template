@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHFloorItem.h"
 #include "UObject/NoExportTypes.h"
+#include "EHFloorItem.h"
 #include "EHInteractableFloorItem.generated.h"
 
 UCLASS(Blueprintable)

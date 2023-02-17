@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "EHPlayerActionSet.generated.h"
 
-class UEHItem;
-class UEHInteractableObject;
 class AActor;
+class UEHInteractableObject;
+class UEHItem;
 
 USTRUCT(BlueprintType)
 struct ASTROCOLONY_API FEHPlayerActionSet {

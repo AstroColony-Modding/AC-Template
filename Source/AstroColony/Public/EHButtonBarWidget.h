@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "TGUILayer.h"
 #include "EButtonBarAction.h"
+#include "Templates/SubclassOf.h"
 #include "EHButtonBarWidget.generated.h"
 
 class UEHButtonBarEntryWidget;
+class UEHButtonBarViewModel;
 class UHorizontalBox;
 class UTGUserWidget;
-class UEHButtonBarViewModel;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHButtonBarWidget : public UTGUILayer {
@@ -30,10 +30,10 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEHButtonBarViewModel* EHButtonBarViewModel;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TMap<EButtonBarAction, UEHButtonBarEntryWidget*> ControllerButtonsCached;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TMap<EButtonBarAction, UEHButtonBarEntryWidget*> KeyboardButtonsCached;
     
 public:

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EHHeadMeshes.generated.h"
 
-class UStaticMeshComponent;
 class UEHGroomComponent;
+class UStaticMeshComponent;
 
 USTRUCT(BlueprintType)
 struct ASTROCOLONY_API FEHHeadMeshes {

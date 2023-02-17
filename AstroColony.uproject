@@ -451,6 +451,11 @@
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/a220ab040cb844beb355b0f159eabefa"
 		},
 		{
+			"Name": "AssetAssistant",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/b77ea233ba3748409cdc06601b2a7969"
+		},
+		{
 			"Name": "BlueManVehiclePhysics",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/bfea1a968e994224b5e050224172ee67"
@@ -607,12 +612,8 @@
 			"Enabled": false
 		},
 		{
-			"Name": "CascadeToNiagaraConverter",
-			"Enabled": false
-		},
-		{
 			"Name": "ChaosEditor",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "WindowsMoviePlayer",
@@ -621,6 +622,16 @@
 		{
 			"Name": "BinkMedia",
 			"Enabled": true
+		},
+		{
+			"Name": "SmoothSyncPlugin",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/c8f61b007fb44f4abcb7b0974cebff6b"
+		},
+		{
+			"Name": "PakLoader",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/fb9820b9b5c24f8ba178b2a11a61063f"
 		}
 	]
 }

@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHRemotlyConstructedActor.h"
 #include "EBlackHoleType.h"
 #include "EHMapTrackableInterface.h"
+#include "EHRemotlyConstructedActor.h"
 #include "EHBlackHole.generated.h"
 
 UCLASS(Blueprintable)

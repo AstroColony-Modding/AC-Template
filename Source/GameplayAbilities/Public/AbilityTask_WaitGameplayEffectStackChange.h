@@ -5,8 +5,8 @@
 #include "WaitGameplayEffectStackChangeDelegateDelegate.h"
 #include "AbilityTask_WaitGameplayEffectStackChange.generated.h"
 
-class UGameplayAbility;
 class UAbilityTask_WaitGameplayEffectStackChange;
+class UGameplayAbility;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitGameplayEffectStackChange : public UAbilityTask {

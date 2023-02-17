@@ -12,7 +12,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEHDeviceObject* ControlledDevice;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 MathConditionIndex;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -22,12 +22,6 @@ public:
     bool Response;
     
     UEHDeciderCombinatorObject();
-    UFUNCTION(BlueprintCallable)
-    void UpdateMathCondition(uint8 NewMathConditionIndex);
-    
-    UFUNCTION(BlueprintCallable)
-    void UpdateConditionValue(int32 NewConditionValue);
-    
 private:
     UFUNCTION(BlueprintCallable)
     void HandleSelectedResourcesChanged();

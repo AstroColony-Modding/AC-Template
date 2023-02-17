@@ -1,8 +1,8 @@
 #include "EndSessionCallbackProxy.h"
 
-class UObject;
 class APlayerController;
 class UEndSessionCallbackProxy;
+class UObject;
 
 UEndSessionCallbackProxy* UEndSessionCallbackProxy::EndSession(UObject* WorldContextObject, APlayerController* PlayerController) {
     return NULL;

@@ -1,9 +1,9 @@
 #include "AbilityTask_VisualizeTargeting.h"
 #include "Templates/SubclassOf.h"
 
-class UGameplayAbility;
 class AGameplayAbilityTargetActor;
 class UAbilityTask_VisualizeTargeting;
+class UGameplayAbility;
 
 UAbilityTask_VisualizeTargeting* UAbilityTask_VisualizeTargeting::VisualizeTargetingUsingActor(UGameplayAbility* OwningAbility, AGameplayAbilityTargetActor* TargetActor, FName TaskInstanceName, float Duration) {
     return NULL;

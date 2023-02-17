@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "VoxelTestValues.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 #include "VoxelIntBox.h"
+#include "VoxelTestValues.h"
 #include "VoxelTestLibrary.generated.h"
 
 class AVoxelWorld;

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "UObject/NoExportTypes.h"
 #include "VoxelHaltonStream.h"
-#include "UObject/NoExportTypes.h"
 #include "VoxelMathLibrary.generated.h"
 
 UCLASS(Blueprintable)

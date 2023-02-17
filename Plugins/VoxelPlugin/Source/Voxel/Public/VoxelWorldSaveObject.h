@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "UObject/Object.h"
 #include "VoxelCompressedWorldSave.h"
-#include "UObject/NoExportTypes.h"
 #include "VoxelWorldSaveObject.generated.h"
 
 UCLASS(Blueprintable)

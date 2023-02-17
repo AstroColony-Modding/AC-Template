@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "TGUIConfigMain.h"
-#include "ConfigurableImage.h"
 #include "ConfigurableBorder.h"
+#include "ConfigurableImage.h"
+#include "TGUIConfigMain.h"
 #include "EHConfig.generated.h"
 
 UCLASS(Blueprintable)

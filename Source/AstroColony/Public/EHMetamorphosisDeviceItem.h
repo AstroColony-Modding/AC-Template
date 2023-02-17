@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "CellTransformation.h"
-#include "EHDeviceItem.h"
 #include "EEHMetamorphosisType.h"
+#include "EHDeviceItem.h"
 #include "EHMetamorphosisDeviceItem.generated.h"
 
 UCLASS(Blueprintable)

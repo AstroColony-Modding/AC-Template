@@ -1,8 +1,8 @@
 #include "VoxelSurfaceTools.h"
 
 class AVoxelWorld;
-class UObject;
 class UCurveFloat;
+class UObject;
 
 void UVoxelSurfaceTools::GetStrengthMaskScale(float& ScaleX, float& ScaleY, AVoxelWorld* World, FVoxelFloatTexture Mask, float SizeX, float SizeY, bool bConvertToVoxelSpace) {
 }

@@ -1,44 +1,44 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
+#include "Engine/NetSerialization.h"
+#include "GameplayTagContainer.h"
+#include "GameplayTagAssetInterface.h"
 #include "GameplayTagContainer.h"
 #include "GameplayTasksComponent.h"
-#include "GameplayAttribute.h"
-#include "GameplayTagAssetInterface.h"
+#include "AbilitySystemReplicationProxyInterface.h"
+#include "ActiveGameplayCueContainer.h"
+#include "ActiveGameplayEffectHandle.h"
+#include "ActiveGameplayEffectsContainer.h"
+#include "AttributeDefaults.h"
+#include "EAbilityGenericReplicatedEvent.h"
+#include "GameplayAbilityActivationInfo.h"
+#include "GameplayAbilityLocalAnimMontage.h"
 #include "GameplayAbilityRepAnimMontage.h"
 #include "GameplayAbilitySpecContainer.h"
-#include "AbilitySystemReplicationProxyInterface.h"
-#include "AttributeDefaults.h"
-#include "Engine/NetSerialization.h"
-#include "GameplayAbilityLocalAnimMontage.h"
-#include "ActiveGameplayEffectsContainer.h"
-#include "ActiveGameplayCueContainer.h"
-#include "MinimalReplicationTagCountMap.h"
-#include "ReplicatedPredictionKeyMap.h"
-#include "GameplayEffectQuery.h"
-#include "EAbilityGenericReplicatedEvent.h"
-#include "ActiveGameplayEffectHandle.h"
 #include "GameplayAbilitySpecHandle.h"
-#include "PredictionKey.h"
-#include "GameplayEventData.h"
-#include "GameplayEffectContextHandle.h"
 #include "GameplayAbilityTargetDataHandle.h"
-#include "GameplayTagContainer.h"
-#include "GameplayAbilityActivationInfo.h"
-#include "ServerAbilityRPCBatch.h"
+#include "GameplayAttribute.h"
 #include "GameplayCueParameters.h"
+#include "GameplayEffectContextHandle.h"
+#include "GameplayEffectQuery.h"
 #include "GameplayEffectSpecForRPC.h"
 #include "GameplayEffectSpecHandle.h"
+#include "GameplayEventData.h"
+#include "MinimalReplicationTagCountMap.h"
+#include "PredictionKey.h"
+#include "ReplicatedPredictionKeyMap.h"
+#include "ServerAbilityRPCBatch.h"
+#include "Templates/SubclassOf.h"
 #include "AbilitySystemComponent.generated.h"
 
-class UAttributeSet;
-class AGameplayAbilityTargetActor;
 class AActor;
-class UGameplayAbility;
-class UDataTable;
-class UAnimMontage;
-class UGameplayEffect;
+class AGameplayAbilityTargetActor;
 class UAbilitySystemComponent;
+class UAnimMontage;
+class UAttributeSet;
+class UDataTable;
+class UGameplayAbility;
+class UGameplayEffect;
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class GAMEPLAYABILITIES_API UAbilitySystemComponent : public UGameplayTasksComponent, public IGameplayTagAssetInterface, public IAbilitySystemReplicationProxyInterface {
@@ -117,7 +117,7 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FActiveGameplayCueContainer MinimalReplicationGameplayCues;
     
-    UPROPERTY(EditAnywhere, Replicated, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     TArray<uint8> BlockedAbilityBindings;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
@@ -127,7 +127,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FReplicatedPredictionKeyMap ReplicatedPredictionKeyMap;
     
-    /*UAbilitySystemComponent();*/
+    //UAbilitySystemComponent();
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
     
     UFUNCTION(BlueprintCallable)
@@ -165,10 +165,10 @@ public:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSetReplicatedTargetData(FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, const FGameplayAbilityTargetDataHandle& ReplicatedTargetDataHandle, FGameplayTag ApplicationTag, FPredictionKey CurrentPredictionKey);
     
-    /*UFUNCTION(Reliable, Server, WithValidation)
-    void ServerSetReplicatedEventWithPayload(TEnumAsByte<EAbilityGenericReplicatedEvent::Type> EventType, FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FPredictionKey CurrentPredictionKey, FVector_NetQuantize100 VectorPayload);
+    /*UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    void ServerSetReplicatedEventWithPayload(TEnumAsByte<EAbilityGenericReplicatedEvent::Type> EventType, FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FPredictionKey CurrentPredictionKey, FVector_NetQuantize100 VectorPayload);*/
     
-    UFUNCTION(Reliable, Server, WithValidation)
+    /*UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSetReplicatedEvent(TEnumAsByte<EAbilityGenericReplicatedEvent::Type> EventType, FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey, FPredictionKey CurrentPredictionKey);*/
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
@@ -302,7 +302,7 @@ protected:
     void ClientTryActivateAbility(FGameplayAbilitySpecHandle AbilityToActivate);
     
 public:
-    /*UFUNCTION(Client, Reliable)
+    /*UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientSetReplicatedEvent(TEnumAsByte<EAbilityGenericReplicatedEvent::Type> EventType, FGameplayAbilitySpecHandle AbilityHandle, FPredictionKey AbilityOriginalPredictionKey);*/
     
     UFUNCTION(BlueprintCallable, Client, Reliable)

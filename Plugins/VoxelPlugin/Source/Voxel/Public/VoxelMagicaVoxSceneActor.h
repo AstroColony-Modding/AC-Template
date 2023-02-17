@@ -4,8 +4,8 @@
 #include "GameFramework/Actor.h"
 #include "VoxelMagicaVoxSceneActor.generated.h"
 
-class AVoxelWorld;
 class AVoxelAssetActor;
+class AVoxelWorld;
 class UVoxelMagicaVoxScene;
 
 UCLASS(Blueprintable)

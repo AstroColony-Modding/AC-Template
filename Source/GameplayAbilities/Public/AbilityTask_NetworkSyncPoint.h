@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EAbilityTaskNetSyncType.h"
 #include "AbilityTask.h"
+#include "EAbilityTaskNetSyncType.h"
 #include "NetworkSyncDelegateDelegate.h"
 #include "AbilityTask_NetworkSyncPoint.generated.h"
 

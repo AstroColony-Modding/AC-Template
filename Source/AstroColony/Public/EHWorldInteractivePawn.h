@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-#include "EHPlayerWorldInteractionInterface.h"
 #include "EHIndicationInterface.h"
+#include "EHJobModeType.h"
+#include "EHPlayerWorldInteractionInterface.h"
 #include "EHSaveGameInterface.h"
 #include "EPlayerActionType.h"
-#include "EHJobModeType.h"
 #include "EHWorldInteractivePawn.generated.h"
 
 class UTexture2D;

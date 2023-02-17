@@ -2,9 +2,9 @@
 #include "Templates/SubclassOf.h"
 
 class APlayerController;
+class AVoxelWorld;
 class UObject;
 class UVoxelTool;
-class AVoxelWorld;
 
 FVoxelToolTickData UVoxelTool::MakeVoxelToolTickData(APlayerController* PlayerController, bool bEdit, const TMap<FName, bool>& Keys, const TMap<FName, float>& Axes, FVector2D MousePosition, FVector CameraDirection, TEnumAsByte<ECollisionChannel> CollisionChannel) {
     return FVoxelToolTickData{};

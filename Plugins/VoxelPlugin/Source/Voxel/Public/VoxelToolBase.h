@@ -1,19 +1,19 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "VoxelTool.h"
 #include "UObject/NoExportTypes.h"
-#include "VoxelToolTickData.h"
-#include "VoxelToolBaseConfig.h"
-#include "VoxelIntBoxWithValidity.h"
 #include "UObject/NoExportTypes.h"
 #include "VoxelIntBox.h"
+#include "VoxelIntBoxWithValidity.h"
+#include "VoxelTool.h"
+#include "VoxelToolBaseConfig.h"
+#include "VoxelToolTickData.h"
 #include "VoxelToolBase.generated.h"
 
 class AVoxelWorld;
 class UMaterialInstanceDynamic;
-class UStaticMesh;
 class UMaterialInterface;
+class UStaticMesh;
 
 UCLASS(Abstract, Blueprintable)
 class VOXEL_API UVoxelToolBase : public UVoxelTool {

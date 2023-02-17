@@ -1,7 +1,7 @@
 #include "VoxelSpawnerActor.h"
 
-class UStaticMesh;
 class UMaterialInterface;
+class UStaticMesh;
 
 void AVoxelSpawnerActor::SetStaticMesh_Implementation(UStaticMesh* Mesh, const TMap<int32, UMaterialInterface*>& SectionsMaterials, const FBodyInstance& CollisionPresets) {
 }

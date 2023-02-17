@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EHNetwork.h"
-#include "EHIndicationInterface.h"
 #include "UObject/NoExportTypes.h"
+#include "EHIndicationInterface.h"
+#include "EHNetwork.h"
 #include "EHResourceVeinNetwork.generated.h"
 
 class UEHItem;

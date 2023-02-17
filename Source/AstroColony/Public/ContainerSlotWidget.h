@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "Blueprint/UserWidget.h"
 #include "EHItemInstance.h"
+#include "Templates/SubclassOf.h"
 #include "ContainerSlotWidget.generated.h"
 
-class UImage;
-class UEHItemsContainer;
-class UTextBlock;
-class UEHItemVariantsWidget;
 class UBorder;
-class UOverlay;
 class UDraggableItemPayload;
+class UEHItemVariantsWidget;
+class UEHItemsContainer;
+class UImage;
+class UOverlay;
+class UTextBlock;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UContainerSlotWidget : public UUserWidget {

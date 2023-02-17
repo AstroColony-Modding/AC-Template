@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameplayCueTag.h"
 #include "UObject/NoExportTypes.h"
 #include "MovieSceneObjectBindingID.h"
+#include "GameplayCueTag.h"
 #include "MovieSceneGameplayCueKey.generated.h"
 
 class UPhysicalMaterial;

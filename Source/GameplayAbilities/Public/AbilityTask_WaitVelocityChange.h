@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
 #include "AbilityTask.h"
 #include "WaitVelocityChangeDelegateDelegate.h"
-#include "UObject/NoExportTypes.h"
 #include "AbilityTask_WaitVelocityChange.generated.h"
 
 class UAbilityTask_WaitVelocityChange;
-class UMovementComponent;
 class UGameplayAbility;
+class UMovementComponent;
 
 UCLASS(Blueprintable)
 class GAMEPLAYABILITIES_API UAbilityTask_WaitVelocityChange : public UAbilityTask {

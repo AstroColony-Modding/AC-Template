@@ -1,8 +1,6 @@
 #include "EHElectricNetwork.h"
 
-class AEHGrid;
-
-void UEHElectricNetwork::UpdateBlackout(AEHGrid* Grid, bool HasBlackout) {
+void UEHElectricNetwork::UpdateBlackout(bool HasBlackout) {
 }
 
 UEHElectricNetwork::UEHElectricNetwork() {

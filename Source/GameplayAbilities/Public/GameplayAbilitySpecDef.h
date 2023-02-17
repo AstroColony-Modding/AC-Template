@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "EGameplayEffectGrantedAbilityRemovePolicy.h"
-#include "ScalableFloat.h"
 #include "GameplayAbilitySpecHandle.h"
+#include "ScalableFloat.h"
+#include "Templates/SubclassOf.h"
 #include "GameplayAbilitySpecDef.generated.h"
 
 class UGameplayAbility;

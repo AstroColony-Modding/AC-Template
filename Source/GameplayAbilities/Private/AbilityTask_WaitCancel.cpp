@@ -1,7 +1,7 @@
 #include "AbilityTask_WaitCancel.h"
 
-class UGameplayAbility;
 class UAbilityTask_WaitCancel;
+class UGameplayAbility;
 
 UAbilityTask_WaitCancel* UAbilityTask_WaitCancel::WaitCancel(UGameplayAbility* OwningAbility) {
     return NULL;

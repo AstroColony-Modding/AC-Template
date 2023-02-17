@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Channels/MovieSceneChannel.h"
 #include "UObject/NoExportTypes.h"
+#include "Channels/MovieSceneChannel.h"
 #include "MovieSceneGameplayCueKey.h"
 #include "MovieSceneGameplayCueChannel.generated.h"
 

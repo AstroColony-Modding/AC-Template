@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Templates/SubclassOf.h"
 #include "InteractBaseWidget.h"
+#include "Templates/SubclassOf.h"
 #include "EHContainerWidget.generated.h"
 
-class UEHItemsContainer;
-class UEHItem;
-class UUniformGridPanel;
-class UEHItemTooltipWidget;
 class UContainerSlotWidget;
+class UEHItem;
+class UEHItemTooltipWidget;
+class UEHItemsContainer;
+class UUniformGridPanel;
 
 UCLASS(Blueprintable, EditInlineNew)
 class ASTROCOLONY_API UEHContainerWidget : public UInteractBaseWidget {
@@ -31,10 +31,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool TextAlwaysVisible;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 Columns;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 Rows;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

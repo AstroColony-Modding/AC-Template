@@ -1,33 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
-#include "EEHStartingStationSize.h"
-#include "VoxelTerrainDigData.h"
 #include "TGIUIDataProvider.h"
-#include "EHObjectLoaderInterface.h"
-#include "EHHeadGroom.h"
-#include "VoxelShapeData.h"
 #include "DecalInfo.h"
-#include "EHTrackableInfo.h"
-#include "EHStartingStation.h"
+#include "EEHDecalType.h"
+#include "EEHStartingStationSize.h"
+#include "EEHTrackableType.h"
+#include "EHHeadGroom.h"
+#include "EHObjectLoaderInterface.h"
 #include "EHPlanetoidDecalInfo.h"
 #include "EHPlanetoidParticleInfo.h"
-#include "EEHTrackableType.h"
-#include "EEHDecalType.h"
+#include "EHStartingStation.h"
+#include "EHTrackableInfo.h"
+#include "VoxelShapeData.h"
+#include "VoxelTerrainDigData.h"
 #include "EHDataProvider.generated.h"
 
-class UEHAsset;
-class UEHItem;
-class UEHVisualMeshAsset;
-class UEHCustomMeshAsset;
-class UEHProfessionMeshAsset;
-class UEHAIObject;
 class AActor;
-class UDataTable;
-class UEHBlockItem;
 class UDataAsset;
-class UStaticMesh;
+class UDataTable;
+class UEHAIObject;
+class UEHAsset;
+class UEHBlockItem;
+class UEHCustomMeshAsset;
+class UEHItem;
+class UEHProfessionMeshAsset;
+class UEHVisualMeshAsset;
 class UMaterialInterface;
+class UStaticMesh;
 class UTexture2D;
 
 UCLASS(Blueprintable)
@@ -52,16 +52,16 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UEHProfessionMeshAsset*> HumanProfessions;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<UEHAIObject> ProfessionClassMap[10];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftClassPtr<AActor> CelestialBodiesMap[11];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FDecalInfo OutletInfos[7];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FEHTrackableInfo TrackableInfos[6];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -88,10 +88,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UStaticMesh* ConnectionLineMesh;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TSoftObjectPtr<UMaterialInterface> ConnectionLineMaterials[4];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     UEHBlockItem* PlanetoidResourceItems[12];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -104,10 +104,34 @@ public:
     UEHItem* QuartzResource;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UEHItem* HydrotonicResource;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEHItem* FloorRecyclable;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEHItem* WallRecyclable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UEHItem* ColonyOrigin;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UEHItem* ConveyorLineItem;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UEHItem* AdvConveyorLineItem;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UEHItem* BulkHeightExtenderItem;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UEHItem* BulkFoundationItem;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UEHItem* BulkFloorItem;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UEHItem* BulkDecorationItem;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<float> DestructibleSpawnChances;
@@ -125,13 +149,13 @@ public:
     UEHAsset* DestructionGameplayEffect;
     
 private:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FVoxelTerrainDigData VoxelTerrainDigDatas[12];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FVoxelShapeData VoxelShapeDatas[10];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* BillboardTextures[14];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -153,6 +177,9 @@ public:
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FDecalInfo GetOutletInfo(const EEHDecalType Type);
+    
+    UFUNCTION(BlueprintCallable, BlueprintPure)
+    UEHItem* GetBulkPreviewItem(UEHAsset* Item);
     
     
     // Fix for true pure virtual functions not being implemented

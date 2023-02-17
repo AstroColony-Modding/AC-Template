@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EVoxelRGBA.h"
 #include "EVoxelSpawnerDensityTransform.h"
 #include "EVoxelSpawnerDensityType.h"
 #include "EVoxelSpawnerUVAxis.h"
-#include "EVoxelRGBA.h"
 #include "VoxelGeneratorPicker.h"
 #include "VoxelSpawnerOutputName.h"
 #include "VoxelSpawnerDensity.generated.h"
@@ -33,7 +33,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 UVChannel;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     EVoxelSpawnerUVAxis UVAxis;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -45,7 +45,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<int32> MultiIndexChannels;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     EVoxelSpawnerDensityTransform Transform;
     
     VOXEL_API FVoxelSpawnerDensity();
